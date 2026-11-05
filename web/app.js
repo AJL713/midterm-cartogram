@@ -1412,6 +1412,7 @@ function render() {
   drawHistory();
   drawTurnout();
   drawTable();
+  if (DATA.layouts) drawAlternatives();  // EXPERIMENT only
   hideTip();
   placePills();
 }
@@ -1472,4 +1473,132 @@ function layoutSwitcher() {
     smoothly(() => { DATA.hex = l.hex; DATA.hexShape = l.shape; zoomState = null; render(); });
   });
   document.querySelector(".controls").append(wrap);
+}
+
+
+/* ------------------------------------------------------------------ EXPERIMENT: other diagrams */
+// Three other ways to show the same results, under the map on the experiment build only.
+// Each seat is colored as on the map: Democrat, Republican, not yet called; seats not up
+// this year (Senate, governors) are shown lighter.
+
+function altColors(t) {
+  // One entry per seat, left (Democrat) to right (Republican).
+  const seq = [];
+  const push = (n, fill, op = 1, label = "") => { for (let i = 0; i < n; i++) seq.push({ fill, op, label }); };
+  push(t.held.D, "var(--dem)", 0.45, "Democrat, not up this year");
+  push(t.won.D, "var(--dem)", 1, "Democrat");
+  push(t.pending, "var(--pending)", 1, "Not yet called");
+  push(t.won.other, "var(--ink-2)", 1, "Other");
+  push(t.won.R, "var(--rep)", 1, "Republican");
+  push(t.held.R, "var(--rep)", 0.45, "Republican, not up this year");
+  return seq;
+}
+
+function drawAlternatives() {
+  let box = document.getElementById("alt-diagrams");
+  if (!box) {
+    box = document.createElement("section");
+    box.id = "alt-diagrams";
+    box.className = "card alt";
+    box.innerHTML = `<h2>Other ways to show it <span class="scope">experiment</span></h2>
+      <h3>Seat arc</h3><p class="hint">Every seat as a dot, like a parliament chamber: Democrats from the left, Republicans from the right, uncalled in the middle. The dashed line is a majority.</p><div id="alt-arc"></div>
+      <div id="alt-house-only"><h3>Delegations on a tile map</h3><p class="hint">One square per state, roughly where it is; inside, one small square per House seat, sorted by party. Every state is the same size, so this shows each state's split rather than its weight.</p><div id="alt-waffle"></div>
+      <h3>Seats by state</h3><p class="hint">One bar per state, longest first, split by party.</p><div id="alt-bars"></div></div>`;
+    document.querySelector(".summary").after(box);
+  }
+  const t = tally(view);
+  drawArc(document.getElementById("alt-arc"), altColors(t), t.majority, t.seats);
+  document.getElementById("alt-house-only").hidden = view !== "house";
+  if (view === "house") { drawWaffle(document.getElementById("alt-waffle")); drawBars(document.getElementById("alt-bars")); }
+}
+
+/** Parliament arc: seats on concentric half-circles, filled in order of angle. */
+function drawArc(host, seq, majority, seats) {
+  const n = seq.length;
+  const rows = n > 200 ? 10 : n > 60 ? 5 : 3;
+  const R = 10, r0 = R * 0.42;
+  const radii = Array.from({ length: rows }, (_, i) => r0 + (R - r0) * (i + 0.5) / rows);
+  const total = radii.reduce((s, r) => s + r, 0);
+  const counts = radii.map((r) => Math.round(n * r / total));
+  counts[rows - 1] += n - counts.reduce((s, c) => s + c, 0);
+  const pts = [];
+  radii.forEach((r, i) => {
+    const c = counts[i];
+    for (let j = 0; j < c; j++) {
+      const a = Math.PI * (1 - (c === 1 ? 0.5 : j / (c - 1)));
+      pts.push({ a, x: r * Math.cos(a), y: -r * Math.sin(a) });
+    }
+  });
+  pts.sort((p, q) => q.a - p.a); // left to right
+  const dotR = ((R - r0) / rows) * 0.42;
+  const svg = el("svg", { viewBox: `${-R - 1} ${-R - 1} ${2 * R + 2} ${R + 3.2}`, class: "alt-svg arc", role: "img",
+    "aria-label": `Seat arc: ${seq.filter((s) => s.label.startsWith("Democrat")).length} Democrats, ${seq.filter((s) => s.label === "Not yet called").length} not yet called, ${seq.filter((s) => s.label.startsWith("Republican")).length} Republicans. ${majority} for a majority.` });
+  pts.forEach((p, i) => el("circle", { cx: p.x.toFixed(3), cy: p.y.toFixed(3), r: dotR.toFixed(3), fill: seq[i].fill, "fill-opacity": seq[i].op }, svg));
+  // majority line: the angle of the majority-th seat from the left
+  const m = pts[Math.min(majority, n) - 1];
+  if (m) el("line", { x1: (r0 * 0.8 * Math.cos(m.a)).toFixed(3), y1: (-r0 * 0.8 * Math.sin(m.a)).toFixed(3),
+    x2: ((R + 0.6) * Math.cos(m.a)).toFixed(3), y2: (-(R + 0.6) * Math.sin(m.a)).toFixed(3), class: "alt-maj" }, svg);
+  const txt = el("text", { x: 0, y: 1.6, class: "alt-num" }, svg);
+  txt.textContent = `${majority} for a majority of ${seats}`;
+  host.replaceChildren(svg);
+}
+
+/** Seats of one state, sorted D, uncalled, other, R. */
+function stateSeats(st) {
+  const order = { D: 0, P: 1, O: 2, R: 3 };
+  return DATA.hex.filter((h) => h.state === st).map((h) => DATA.results.races[`H-${h.id}`])
+    .map((r) => (!r || !r.called ? "P" : r.winner === "D" ? "D" : r.winner === "R" ? "R" : "O"))
+    .sort((a, b) => order[a] - order[b]);
+}
+const SEAT_FILL = { D: "var(--dem)", R: "var(--rep)", P: "var(--pending)", O: "var(--ink-2)" };
+
+/** Tile map, one square per state, filled with a small square per seat. */
+function drawWaffle(host) {
+  const tiles = DATA.tiles;
+  const xs = tiles.map((t) => t.x), ys = tiles.map((t) => t.y);
+  const x0 = Math.min(...xs) - 1, y0 = Math.min(...ys) - 1, w = Math.max(...xs) - x0 + 1, h = Math.max(...ys) - y0 + 1;
+  const svg = el("svg", { viewBox: `${x0} ${y0} ${w} ${h}`, class: "alt-svg", role: "img", "aria-label": "Each state's House delegation as small squares inside a tile map" });
+  const S = 1.5; // tile side
+  for (const t of tiles) {
+    const seats = stateSeats(t.state);
+    const g = el("g", {}, svg);
+    el("rect", { x: t.x - S / 2, y: t.y - S / 2, width: S, height: S, rx: 0.12, class: "alt-tile" }, g);
+    const cols = Math.ceil(Math.sqrt(seats.length));
+    const rowsN = Math.ceil(seats.length / cols);
+    const pad = 0.16, cell = (S - 2 * pad) / Math.max(cols, rowsN);
+    const ox = t.x - (cols * cell) / 2, oy = t.y - S / 2 + pad + 0.3 + ((S - 2 * pad - 0.3) - rowsN * cell) / 2;
+    seats.forEach((p, i) => {
+      el("rect", { x: (ox + (i % cols) * cell + cell * 0.08).toFixed(3), y: (oy + Math.floor(i / cols) * cell + cell * 0.08).toFixed(3),
+        width: (cell * 0.84).toFixed(3), height: (cell * 0.84).toFixed(3), fill: SEAT_FILL[p] }, g);
+    });
+    const lab = el("text", { x: t.x, y: t.y - S / 2 + 0.24, class: "alt-tile-label" }, g);
+    lab.textContent = t.state;
+    const title = el("title", {}, g);
+    const c = { D: 0, R: 0, P: 0, O: 0 }; seats.forEach((p) => c[p]++);
+    title.textContent = `${t.state}: ${c.D} D, ${c.R} R${c.P ? `, ${c.P} not yet called` : ""}${c.O ? `, ${c.O} other` : ""}`;
+  }
+  host.replaceChildren(svg);
+}
+
+/** One bar per state, split by party, longest first. */
+function drawBars(host) {
+  const states = [...new Set(DATA.hex.map((h) => h.state))]
+    .map((st) => ({ st, seats: stateSeats(st) })).sort((a, b) => b.seats.length - a.seats.length || a.st.localeCompare(b.st));
+  const max = states[0].seats.length, rowH = 1, labW = 2.6, W = 32;
+  const svg = el("svg", { viewBox: `0 0 ${labW + W + 4} ${states.length * rowH + 0.5}`, class: "alt-svg bars", role: "img", "aria-label": "House seats by state, split by party" });
+  states.forEach(({ st, seats }, i) => {
+    const y = i * rowH;
+    const lab = el("text", { x: labW - 0.4, y: y + rowH * 0.55, class: "alt-bar-label" }, svg);
+    lab.textContent = st;
+    let x = labW;
+    for (const p of ["D", "P", "O", "R"]) {
+      const n = seats.filter((s) => s === p).length;
+      if (!n) continue;
+      el("rect", { x: x.toFixed(3), y: (y + 0.12).toFixed(3), width: (n / max * W).toFixed(3), height: (rowH * 0.76).toFixed(3), fill: SEAT_FILL[p] }, svg);
+      x += n / max * W;
+    }
+    const num = el("text", { x: (x + 0.5).toFixed(3), y: y + rowH * 0.55, class: "alt-bar-num" }, svg);
+    num.textContent = seats.length;
+  });
+  host.replaceChildren(svg);
 }

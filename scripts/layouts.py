@@ -170,9 +170,12 @@ def to_records(geo, regions):
 class Field:
     """The country outline laid over a grid: which cells are inside, at what scale."""
 
-    def __init__(self, geo, slack: float):
+    def __init__(self, geo, slack: float, warp=None):
         self.geo = geo
-        country, mainland, labels = bh.country_outline()
+        self.shapes, labels = warp or (state_polygons(prepared=False), bh.country_outline()[2])
+        from shapely.ops import unary_union
+        country = unary_union(list(self.shapes.values()))
+        mainland = unary_union([g for st, g in self.shapes.items() if st not in INSETS])
         self.country, self.mainland, self.labels = prep(country), prep(mainland), labels
         minx, miny, maxx, maxy = country.bounds
         self.bounds = (minx, miny, maxx, maxy)
@@ -244,7 +247,8 @@ def deal_outline(field: Field, rounds: int):
             cx = sum(geo.xy(*c)[0] for c in cs) / len(cs)
             cy = sum(geo.xy(*c)[1] for c in cs) / len(cs)
             anchors[s] = (0.5 * anchors[s][0] + 0.5 * cx, 0.5 * anchors[s][1] + 0.5 * cy)
-    regions = join_pieces(geo, assign(geo, pool, anchors, seats))
+    regions = assign(geo, pool, anchors, seats)
+    regions = join_pieces(geo, regions, free=set(field.allowed) - set(pool))
     regions.update(field.insets)
     return regions
 
@@ -279,7 +283,7 @@ def deal_geo(field: Field, label_weight: float = 0.05):
     least total cost; cells left over (the grid has a few more than 432) go unused.
     States keep their place; crowded ones spill into the nearest neighbouring land."""
     geo, seats, allowed = field.geo, field.mainland_seats, field.allowed
-    shapes = {s: g for s, g in state_polygons(prepared=False).items() if s in seats}
+    shapes = {s: g for s, g in field.shapes.items() if s in seats}
     cells = sorted(c for c in allowed if c not in {x for v in field.insets.values() for x in v})
     pts = [Point(geo.xy(*c)[0] * field.k, geo.xy(*c)[1] * field.k) for c in cells]
     names = sorted(seats)
@@ -335,13 +339,63 @@ def state_polygons(prepared=True):
     return out
 
 
+# ----------------------------------------------------------------- warping the map
+
+def warp_map(ax: float, ay: float = 0.0, sigma: float = 45.0):
+    """Stretch the map where seats are dense and squeeze it where they are sparse,
+    separately along x (east-west) and y (north-south), before laying out cells.
+
+    Along x, each thin north-south band of the map gets a new width proportional to
+    (1 - ax) + ax * (seats near that band / average). ax = 0 leaves the map as it is;
+    ax = 1 makes every seat take the same width. "Seats near" is a smooth (Gaussian,
+    sigma map pixels) sum over the states' label points weighted by their seats. The
+    same along y with ay. The result: the empty Mountain West narrows (no "fjord"),
+    the Midwest and the East widen, and New York moves back toward the coast."""
+    from shapely.ops import transform
+
+    shapes = state_polygons(prepared=False)
+    labels = bh.country_outline()[2]
+    main = [s for s in SEATS if s not in INSETS]
+    xs = np.array([labels[s][0] for s in main]); ys = np.array([labels[s][1] for s in main])
+    w = np.array([SEATS[s] for s in main], dtype=float)
+    from shapely.ops import unary_union
+    minx, miny, maxx, maxy = unary_union(list(shapes.values())).bounds
+
+    def axis_map(vals, lo, hi, a):
+        if a <= 0:
+            return lambda v: v
+        g = np.linspace(lo - 1, hi + 1, 4001)
+        dens = (w[None, :] * np.exp(-((g[:, None] - vals[None, :]) ** 2) / (2 * sigma ** 2))).sum(axis=1)
+        dens = (1 - a) + a * dens / dens.mean()
+        cdf = np.concatenate([[0], np.cumsum((dens[1:] + dens[:-1]) / 2 * np.diff(g))])
+        cdf = g[0] + cdf / cdf[-1] * (g[-1] - g[0])
+        return lambda v: np.interp(v, g, cdf)
+
+    fx, fy = axis_map(xs, minx, maxx, ax), axis_map(ys, miny, maxy, ay)
+
+    def f(x, y, z=None):
+        return fx(np.asarray(x)), fy(np.asarray(y))
+
+    warped = {}
+    for st, g in shapes.items():
+        if st in INSETS:  # the insets keep their size and only move with their anchor
+            cx, cy = labels[st]
+            nx, ny = float(fx(cx)), float(fy(cy))
+            from shapely.affinity import translate
+            warped[st] = translate(g, nx - cx, ny - cy)
+        else:
+            warped[st] = transform(f, g).buffer(0)
+    wlabels = {st: (float(fx(x)), float(fy(y))) for st, (x, y) in labels.items()}
+    return warped, wlabels
+
+
 # ----------------------------------------------------------------- the menu
 
 def main() -> None:
     layouts = {}
 
-    def add(key, label, geo, slack, deal):
-        field = Field(geo, slack)
+    def add(key, label, geo, slack, deal, warp=None):
+        field = Field(geo, slack, warp)
         print('building', key, flush=True)
         regions = deal(field)
         recs = to_records(geo, regions)
@@ -351,11 +405,16 @@ def main() -> None:
 
     layouts["current"] = {"label": "Current (published)", "shape": "hex",
                           "hex": json.loads((DATA / "hex.json").read_text())}
-    add("geo", "True geography, same grid", Hex(), bh.OUTLINE_SLACK, deal_geo)
-    add("geo-roomy", "True geography, roomier grid", Hex(), 1.25, deal_geo)
-    add("geo-tight", "True geography, stronger pull to centre", Hex(), bh.OUTLINE_SLACK, lambda f: deal_geo(f, 0.4))
-    add("geo-flat", "True geography, flat-top hexagons", HexFlat(), 1.10, deal_geo)
-    add("geo-squares", "True geography, squares", Square(), 1.2, deal_geo)
+    for key, label, ax, ay in [
+        ("warp-light", "Squeeze the empty West: light", 0.35, 0.0),
+        ("warp-medium", "Squeeze the empty West: medium (Reddit advice)", 0.6, 0.0),
+        ("warp-strong", "Squeeze the empty West: strong", 0.85, 0.0),
+        ("warp-both", "Squeeze west-east and north-south", 0.6, 0.35),
+    ]:
+        w = warp_map(ax, ay)
+        add(key, label, Hex(), bh.OUTLINE_SLACK, lambda f: deal_outline(f, bh.ROUNDS), w)
+    w = warp_map(0.6, 0.0)
+    add("warp-geo", "Squeeze (medium) + true geography", Hex(), bh.OUTLINE_SLACK, deal_geo, w)
 
     (DATA / "layouts.json").write_text(json.dumps(layouts, separators=(",", ":")))
     print("wrote", DATA / "layouts.json")

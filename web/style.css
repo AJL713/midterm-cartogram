@@ -414,3 +414,17 @@ details.notes summary { padding: 12px 0 8px; font: 600 13px var(--body); letter-
 /* EXPERIMENT: layout switcher (experiment build only) */
 .layout-switch { display: inline-flex; align-items: center; gap: 6px; font: 600 12px/1 var(--display); text-transform: uppercase; letter-spacing: .06em; color: var(--ink-2); }
 .layout-switch select { font: 500 14px/1.2 var(--body); color: var(--ink); background: var(--panel); border: 1px solid var(--rule); border-radius: 999px; padding: 8px 12px; }
+
+/* EXPERIMENT: other diagrams */
+.alt h3 { margin-top: 14px; }
+.alt-svg { display: block; width: 100%; height: auto; max-width: 760px; margin: 4px auto 0; }
+.alt-svg.bars { max-width: 520px; }
+.alt-svg.arc { max-width: 620px; }
+.layout-switch { flex-wrap: wrap; max-width: 100%; }
+.layout-switch select { max-width: 100%; }
+.alt-maj { stroke: var(--ink); stroke-width: .08; stroke-dasharray: .3 .2; }
+.alt-num { font: 600 1.1px var(--display); text-anchor: middle; fill: var(--ink-2); }
+.alt-tile { fill: var(--paper); stroke: var(--rule); stroke-width: .04; }
+.alt-tile-label { font: 700 .26px var(--display); text-anchor: middle; dominant-baseline: central; fill: var(--ink); }
+.alt-bar-label { font: 600 .72px var(--display); text-anchor: end; dominant-baseline: central; fill: var(--ink); }
+.alt-bar-num { font: .62px var(--body); dominant-baseline: central; fill: var(--ink-2); }

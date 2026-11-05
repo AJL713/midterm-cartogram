@@ -98,7 +98,7 @@ def main() -> None:
         # The experiment branch's preview: a banner so it can't be mistaken for the real page.
         banner = ('<p class="unofficial" style="background:#fff3c4;color:#5a4300;border-radius:6px;padding:6px 10px">'
                   "Experimental version. The real page is at "
-                  f'<a href="{PAGES_URL}">{PAGES_URL.replace("https://", "")}</a></p>')
+                  f'<a style="color:inherit" href="{PAGES_URL}">{PAGES_URL.replace("https://", "")}</a></p>')
         html = html.replace('<main class="wrap">', '<main class="wrap">' + banner, 1)
     out = ROOT / "dist" / ("experimental.html" if args.experimental else "index.html")
     out.parent.mkdir(exist_ok=True)
