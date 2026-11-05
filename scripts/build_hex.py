@@ -10,19 +10,12 @@ Why generate instead of download?
   for 2026. Generating the layout from seat counts keeps it correct for any
   map, and needs no download.
 
-How the House layout works ("inside the outline"):
-  1. The real map of the country (data/geo.json, the same Albers projection the
-     Map style uses) is laid over a grid of hexagons, scaled so that the
-     mainland holds a little more than 435 hexagons. Only hexagons whose centre
-     falls inside the country may be used, so the result keeps the coastlines,
-     Florida, Texas, the Great Lakes and New England recognisable. Alaska and
-     Hawaii get their own hexagons at their inset positions.
-  2. Every state grows at once from its label point, one hexagon per turn (the
-     least-complete state goes next), so no state is boxed out.
-  3. The hexagons that were claimed are then re-dealt so that each state gets
-     the ones nearest its centre (an optimal assignment), a few rounds, which
-     makes the state shapes compact. States with many seats and little land
-     (New Jersey, Massachusetts) necessarily spill over their real borders.
+How the House layout works: see scripts/hexlayout.py. In short, the real map is
+squeezed east-west where seats are sparse (WARP_X), a hexagon grid is laid over
+the squeezed outline, every state grows from its label point at once, and the
+cells are re-dealt so states are compact and in one piece. The functions below
+(grow_all, assign_optimally, join_pieces, ...) are the earlier unsqueezed method,
+kept for comparison.
   4. Inside each state, district 1 gets the north-west-most hexagon and the
      numbers run left-to-right, top-to-bottom, so the layout reads like a page.
 
@@ -378,50 +371,17 @@ def join_pieces(regions: dict[str, list]) -> dict[str, list]:
     raise RuntimeError("too many swaps while joining pieces")
 
 
-def build_house() -> list[dict]:
-    country, mainland, labels = country_outline()
-    # Step 1: find the scale at which the mainland holds about 432 * OUTLINE_SLACK hexagons.
-    lo, hi = 5.0, 40.0
-    for _ in range(18):
-        k = (lo + hi) / 2
-        _, n = outline_cells(country, mainland, k)
-        lo, hi = (k, hi) if n > 432 * OUTLINE_SLACK else (lo, k)
-    k = lo
-    allowed, _ = outline_cells(country, mainland, k)
-    anchors = {s: (labels[s][0] / k, labels[s][1] / k) for s in SEATS}
-    # Alaska and Hawaii are insets too small to hold a hexagon: each gets fixed
-    # hexagons at its inset position and stays out of the mainland deal.
-    insets: dict[str, list] = {}
-    for s in ("AK", "HI"):
-        r0 = round(anchors[s][1] / 1.5)
-        c = (round(anchors[s][0] / SQRT3 - r0 / 2), r0)
-        insets[s] = [c, (c[0] + 1, c[1])][: SEATS[s]]
-    mainland_seats = {s: n for s, n in SEATS.items() if s not in insets}
-    # Step 2: grow every mainland state at once inside the outline.
-    grown = grow_all(set(), anchors, allowed, mainland_seats)
-    pool = [c for cells in grown.values() for c in cells]
-    # Step 3: re-deal that pool optimally, then nudge each anchor to the centre
-    # of what its state received and re-deal again (a few rounds of "Lloyd
-    # relaxation"). Each round makes the state shapes rounder and tidier.
-    for _ in range(ROUNDS):
-        regions = assign_optimally(pool, anchors, mainland_seats)
-        for s, cells in regions.items():
-            cx = sum(hex_to_xy(*c)[0] for c in cells) / len(cells)
-            cy = sum(hex_to_xy(*c)[1] for c in cells) / len(cells)
-            ax, ay = anchors[s]
-            anchors[s] = (0.5 * ax + 0.5 * cx, 0.5 * ay + 0.5 * cy)
-    regions = join_pieces(assign_optimally(pool, anchors, mainland_seats))
-    regions.update(insets)
+# How much to squeeze the map east-west where seats are sparse before laying out
+# hexagons (see hexlayout.warp_map): 0 = the real map, 1 = every seat the same width.
+WARP_X = 0.85
 
-    out = []
-    for state, cells in regions.items():
-        # Number districts left-to-right, top-to-bottom within the state.
-        cells.sort(key=lambda c: (c[1], hex_to_xy(*c)[0]))
-        for i, (q, r) in enumerate(cells, start=1):
-            x, y = hex_to_xy(q, r)
-            out.append({"id": district_id(state, i), "state": state,
-                        "q": q, "r": r, "x": round(x, 3), "y": round(y, 3)})
-    return out
+
+def build_house() -> list[dict]:
+    """The House cartogram: see scripts/hexlayout.py for the method."""
+    import hexlayout as hl
+
+    field = hl.Field(hl.Hex(), OUTLINE_SLACK, hl.warp_map(WARP_X))
+    return hl.to_records(hl.Hex(), hl.deal_outline(field, ROUNDS))
 
 
 def build_tiles() -> list[dict]:
