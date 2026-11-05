@@ -407,3 +407,7 @@ details.notes summary { padding: 12px 0 8px; font: 600 13px var(--body); letter-
 /* ---------- feedback link ---------- */
 .feedback a { color: var(--ink); font-weight: 600; text-underline-offset: 2px; }
 .feedback .aside { color: var(--ink-2); }
+
+/* House cartogram: one- and two-seat states get a smaller name so neighbours don't collide. */
+.label.house.small { font-size: .8px; stroke-width: .22px; }
+#map.zoomed .label.house.small { font-size: calc(.8px / var(--z, 1)); stroke-width: calc(.22px / var(--z, 1)); }

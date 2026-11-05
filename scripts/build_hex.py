@@ -10,13 +10,20 @@ Why generate instead of download?
   for 2026. Generating the layout from seat counts keeps it correct for any
   map, and needs no download.
 
-How the House layout works (a "grow from the anchor" packing):
-  1. Every state has an anchor point: its rough geographic centre, projected
-     onto a flat grid of hexagons.
-  2. States are placed one at a time, largest first. Each state starts at the
-     free hexagon closest to its anchor and grows by repeatedly claiming the
-     free neighbouring hexagon that is closest to the anchor.
-  3. Inside each state, district 1 gets the north-west-most hexagon and the
+How the House layout works ("inside the outline"):
+  1. The real map of the country (data/geo.json, the same Albers projection the
+     Map style uses) is laid over a grid of hexagons, scaled so that the
+     mainland holds a little more than 435 hexagons. Only hexagons whose centre
+     falls inside the country may be used, so the result keeps the coastlines,
+     Florida, Texas, the Great Lakes and New England recognisable. Alaska and
+     Hawaii get their own hexagons at their inset positions.
+  2. Every state grows at once from its label point, one hexagon per turn (the
+     least-complete state goes next), so no state is boxed out.
+  3. The hexagons that were claimed are then re-dealt so that each state gets
+     the ones nearest its centre (an optimal assignment), a few rounds, which
+     makes the state shapes compact. States with many seats and little land
+     (New Jersey, Massachusetts) necessarily spill over their real borders.
+  4. Inside each state, district 1 gets the north-west-most hexagon and the
      numbers run left-to-right, top-to-bottom, so the layout reads like a page.
 
 Run:  python scripts/build_hex.py
@@ -26,6 +33,7 @@ from __future__ import annotations
 
 import json
 import math
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -124,20 +132,23 @@ def anchor_xy(state: str) -> tuple[float, float]:
     return fx * width * SCALE * SQRT3, fy * height * SCALE * 1.5
 
 
-def nearest_free(occupied: set, ax: float, ay: float) -> tuple[int, int]:
-    """Free hexagon whose centre is closest to (ax, ay)."""
+def nearest_free(occupied: set, ax: float, ay: float, allowed: set | None = None) -> tuple[int, int]:
+    """Free hexagon whose centre is closest to (ax, ay); inside `allowed` if given."""
     r0 = round(ay / 1.5)
     q0 = round(ax / SQRT3 - r0 / 2)
     best, best_d = None, math.inf
     for dr in range(-12, 13):
         for dq in range(-12, 13):
             cell = (q0 + dq, r0 + dr)
-            if cell in occupied:
+            if cell in occupied or (allowed is not None and cell not in allowed):
                 continue
             x, y = hex_to_xy(*cell)
             d = (x - ax) ** 2 + (y - ay) ** 2
             if d < best_d:
                 best, best_d = cell, d
+    if best is None and allowed is not None:  # boxed in: the nearest free cell anywhere inside
+        free = [c for c in allowed if c not in occupied]
+        best = min(free, key=lambda c: (hex_to_xy(*c)[0] - ax) ** 2 + (hex_to_xy(*c)[1] - ay) ** 2)
     return best
 
 
@@ -170,18 +181,20 @@ def district_id(state: str, number: int) -> str:
     return f"{state}-{'00' if SEATS[state] == 1 else f'{number:02d}'}"
 
 
-def grow_all(occupied: set) -> dict[str, list[tuple[int, int]]]:
+def grow_all(occupied: set, anchors: dict | None = None, allowed: set | None = None,
+             seats: dict | None = None) -> dict[str, list[tuple[int, int]]]:
     """Grow every state at once, one hexagon per turn.
 
     Each turn, the state that is least complete (smallest share of its seats
     placed) claims its best free neighbouring hexagon. Growing together, like
     crystals, stops a big early state from taking a small neighbour's space.
     """
-    anchors = {s: anchor_xy(s) for s in SEATS}
+    SEATS = seats or globals()["SEATS"]  # noqa: N806 (the states to grow; all by default)
+    anchors = anchors or {s: anchor_xy(s) for s in SEATS}
     cells: dict[str, list] = {}
     # Seeds: small states first, so each gets the spot nearest its anchor.
     for s in sorted(SEATS, key=lambda s: SEATS[s]):
-        cells[s] = [nearest_free(occupied, *anchors[s])]
+        cells[s] = [nearest_free(occupied, *anchors[s], allowed)]
         occupied.add(cells[s][0])
 
     def dist(c, s):
@@ -198,15 +211,15 @@ def grow_all(occupied: set) -> dict[str, list[tuple[int, int]]]:
             (q + dq, r + dr)
             for q, r in cells[s]
             for dq, dr in NEIGHBOURS
-            if (q + dq, r + dr) not in occupied
+            if (q + dq, r + dr) not in occupied and (allowed is None or (q + dq, r + dr) in allowed)
         }
         cell = min(frontier, key=lambda c: dist(c, s)) if frontier \
-            else nearest_free(occupied, *anchors[s])
+            else nearest_free(occupied, *anchors[s], allowed)
         cells[s].append(cell)
         occupied.add(cell)
 
 
-def assign_optimally(pool: list[tuple[int, int]], anchors: dict) -> dict[str, list]:
+def assign_optimally(pool: list[tuple[int, int]], anchors: dict, seats: dict | None = None) -> dict[str, list]:
     """Give each state exactly SEATS[state] hexagons from the pool so that the
     total squared distance from every hexagon to its state's anchor is as small
     as possible (an "optimal transport" assignment, solved exactly by SciPy).
@@ -217,12 +230,13 @@ def assign_optimally(pool: list[tuple[int, int]], anchors: dict) -> dict[str, li
     from scipy.optimize import linear_sum_assignment
     import numpy as np
 
-    slots = [s for s in sorted(SEATS) for _ in range(SEATS[s])]  # one slot per seat
+    seats = seats or SEATS
+    slots = [s for s in sorted(seats) for _ in range(seats[s])]  # one slot per seat
     pts = np.array([hex_to_xy(*c) for c in pool])
     anc = np.array([anchors[s] for s in slots])
     cost = ((pts[:, None, :] - anc[None, :, :]) ** 2).sum(axis=2)
     rows, cols = linear_sum_assignment(cost)
-    out: dict[str, list] = {s: [] for s in SEATS}
+    out: dict[str, list] = {s: [] for s in seats}
     for r, c in zip(rows, cols):
         out[slots[c]].append(pool[r])
     return out
@@ -269,24 +283,135 @@ def compact(regions: dict[str, list]) -> dict[str, list]:
     return regions
 
 
+# Mainland hexagons to fit inside the outline, as a multiple of the 432 mainland
+# seats. A little slack keeps every state reachable; too much leaves empty slots.
+OUTLINE_SLACK = 1.06
+
+
+def country_outline():
+    """(country shape, mainland shape, label points) from data/geo.json, in map pixels."""
+    from shapely.geometry import Polygon
+    from shapely.ops import unary_union
+
+    geo = json.loads((DATA / "geo.json").read_text())
+    shapes, labels = {}, {}
+    for st in geo["states"]:
+        polys = []
+        for sub in re.findall(r"M([^M]+)", st["path"]):
+            pts = [tuple(map(float, p.split(","))) for p in re.findall(r"[-\d.]+,[-\d.]+", sub)]
+            if len(pts) >= 3:
+                polys.append(Polygon(pts).buffer(0))
+        shapes[st["state"]] = unary_union(polys)
+        labels[st["state"]] = (float(st["x"]), float(st["y"]))
+    country = unary_union(list(shapes.values()))
+    mainland = unary_union([g for st, g in shapes.items() if st not in ("AK", "HI")])
+    return country, mainland, labels
+
+
+def outline_cells(country, mainland, k: float):
+    """Hexagons whose centre lies inside the country, at k map pixels per hex unit."""
+    from shapely.geometry import Point
+
+    minx, miny, maxx, maxy = country.bounds
+    inside, on_mainland = set(), 0
+    for r in range(int(miny / k / 1.5) - 2, int(maxy / k / 1.5) + 3):
+        for q in range(int(minx / k / SQRT3) - r // 2 - 3, int(maxx / k / SQRT3) - r // 2 + 4):
+            x, y = hex_to_xy(q, r)
+            pt = Point(x * k, y * k)
+            if country.contains(pt):
+                inside.add((q, r))
+                on_mainland += mainland.contains(pt)
+    return inside, on_mainland
+
+
+def pieces(cells: list) -> list[set]:
+    """Connected groups of hexagons (a state in one piece has exactly one)."""
+    left, out = set(cells), []
+    while left:
+        todo, seen = [left.pop()], set()
+        while todo:
+            c = todo.pop()
+            seen.add(c)
+            for dq, dr in NEIGHBOURS:
+                n = (c[0] + dq, c[1] + dr)
+                if n in left:
+                    left.remove(n)
+                    todo.append(n)
+        out.append(seen)
+    return sorted(out, key=len, reverse=True)
+
+
+def join_pieces(regions: dict[str, list]) -> dict[str, list]:
+    """The optimal deal can leave a state in two pieces (two hexagons of Idaho
+    on either side of a neighbour). Swap a stray hexagon for one that touches
+    the state's main piece, as long as the other state stays in one piece."""
+    owner = {c: s for s, cells in regions.items() for c in cells}
+    for _ in range(500):
+        split = [(s, pieces(regions[s])) for s in regions]
+        split = [(s, ps) for s, ps in split if len(ps) > 1]
+        if not split:
+            return regions
+        s, ps = split[0]
+        main, stray = ps[0], ps[-1]
+        done = False
+        for c in sorted(stray):
+            for m in main:
+                for dq, dr in NEIGHBOURS:
+                    d = (m[0] + dq, m[1] + dr)
+                    t = owner.get(d)
+                    if t is None or t == s:
+                        continue
+                    new_t = [x for x in regions[t] if x != d] + [c]
+                    if len(pieces(new_t)) > len(pieces(regions[t])):
+                        continue
+                    regions[t] = new_t
+                    regions[s] = [x for x in regions[s] if x != c] + [d]
+                    owner[d], owner[c] = s, t
+                    done = True
+                    break
+                if done:
+                    break
+            if done:
+                break
+        if not done:
+            raise RuntimeError(f"could not join {s} into one piece")
+    raise RuntimeError("too many swaps while joining pieces")
+
+
 def build_house() -> list[dict]:
-    # Step 1: grow states together to get a US-shaped pool of 435 hexagons.
-    grown = grow_all(set())
+    country, mainland, labels = country_outline()
+    # Step 1: find the scale at which the mainland holds about 432 * OUTLINE_SLACK hexagons.
+    lo, hi = 5.0, 40.0
+    for _ in range(18):
+        k = (lo + hi) / 2
+        _, n = outline_cells(country, mainland, k)
+        lo, hi = (k, hi) if n > 432 * OUTLINE_SLACK else (lo, k)
+    k = lo
+    allowed, _ = outline_cells(country, mainland, k)
+    anchors = {s: (labels[s][0] / k, labels[s][1] / k) for s in SEATS}
+    # Alaska and Hawaii are insets too small to hold a hexagon: each gets fixed
+    # hexagons at its inset position and stays out of the mainland deal.
+    insets: dict[str, list] = {}
+    for s in ("AK", "HI"):
+        r0 = round(anchors[s][1] / 1.5)
+        c = (round(anchors[s][0] / SQRT3 - r0 / 2), r0)
+        insets[s] = [c, (c[0] + 1, c[1])][: SEATS[s]]
+    mainland_seats = {s: n for s, n in SEATS.items() if s not in insets}
+    # Step 2: grow every mainland state at once inside the outline.
+    grown = grow_all(set(), anchors, allowed, mainland_seats)
     pool = [c for cells in grown.values() for c in cells]
-    # Step 2: re-deal that pool optimally, then nudge each anchor to the centre
+    # Step 3: re-deal that pool optimally, then nudge each anchor to the centre
     # of what its state received and re-deal again (a few rounds of "Lloyd
     # relaxation"). Each round makes the state shapes rounder and tidier.
-    anchors = {s: anchor_xy(s) for s in SEATS}
     for _ in range(ROUNDS):
-        regions = assign_optimally(pool, anchors)
+        regions = assign_optimally(pool, anchors, mainland_seats)
         for s, cells in regions.items():
             cx = sum(hex_to_xy(*c)[0] for c in cells) / len(cells)
             cy = sum(hex_to_xy(*c)[1] for c in cells) / len(cells)
             ax, ay = anchors[s]
             anchors[s] = (0.5 * ax + 0.5 * cx, 0.5 * ay + 0.5 * cy)
-    regions = assign_optimally(pool, anchors)
-    # Step 3: close the gaps by sliding whole states toward the middle.
-    regions = compact(regions)
+    regions = join_pieces(assign_optimally(pool, anchors, mainland_seats))
+    regions.update(insets)
 
     out = []
     for state, cells in regions.items():

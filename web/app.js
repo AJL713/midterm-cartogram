@@ -344,12 +344,28 @@ function drawStateLabels(svg, items) {
   const byState = {};
   for (const d of items) (byState[d.state] ||= []).push(d);
   const g = el("g", { "aria-hidden": "true" }, svg);
+  const labels = [];
   for (const [st, cells] of Object.entries(byState)) {
     const cx = cells.reduce((s, c) => s + c.x, 0) / cells.length;
     const cy = cells.reduce((s, c) => s + c.y, 0) / cells.length;
-    const c = cells.reduce((a, b) => (Math.hypot(a.x - cx, a.y - cy) <= Math.hypot(b.x - cx, b.y - cy) ? a : b));
-    const t = el("text", { class: "label house", x: c.x, y: c.y }, g);
-    t.textContent = st;
+    labels.push({ st, x: cx, y: cy, small: cells.length <= 2 });
+  }
+  // Labels sit at the centre of each state's hexagons. Where two small states
+  // touch (Wyoming and Montana, say), nudge the pair apart so the names don't overlap.
+  for (let pass = 0; pass < 12; pass++) {
+    for (const a of labels) for (const b of labels) {
+      if (a === b) continue;
+      const w = (a.small || b.small) ? 1.9 : 2.3, h = 1.1;  // label footprint, map units
+      const dx = b.x - a.x, dy = b.y - a.y;
+      if (Math.abs(dx) >= w || Math.abs(dy) >= h) continue;
+      // Push along whichever axis needs less movement.
+      if (w - Math.abs(dx) < h - Math.abs(dy)) { const s = (w - Math.abs(dx)) / 2 * Math.sign(dx || 1); a.x -= s; b.x += s; }
+      else { const s = (h - Math.abs(dy)) / 2 * Math.sign(dy || 1); a.y -= s; b.y += s; }
+    }
+  }
+  for (const l of labels) {
+    const t = el("text", { class: "label house" + (l.small ? " small" : ""), x: l.x.toFixed(3), y: l.y.toFixed(3) }, g);
+    t.textContent = l.st;
   }
 }
 

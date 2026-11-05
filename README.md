@@ -70,13 +70,13 @@ nothing from outside when it opens. A test checks the link.
 ```
 Wikipedia tables ──scrape.py──> data/raw/*.txt ──scrape.py──> data/results.json ─┐
                                  + overrides.json                                ├─ bundle.py ─> dist/index.html
-seat counts + rough state centres ──build_hex.py──> data/hex.json, tiles.json ──┤
+seat counts + US outline (geo.json) ──build_hex.py──> data/hex.json, tiles.json ──┤
 Census boundaries + population ─────build_geo.py──> data/geo.json ─────────────┘
 ```
 
 | File | What it is |
 | --- | --- |
-| `scripts/build_hex.py` | Generates the House layout: grows each state from its rough location, re-deals the hexagons optimally so states stay compact, then slides states together to close gaps. Tuning knobs `SCALE`, `EQUALIZE`, `ROUNDS` are at the top. |
+| `scripts/build_hex.py` | Generates the House layout inside the real outline of the country: a hexagon grid is scaled so the mainland holds just over 435 hexagons, only hexagons inside the country are used, every state grows from its label point at once, then the hexagons are re-dealt optimally so states stay compact and a repair step keeps each state in one piece. Alaska and Hawaii are fixed insets. Needs `data/geo.json` first (`build_geo.py`). Knobs: `OUTLINE_SLACK`, `ROUNDS`. |
 | `scripts/extract_wikipedia.js` | The same table-reading rules as `scrape.py`, run inside a browser on the Wikipedia pages (used by the scheduled update). |
 | `scripts/scrape.py` | Snapshot step (`--live`) and build step. Only marks a race called when Wikipedia shows a winner in bold; never infers a winner from votes. |
 | `scripts/build_geo.py` | Reads the Census boundary files in `data/source/` and writes state outlines, county lines (shown only when zoomed into a state), and one dot per 25,000 residents, scattered inside each resident's county. |
