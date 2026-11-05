@@ -100,6 +100,8 @@ def main() -> None:
                   "Experimental version. The real page is at "
                   f'<a style="color:inherit" href="{PAGES_URL}">{PAGES_URL.replace("https://", "")}</a></p>')
         html = html.replace('<main class="wrap">', '<main class="wrap">' + banner, 1)
+        # Its own name, so the gallery and browser tabs never mix it up with the real page.
+        html = html.replace("<title>Seats, Not Acres</title>", "<title>Seats, Not Acres Lab</title>", 1)
     out = ROOT / "dist" / ("experimental.html" if args.experimental else "index.html")
     out.parent.mkdir(exist_ok=True)
     out.write_text(html.replace("<!--SITE_TAGS-->", site_tags(args.site_url)))
