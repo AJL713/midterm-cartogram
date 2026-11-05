@@ -56,6 +56,15 @@ needs: a doctype, the language tag, a tab icon, and the link-preview tags pointi
 `docs/preview.png`. `data/source/` (Census and us-atlas files) is committed so anyone
 can rebuild the map from scratch.
 
+## Feedback
+
+The page links to an anonymous Google Form, "Seats, not acres: feedback" (in Alberto's
+Google Drive), from the summary under the map and from "Sources and notes". The form
+doesn't collect email addresses and doesn't limit people to one response, so no sign-in
+is needed. Answers go to the Google Sheet "Seats not acres: feedback" and are never shown
+on the page. The link opens in a new tab with `rel="noopener"`; the page still loads
+nothing from outside when it opens. A test checks the link.
+
 ## How it fits together
 
 ```

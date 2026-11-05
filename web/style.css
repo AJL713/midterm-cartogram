@@ -403,3 +403,7 @@ details.notes summary { padding: 12px 0 8px; font: 600 13px var(--body); letter-
 .flip-switch[aria-pressed="true"] .track { background: var(--ink); border-color: var(--ink); }
 .flip-switch[aria-pressed="true"] .track::after { transform: translateX(12px); background: var(--paper); }
 @media (prefers-reduced-motion: reduce) { .flip-switch, .flip-switch .track, .flip-switch .track::after, .bar span { transition: none; } }
+
+/* ---------- feedback link ---------- */
+.feedback a { color: var(--ink); font-weight: 600; text-underline-offset: 2px; }
+.feedback .aside { color: var(--ink-2); }

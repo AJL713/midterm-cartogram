@@ -272,3 +272,15 @@ def test_link_preview_tags_only_with_a_site_address():
     assert '<link rel="canonical" href="https://example.github.io/midterm-cartogram/">' in tags
     page = (ROOT / "web" / "index.html").read_text()
     assert 'property="og:title"' in page and "<!--SITE_TAGS-->" in page
+
+
+def test_feedback_link_is_the_form_and_opens_safely():
+    """The page links to the feedback form (twice) and to no other Google service.
+    The link opens in a new tab with rel="noopener", so the form can't control the page."""
+    import re
+    page = (ROOT / "web" / "index.html").read_text()
+    links = re.findall(r'<a href="(https://docs\.google\.com[^"]*)"([^>]*)>', page)
+    assert len(links) == 2
+    for url, attrs in links:
+        assert url == "https://docs.google.com/forms/d/e/1FAIpQLSe3xU336rEL3261p4J6LMn-C82QrbYm8YPACOikHYaEpKunyg/viewform"
+        assert 'target="_blank"' in attrs and 'rel="noopener"' in attrs
