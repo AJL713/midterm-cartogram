@@ -44,6 +44,13 @@ python scripts/bundle.py --pages    # rebuilds dist/, the preview image and docs
 git add docs data && git commit -m "Results as of …" && git push
 ```
 
+**Keeping it current:** the scheduled updates publish new results to the claude.ai page
+only (scheduled runs can't push to GitHub). About 25 minutes after each update, a Claude
+chat session reads the live claude.ai page and runs
+`python scripts/sync_from_artifact.py <saved page>`, which copies its results into
+`data/results.json` and rebuilds `docs/`; then it commits and pushes. `data/results.json`
+is what the page shows; the `data/raw/` snapshots in this repo can trail it.
+
 `docs/index.html` is the same page as `dist/index.html`, plus what a plain web host
 needs: a doctype, the language tag, a tab icon, and the link-preview tags pointing at
 `docs/preview.png`. `data/source/` (Census and us-atlas files) is committed so anyone
