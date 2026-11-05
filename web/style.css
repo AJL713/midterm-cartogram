@@ -360,3 +360,26 @@ details.notes summary { padding: 12px 0 8px; font: 600 13px var(--body); letter-
   pointer-events: none; white-space: nowrap;
 }
 @media (hover: none) { .wheel-hint { display: none; } } /* phones and tablets pinch instead */
+
+/* ---------- smooth changes ---------- */
+/* Toggle highlight: one pill per group that slides to the pressed button. */
+.tabs { position: relative; }
+.tabs .pill-bg { position: absolute; top: 3px; bottom: 3px; left: 0; border-radius: 999px; background: var(--ink); pointer-events: none; }
+.tabs .pill-bg.ready { transition: transform .28s cubic-bezier(.3,.7,.2,1), width .28s cubic-bezier(.3,.7,.2,1); }
+.tabs button { position: relative; z-index: 1; transition: color .2s; }
+.tabs button[aria-pressed="true"] { background: transparent; color: var(--paper); }
+/* Crossfade timing; the toggles and the tally animate themselves instead. */
+::view-transition-old(root), ::view-transition-new(root) { animation-duration: .28s; }
+.controls { view-transition-name: controls; }
+.tally { view-transition-name: tally; }
+::view-transition-old(controls), ::view-transition-old(tally) { display: none; }
+::view-transition-new(controls), ::view-transition-new(tally) { animation: none; }
+/* Small things appear with a short fade instead of popping in. */
+@keyframes fade-in { from { opacity: 0; transform: translateY(3px); } to { opacity: 1; transform: none; } }
+#tip:not([hidden]) { animation: fade-in .12s ease-out; }
+.state-card:not([hidden]), .zoom-out:not([hidden]), .final-banner:not([hidden]) { animation: fade-in .22s ease-out; }
+@media (prefers-reduced-motion: reduce) {
+  .tabs .pill-bg.ready, .tabs button { transition: none; }
+  #tip:not([hidden]), .state-card:not([hidden]), .zoom-out:not([hidden]), .final-banner:not([hidden]) { animation: none; }
+  ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; }
+}

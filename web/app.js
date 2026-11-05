@@ -417,9 +417,9 @@ function drawTally() {
   const t = tally(view);
   const D = t.won.D + t.held.D, R = t.won.R + t.held.R;
   const pct = (n) => `${(100 * n) / t.seats}%`;
-  document.getElementById("d-num").textContent = D;
-  document.getElementById("r-num").textContent = R;
-  document.getElementById("u-num").textContent = t.pending;
+  countTo(document.getElementById("d-num"), D);
+  countTo(document.getElementById("r-num"), R);
+  countTo(document.getElementById("u-num"), t.pending);
   // The House number is just races won, so no sub-line; Senate and governor totals add seats not up.
   const sub = (won, held) => (view === "house" ? "" : `${won} won Tuesday + ${held} not up`);
   document.getElementById("d-sub").textContent = sub(t.won.D, t.held.D);
@@ -775,9 +775,11 @@ function drawChanges() {
 }
 
 function setFlipsOnly(on) {
-  flipsOnly = on;
-  drawMap();
-  drawChanges();
+  smoothly(() => {
+    flipsOnly = on;
+    drawMap();
+    drawChanges();
+  });
 }
 
 /* ------------------------------------------------------------------ calls over time */
@@ -1226,6 +1228,46 @@ function wirePanZoom() {
   document.getElementById("zoom-out-btn").addEventListener("click", () => step(1 / 1.6));
 }
 
+/* ------------------------------------------------------------------ smooth changes */
+// Switching office, style or filter crossfades the page instead of jumping
+// (the browser's View Transitions; browsers without it switch instantly, as before).
+// The toggles and the tally are left out of the crossfade: the toggle highlight
+// slides and the numbers count, so they never show a double image.
+
+function smoothly(change) {
+  if (reduceMotion() || !document.startViewTransition) { change(); return; }
+  document.startViewTransition(change);
+}
+
+/** Count a number from what it shows now to `to` (instant on first draw or with reduced motion). */
+function countTo(el, to) {
+  const from = Number(el.dataset.value ?? NaN);
+  el.dataset.value = to;
+  if (!Number.isFinite(from) || from === to || reduceMotion()) { el.textContent = to; return; }
+  cancelAnimationFrame(el._count);
+  const t0 = performance.now(), ms = 450;
+  const step = (now) => {
+    const k = Math.min(1, (now - t0) / ms), eased = 1 - (1 - k) ** 3;
+    el.textContent = Math.round(from + (to - from) * eased);
+    if (k < 1) el._count = requestAnimationFrame(step);
+  };
+  el._count = requestAnimationFrame(step);
+}
+
+/** Each toggle group has one highlight that slides under the pressed button. */
+function placePills() {
+  for (const group of document.querySelectorAll(".tabs")) {
+    let pill = group.querySelector(".pill-bg");
+    if (!pill) { pill = document.createElement("span"); pill.className = "pill-bg"; pill.setAttribute("aria-hidden", "true"); group.prepend(pill); }
+    const on = group.querySelector('button[aria-pressed="true"]');
+    if (!on) continue;
+    pill.style.width = `${on.offsetWidth}px`;
+    pill.style.transform = `translateX(${on.offsetLeft}px)`;
+    // No slide on the very first placement, only on later changes.
+    if (!pill.dataset.placed) { pill.dataset.placed = "1"; pill.getBoundingClientRect(); pill.classList.add("ready"); }
+  }
+}
+
 /* ------------------------------------------------------------------ state card */
 
 /** One state's results for all three offices, shown under the map. */
@@ -1339,6 +1381,7 @@ function render() {
   drawTurnout();
   drawTable();
   hideTip();
+  placePills();
 }
 
 // Links look like #senate (cartogram) or #senate-map / #house-dots.
@@ -1357,13 +1400,14 @@ async function main() {
   DATA = await loadData();
   readHash();
   document.querySelectorAll("[data-view]").forEach((b) =>
-    b.addEventListener("click", () => { view = b.dataset.view; writeHash(); render(); }));
+    b.addEventListener("click", () => { if (b.dataset.view === view) return; smoothly(() => { view = b.dataset.view; writeHash(); render(); }); }));
   document.querySelectorAll("[data-style]").forEach((b) =>
-    b.addEventListener("click", () => { style = b.dataset.style; writeHash(); render(); }));
+    b.addEventListener("click", () => { if (b.dataset.style === style) return; smoothly(() => { style = b.dataset.style; writeHash(); render(); }); }));
+  addEventListener("resize", placePills);
   document.getElementById("show-flips").addEventListener("click", () => setFlipsOnly(!flipsOnly));
   document.getElementById("zoom-out").addEventListener("click", zoomOut);
   wireSearch();
-  addEventListener("hashchange", () => { readHash(); render(); });
+  addEventListener("hashchange", () => smoothly(() => { readHash(); render(); }));
 
   const when = new Date(DATA.results.updated);
   const whenText = when.toLocaleString(undefined, {
