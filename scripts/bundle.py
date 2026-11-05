@@ -70,6 +70,7 @@ def main() -> None:
     ap = argparse.ArgumentParser(description="Bundle web/ and data/ into dist/index.html.")
     ap.add_argument("--site-url", default="", help="public address of the hosted page (adds link-preview tags)")
     ap.add_argument("--pages", action="store_true", help="also build the public GitHub Pages site in docs/")
+    ap.add_argument("--experimental", action="store_true", help="mark the build as the experiment branch (banner; written to dist/experimental.html)")
     args = ap.parse_args()
     web, data = ROOT / "web", ROOT / "data"
     html = (web / "index.html").read_text()
@@ -91,7 +92,13 @@ def main() -> None:
                         f"<script>{data_js}</script>\n<script>\n{js}</script>")
     assert "style.css" not in html and 'src="app.js"' not in html, "placeholders not replaced"
 
-    out = ROOT / "dist" / "index.html"
+    if args.experimental:
+        # The experiment branch's preview: a banner so it can't be mistaken for the real page.
+        banner = ('<p class="unofficial" style="background:#fff3c4;color:#5a4300;border-radius:6px;padding:6px 10px">'
+                  "Experimental version. The real page is at "
+                  f'<a href="{PAGES_URL}">{PAGES_URL.replace("https://", "")}</a></p>')
+        html = html.replace('<main class="wrap">', '<main class="wrap">' + banner, 1)
+    out = ROOT / "dist" / ("experimental.html" if args.experimental else "index.html")
     out.parent.mkdir(exist_ok=True)
     out.write_text(html.replace("<!--SITE_TAGS-->", site_tags(args.site_url)))
     print(f"wrote {out} ({out.stat().st_size // 1024} KB)")

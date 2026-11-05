@@ -56,6 +56,15 @@ needs: a doctype, the language tag, a tab icon, and the link-preview tags pointi
 `docs/preview.png`. `data/source/` (Census and us-atlas files) is committed so anyone
 can rebuild the map from scratch.
 
+## Experiment branch
+
+Changes are tried on the `experiment` branch first; `main` is what the public site
+serves. `python scripts/bundle.py --experimental` builds `dist/experimental.html` with a
+yellow "Experimental version" banner, published as a separate claude.ai page. When an
+experiment is ready: `git checkout main && git merge experiment`, rebuild with
+`--pages`, publish the real artifact, push. Results syncs always go to `main`; rebase the
+branch on `main` now and then (`git rebase main`) so it keeps the latest results.
+
 ## Feedback
 
 The page links to an anonymous Google Form, "Seats, not acres: feedback" (in Alberto's
