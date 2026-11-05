@@ -29,6 +29,10 @@ const CELL_SHAPES = {
     // For each neighbour direction (axial q, r), the two corners of the shared edge.
     EDGES: [[[1, 0], 1, 2], [[1, -1], 0, 1], [[0, -1], 5, 0], [[-1, 0], 4, 5], [[-1, 1], 3, 4], [[0, 1], 2, 3]],
   },
+  hexflat: {  // EXPERIMENT: flat-top hexagons (straight columns, zig-zag rows)
+    CORNERS: [[1, 0], [0.5, 0.866], [-0.5, 0.866], [-1, 0], [-0.5, -0.866], [0.5, -0.866]],
+    EDGES: [[[1, 0], 0, 1], [[0, 1], 1, 2], [[-1, 1], 2, 3], [[-1, 0], 3, 4], [[0, -1], 4, 5], [[1, -1], 5, 0]],
+  },
   square: {  // EXPERIMENT: square-grid layout
     CORNERS: [[-0.866, -0.866], [0.866, -0.866], [0.866, 0.866], [-0.866, 0.866]],
     EDGES: [[[1, 0], 1, 2], [[0, -1], 0, 1], [[-1, 0], 3, 0], [[0, 1], 2, 3]],

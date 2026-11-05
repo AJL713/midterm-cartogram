@@ -1,17 +1,23 @@
-"""EXPERIMENT: alternative House cartogram layouts, side by side.
+"""EXPERIMENT: House cartogram layouts that keep states where they really are.
 
-Writes data/layouts.json: {name: {"label": ..., "shape": "hex"|"square", "hex": [...]}}.
-The experimental build (bundle.py --experimental) includes it and shows a temporary
-"Layout" dropdown. The real page never loads this file.
+Writes data/layouts.json: {name: {"label", "shape", "hex": [...]}}. The experimental
+build (bundle.py --experimental) includes it and shows a temporary "Layout" dropdown.
+The real page never loads this file.
 
-Layouts:
-  current   data/hex.json as published (grow together, optimal re-deal, compaction)
-  tuned     same algorithm, but anchors stay closer to true geography
-  outline   hexagons may only be placed inside the real US silhouette (from
-            data/geo.json); states are dealt inside it
-  dorling   each state is a round blob of hexagons at its true position, blobs
-            pushed apart just until they don't overlap (a "Dorling" cartogram)
-  squares   the current algorithm on a square grid (FiveThirtyEight style)
+All layouts use the real outline of the country (data/geo.json) as the playing field.
+Two ways of dealing the cells to states:
+
+  outline   what is published: every state grows from its label point, then the cells
+            are re-dealt so each state gets the ones nearest its (drifting) centre.
+  geo       "true geography first": each cell starts with the state it physically sits
+            in. States short of seats then take cells from better-off neighbours, one at
+            a time, always from the neighbour with the most to spare, until every state
+            has exactly its seat count. States with land to spare shed their farthest
+            cells, which become gaps. Nothing moves that doesn't have to, so states stay
+            put; only crowded ones (NJ, MA, MD) spill over their borders.
+
+and three cell shapes: pointy-top hexagons (as now), flat-top hexagons, and squares,
+plus a "roomy" grid (smaller cells, more of them, so shapes are truer and gaps show).
 
 Run:  python scripts/layouts.py
 """
@@ -20,14 +26,13 @@ from __future__ import annotations
 
 import json
 import math
-import re
 import sys
 from pathlib import Path
 
 import numpy as np
 from scipy.optimize import linear_sum_assignment
-from shapely.geometry import MultiPolygon, Point, Polygon
-from shapely.ops import unary_union
+from shapely.geometry import Point
+from shapely.prepared import prep
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import build_hex as bh  # noqa: E402
@@ -36,11 +41,13 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 SEATS = bh.SEATS
 SQRT3 = math.sqrt(3)
+INSETS = ("AK", "HI")
 
 
-# ----------------------------------------------------------------- grid geometry
+# ----------------------------------------------------------------- grid geometries
 
 class Hex:
+    """Pointy-top hexagons, axial (q, r); the published grid."""
     shape = "hex"
     neighbours = bh.NEIGHBOURS
 
@@ -54,11 +61,26 @@ class Hex:
         return round(x / SQRT3 - r / 2), r
 
 
+class HexFlat:
+    """Flat-top hexagons: columns are straight, rows zig-zag."""
+    shape = "hexflat"
+    neighbours = bh.NEIGHBOURS
+
+    @staticmethod
+    def xy(q, r):
+        return 1.5 * q, SQRT3 * (r + q / 2)
+
+    @staticmethod
+    def cell_near(x, y):
+        q = round(x / 1.5)
+        return q, round(y / SQRT3 - q / 2)
+
+
 class Square:
+    """Squares spaced like hexagon columns (SQRT3 apart) so labels and zoom match."""
     shape = "square"
     neighbours = [(1, 0), (-1, 0), (0, 1), (0, -1)]
 
-    # Squares are spaced like hexagon columns (SQRT3 apart), so labels and zoom match.
     @staticmethod
     def xy(q, r):
         return q * SQRT3, r * SQRT3
@@ -68,108 +90,76 @@ class Square:
         return round(x / SQRT3), round(y / SQRT3)
 
 
-def nearest_free(geo, occupied, ax, ay, allowed=None):
-    q0, r0 = geo.cell_near(ax, ay)
-    best, best_d = None, math.inf
-    for dr in range(-14, 15):
-        for dq in range(-14, 15):
-            c = (q0 + dq, r0 + dr)
-            if c in occupied or (allowed is not None and c not in allowed):
-                continue
-            x, y = geo.xy(*c)
-            d = (x - ax) ** 2 + (y - ay) ** 2
-            if d < best_d:
-                best, best_d = c, d
-    if best is None and allowed is not None:  # boxed in: take the nearest free cell anywhere in the mask
-        free = [c for c in allowed if c not in occupied]
-        best = min(free, key=lambda c: (geo.xy(*c)[0] - ax) ** 2 + (geo.xy(*c)[1] - ay) ** 2)
-    if best is None:
-        raise RuntimeError("no free cell near anchor")
-    return best
+# ----------------------------------------------------------------- shared helpers
+
+def pieces(geo, cells) -> list[set]:
+    left, out = set(cells), []
+    while left:
+        todo, seen = [left.pop()], set()
+        while todo:
+            c = todo.pop()
+            seen.add(c)
+            for dq, dr in geo.neighbours:
+                n = (c[0] + dq, c[1] + dr)
+                if n in left:
+                    left.remove(n)
+                    todo.append(n)
+        out.append(seen)
+    return sorted(out, key=len, reverse=True)
 
 
-def grow_all(geo, anchors, occupied, allowed=None):
-    """Every state grows one cell per turn, least-complete state first (as in build_hex)."""
-    cells = {}
-    for s in sorted(SEATS, key=lambda s: SEATS[s]):
-        cells[s] = [nearest_free(geo, occupied, *anchors[s], allowed)]
-        occupied.add(cells[s][0])
-
-    def dist(c, s):
-        x, y = geo.xy(*c)
-        return (x - anchors[s][0]) ** 2 + (y - anchors[s][1]) ** 2
-
-    while True:
-        todo = [s for s in SEATS if len(cells[s]) < SEATS[s]]
-        if not todo:
-            return cells
-        s = min(todo, key=lambda s: (len(cells[s]) / SEATS[s], s))
-        frontier = {(q + dq, r + dr) for q, r in cells[s] for dq, dr in geo.neighbours
-                    if (q + dq, r + dr) not in occupied and (allowed is None or (q + dq, r + dr) in allowed)}
-        c = min(frontier, key=lambda c: dist(c, s)) if frontier else nearest_free(geo, occupied, *anchors[s], allowed)
-        cells[s].append(c)
-        occupied.add(c)
-
-
-def assign_optimally(geo, pool, anchors):
-    slots = [s for s in sorted(SEATS) for _ in range(SEATS[s])]
-    pts = np.array([geo.xy(*c) for c in pool])
-    anc = np.array([anchors[s] for s in slots])
-    cost = ((pts[:, None, :] - anc[None, :, :]) ** 2).sum(axis=2)
-    rows, cols = linear_sum_assignment(cost)
-    out = {s: [] for s in SEATS}
-    for r, c in zip(rows, cols):
-        out[slots[c]].append(pool[r])
-    return out
-
-
-def lloyd(geo, pool, anchors, rounds=4):
-    anchors = dict(anchors)
-    for _ in range(rounds):
-        regions = assign_optimally(geo, pool, anchors)
-        for s, cells in regions.items():
-            cx = sum(geo.xy(*c)[0] for c in cells) / len(cells)
-            cy = sum(geo.xy(*c)[1] for c in cells) / len(cells)
-            anchors[s] = (0.5 * anchors[s][0] + 0.5 * cx, 0.5 * anchors[s][1] + 0.5 * cy)
-    return assign_optimally(geo, pool, anchors)
-
-
-def compact(geo, regions):
-    """Slide whole states sideways toward the centre while the cells they move into are empty."""
-    movable = [s for s in regions if s not in ("AK", "HI")]
-    pts = [geo.xy(*c) for s in movable for c in regions[s]]
-    cx = sum(p[0] for p in pts) / len(pts)
-
-    def centre_x(cells):
-        return sum(geo.xy(*c)[0] for c in cells) / len(cells)
-
-    moved = True
-    while moved:
-        moved = False
-        occupied = {c for cells in regions.values() for c in cells}
-        for s in sorted(movable, key=lambda s: abs(centre_x(regions[s]) - cx)):
-            own = set(regions[s])
-            here = abs(centre_x(regions[s]) - cx)
-            best = None
-            for dq, dr in ((1, 0), (-1, 0)):
-                shifted = [(q + dq, r + dr) for q, r in regions[s]]
-                if any(c in occupied and c not in own for c in shifted):
-                    continue
-                d = abs(centre_x(shifted) - cx)
-                if d < here - 0.5 and (best is None or d < best[0]):
-                    best = (d, shifted)
-            if best:
-                occupied -= own
-                regions[s] = best[1]
-                occupied |= set(best[1])
-                moved = True
-    return regions
+def join_pieces(geo, regions: dict[str, list], free: set = frozenset()) -> dict[str, list]:
+    """Until every state is in one piece: move a stray cell into free space next to
+    the state's main piece, or swap it with a neighbour's cell there (as long as
+    that neighbour stays whole)."""
+    owner = {c: s for s, cells in regions.items() for c in cells}
+    free = set(free)
+    for _ in range(800):
+        split = [(s, pieces(geo, regions[s])) for s in regions]
+        split = [(s, ps) for s, ps in split if len(ps) > 1]
+        if not split:
+            return regions
+        s, ps = split[0]
+        main, stray = ps[0], ps[-1]
+        done = False
+        for c in sorted(stray):
+            for m in main:
+                for dq, dr in geo.neighbours:
+                    d = (m[0] + dq, m[1] + dr)
+                    t = owner.get(d)
+                    if t == s:
+                        continue
+                    if t is None:
+                        if d not in free:
+                            continue
+                        regions[s] = [x for x in regions[s] if x != c] + [d]
+                        owner[d] = s
+                        del owner[c]
+                        free.discard(d)
+                        free.add(c)
+                        done = True
+                        break
+                    new_t = [x for x in regions[t] if x != d] + [c]
+                    if len(pieces(geo, new_t)) > len(pieces(geo, regions[t])):
+                        continue
+                    regions[t] = new_t
+                    regions[s] = [x for x in regions[s] if x != c] + [d]
+                    owner[d], owner[c] = s, t
+                    done = True
+                    break
+                if done:
+                    break
+            if done:
+                break
+        if not done:
+            raise RuntimeError(f"could not join {s} into one piece")
+    raise RuntimeError("too many swaps while joining pieces")
 
 
 def to_records(geo, regions):
     out = []
     for state, cells in regions.items():
-        cells = sorted(cells, key=lambda c: (geo.xy(*c)[1], geo.xy(*c)[0]))
+        cells = sorted(cells, key=lambda c: (round(geo.xy(*c)[1], 3), geo.xy(*c)[0]))
         for i, (q, r) in enumerate(cells, start=1):
             x, y = geo.xy(q, r)
             out.append({"id": bh.district_id(state, i), "state": state,
@@ -177,169 +167,198 @@ def to_records(geo, regions):
     return out
 
 
-# ----------------------------------------------------------------- real geography
+class Field:
+    """The country outline laid over a grid: which cells are inside, at what scale."""
 
-def state_shapes() -> dict[str, MultiPolygon]:
-    """Each state's outline from data/geo.json (Albers USA, Alaska and Hawaii inset)."""
+    def __init__(self, geo, slack: float):
+        self.geo = geo
+        country, mainland, labels = bh.country_outline()
+        self.country, self.mainland, self.labels = prep(country), prep(mainland), labels
+        minx, miny, maxx, maxy = country.bounds
+        self.bounds = (minx, miny, maxx, maxy)
+        lo, hi = 5.0, 40.0  # cells shrink as k grows; find the k that gives ~432*slack mainland cells
+        for _ in range(18):
+            k = (lo + hi) / 2
+            _, n = self.cells_at(k)
+            lo, hi = (k, hi) if n > 432 * slack else (lo, k)
+        self.k = lo
+        allowed, _ = self.cells_at(self.k)
+        self.allowed = pieces(geo, allowed)[0]  # the connected mainland only; islands are dropped
+        self.anchors = {s: (labels[s][0] / self.k, labels[s][1] / self.k) for s in SEATS}
+        # Alaska and Hawaii: fixed cells at their inset positions, outside the mainland deal.
+        self.insets = {}
+        for s in INSETS:
+            c = geo.cell_near(*self.anchors[s])
+            self.insets[s] = [c, (c[0] + 1, c[1])][: SEATS[s]]
+        self.mainland_seats = {s: n for s, n in SEATS.items() if s not in INSETS}
+
+    def cells_at(self, k):
+        minx, miny, maxx, maxy = self.bounds
+        span = int(max(maxx, maxy) / k) + 6
+        inside, on_mainland = set(), 0
+        for q in range(-span, span):
+            for r in range(-span, span):
+                x, y = self.geo.xy(q, r)
+                if not (minx <= x * k <= maxx and miny <= y * k <= maxy):
+                    continue
+                pt = Point(x * k, y * k)
+                if self.country.contains(pt):
+                    inside.add((q, r))
+                    on_mainland += self.mainland.contains(pt)
+        return inside, on_mainland
+
+    def state_at(self, cell, shapes) -> str | None:
+        x, y = self.geo.xy(*cell)
+        pt = Point(x * self.k, y * self.k)
+        for s, g in shapes.items():
+            if g.contains(pt):
+                return s
+        return None
+
+
+# ----------------------------------------------------------------- dealing methods
+
+def deal_outline(field: Field, rounds: int):
+    """The published method: grow, then re-deal optimally with drifting anchors."""
+    geo, seats = field.geo, field.mainland_seats
+    anchors = dict(field.anchors)
+    # grow (from build_hex, which works on pointy hexes only) — reimplemented for any grid
+    occupied, cells = set(), {}
+    for s in sorted(seats, key=lambda s: seats[s]):
+        cells[s] = [nearest_free(geo, occupied, field.allowed, *anchors[s])]
+        occupied.add(cells[s][0])
+    while True:
+        todo = [s for s in seats if len(cells[s]) < seats[s]]
+        if not todo:
+            break
+        s = min(todo, key=lambda s: (len(cells[s]) / seats[s], s))
+        fr = {(q + dq, r + dr) for q, r in cells[s] for dq, dr in geo.neighbours
+              if (q + dq, r + dr) in field.allowed and (q + dq, r + dr) not in occupied}
+        c = min(fr, key=lambda c: dist2(geo, c, anchors[s])) if fr else nearest_free(geo, occupied, field.allowed, *anchors[s])
+        cells[s].append(c)
+        occupied.add(c)
+    pool = [c for cs in cells.values() for c in cs]
+    for _ in range(rounds):
+        regions = assign(geo, pool, anchors, seats)
+        for s, cs in regions.items():
+            cx = sum(geo.xy(*c)[0] for c in cs) / len(cs)
+            cy = sum(geo.xy(*c)[1] for c in cs) / len(cs)
+            anchors[s] = (0.5 * anchors[s][0] + 0.5 * cx, 0.5 * anchors[s][1] + 0.5 * cy)
+    regions = join_pieces(geo, assign(geo, pool, anchors, seats))
+    regions.update(field.insets)
+    return regions
+
+
+def dist2(geo, c, p):
+    x, y = geo.xy(*c)
+    return (x - p[0]) ** 2 + (y - p[1]) ** 2
+
+
+def nearest_free(geo, occupied, allowed, ax, ay):
+    free = [c for c in allowed if c not in occupied]
+    return min(free, key=lambda c: dist2(geo, c, (ax, ay)))
+
+
+def assign(geo, pool, anchors, seats):
+    slots = [s for s in sorted(seats) for _ in range(seats[s])]
+    pts = np.array([geo.xy(*c) for c in pool])
+    anc = np.array([anchors[s] for s in slots])
+    cost = ((pts[:, None, :] - anc[None, :, :]) ** 2).sum(axis=2)
+    rows, cols = linear_sum_assignment(cost)
+    out = {s: [] for s in seats}
+    for r, c in zip(rows, cols):
+        out[slots[c]].append(pool[r])
+    return out
+
+
+def deal_geo(field: Field, label_weight: float = 0.05):
+    """Balanced assignment on true geography. Each cell's cost for a state is how far
+    the cell lies outside that state's real land (zero inside it), plus a small pull
+    toward the state's label point so the cells a state takes beyond its borders are
+    the near ones. The assignment gives every state exactly its seat count at the
+    least total cost; cells left over (the grid has a few more than 432) go unused.
+    States keep their place; crowded ones spill into the nearest neighbouring land."""
+    geo, seats, allowed = field.geo, field.mainland_seats, field.allowed
+    shapes = {s: g for s, g in state_polygons(prepared=False).items() if s in seats}
+    cells = sorted(c for c in allowed if c not in {x for v in field.insets.values() for x in v})
+    pts = [Point(geo.xy(*c)[0] * field.k, geo.xy(*c)[1] * field.k) for c in cells]
+    names = sorted(seats)
+    cost = np.zeros((len(cells), 432 + (len(cells) - 432)))
+    col = 0
+    slots = []
+    for s in names:
+        d = np.array([shapes[s].distance(pt) / field.k for pt in pts])
+        pull = np.array([dist2(geo, c, field.anchors[s]) for c in cells])
+        for _ in range(seats[s]):
+            cost[:, col] = d ** 2 + label_weight * pull
+            slots.append(s)
+            col += 1
+    cost[:, col:] = 0.0  # spare slots: a cell nobody needs costs nothing
+    index = {c: i for i, c in enumerate(cells)}
+    slot_cols = {}
+    for i, s in enumerate(slots):
+        slot_cols.setdefault(s, []).append(i)
+    # Deal; where a state comes out in pieces, make its stray cells dear to it and
+    # deal again. A few rounds settle it; join_pieces mends anything left.
+    for _ in range(80):
+        rows, cols = linear_sum_assignment(cost)
+        regions = {s: [] for s in seats}
+        for r, c in zip(rows, cols):
+            if c < len(slots):
+                regions[slots[c]].append(cells[r])
+        strays = [(s, c) for s in seats for pc in pieces(geo, regions[s])[1:] for c in pc]
+        if not strays:
+            break
+        for s, c in strays:
+            cost[index[c], slot_cols[s]] += 25.0
+    used = {c for cs in regions.values() for c in cs}
+    regions = join_pieces(geo, regions, free=set(cells) - used)
+    regions.update(field.insets)
+    return regions
+
+
+def state_polygons(prepared=True):
+    """State outlines as shapely shapes."""
+    import re
+    from shapely.geometry import Polygon
+    from shapely.ops import unary_union
+
     geo = json.loads((DATA / "geo.json").read_text())
-    shapes = {}
+    out = {}
     for st in geo["states"]:
         polys = []
         for sub in re.findall(r"M([^M]+)", st["path"]):
             pts = [tuple(map(float, p.split(","))) for p in re.findall(r"[-\d.]+,[-\d.]+", sub)]
             if len(pts) >= 3:
-                polys.append(Polygon(pts))
-        shapes[st["state"]] = unary_union([p.buffer(0) for p in polys])
-    return shapes
+                polys.append(Polygon(pts).buffer(0))
+        out[st["state"]] = prep(unary_union(polys)) if prepared else unary_union(polys)
+    return out
 
 
-def label_points() -> dict[str, tuple[float, float]]:
-    geo = json.loads((DATA / "geo.json").read_text())
-    return {st["state"]: (float(st["x"]), float(st["y"])) for st in geo["states"]}
-
-
-# ----------------------------------------------------------------- the layouts
-
-def layout_current():
-    return json.loads((DATA / "hex.json").read_text())
-
-
-def layout_tuned():
-    """Anchors closer to geography (EQUALIZE 0.3 instead of 0.5), then compacted as now."""
-    old = bh.EQUALIZE
-    bh.EQUALIZE = 0.3
-    try:
-        anchors = {s: bh.anchor_xy(s) for s in SEATS}
-    finally:
-        bh.EQUALIZE = old
-    geo = Hex()
-    grown = grow_all(geo, anchors, set())
-    pool = [c for cells in grown.values() for c in cells]
-    return to_records(geo, compact(geo, lloyd(geo, pool, anchors)))
-
-
-def layout_outline():
-    """Only cells inside the real US silhouette may be used."""
-    geo = Hex()
-    shapes = state_shapes()
-    country = unary_union(list(shapes.values()))
-    mainland = unary_union([g for st, g in shapes.items() if st not in ("AK", "HI")])
-    labels = label_points()
-    minx, miny, maxx, maxy = country.bounds
-
-    def mask_at(k):  # k = map pixels per hex unit
-        allowed = set()
-        for r in range(int(miny / k / 1.5) - 2, int(maxy / k / 1.5) + 3):
-            for q in range(int(minx / k / SQRT3) - r // 2 - 3, int(maxx / k / SQRT3) - r // 2 + 4):
-                x, y = geo.xy(q, r)
-                if country.contains(Point(x * k, y * k)):
-                    allowed.add((q, r))
-        return allowed
-
-    lo, hi = 5.0, 40.0  # binary search the scale so the mainland holds ~ 432 * 1.15 cells (AK, HI have their own)
-    for _ in range(18):
-        k = (lo + hi) / 2
-        n = sum(1 for q, r in mask_at(k) if mainland.contains(Point(geo.xy(q, r)[0] * k, geo.xy(q, r)[1] * k)))
-        if n > 432 * 1.15:
-            lo = k
-        else:
-            hi = k
-    k = lo
-    allowed = mask_at(k)
-    anchors = {s: (labels[s][0] / k, labels[s][1] / k) for s in SEATS}
-    # Alaska and Hawaii are insets too small to hold a hexagon; give each its own cells there.
-    for s in ("AK", "HI"):
-        c = geo.cell_near(*anchors[s])
-        allowed |= {c} | {(c[0] + dq, c[1] + dr) for dq, dr in geo.neighbours}
-    grown = grow_all(geo, anchors, set(), allowed)
-    pool = [c for cells in grown.values() for c in cells]
-    return to_records(geo, lloyd(geo, pool, anchors, rounds=3))
-
-
-def layout_dorling():
-    """Round blobs at true positions, pushed apart until they no longer overlap."""
-    geo = Hex()
-    labels = label_points()
-    total_area = 435 * 2.598  # hexagon of radius 1
-    # Scale the map so the blobs cover about 55% of the mainland's box.
-    xs = [p[0] for s, p in labels.items() if s not in ("AK", "HI")]
-    ys = [p[1] for s, p in labels.items() if s not in ("AK", "HI")]
-    box = (max(xs) - min(xs)) * (max(ys) - min(ys))
-    k = math.sqrt(box / (total_area / 0.55))
-    pos = {s: [labels[s][0] / k, labels[s][1] / k] for s in SEATS}
-    rad = {s: 0.909 * math.sqrt(SEATS[s]) + 0.6 for s in SEATS}
-    home = {s: tuple(pos[s]) for s in SEATS}
-    for _ in range(400):  # Dorling relaxation: overlapping circles repel, all drift home a little
-        for a in SEATS:
-            for b in SEATS:
-                if a >= b:
-                    continue
-                dx, dy = pos[b][0] - pos[a][0], pos[b][1] - pos[a][1]
-                d = math.hypot(dx, dy) or 1e-6
-                overlap = rad[a] + rad[b] - d
-                if overlap > 0:
-                    wa = SEATS[b] / (SEATS[a] + SEATS[b])
-                    pos[a][0] -= dx / d * overlap * wa * 0.5
-                    pos[a][1] -= dy / d * overlap * wa * 0.5
-                    pos[b][0] += dx / d * overlap * (1 - wa) * 0.5
-                    pos[b][1] += dy / d * overlap * (1 - wa) * 0.5
-        for s in SEATS:
-            pos[s][0] += (home[s][0] - pos[s][0]) * 0.02
-            pos[s][1] += (home[s][1] - pos[s][1]) * 0.02
-    # Build each blob alone (so it is round), then drop it onto the shared grid.
-    regions, occupied = {}, set()
-    for s in sorted(SEATS, key=lambda s: -SEATS[s]):
-        own = set()
-        c0 = geo.cell_near(0, 0)
-        own.add(c0)
-        while len(own) < SEATS[s]:
-            frontier = {(q + dq, r + dr) for q, r in own for dq, dr in geo.neighbours} - own
-            own.add(min(frontier, key=lambda c: geo.xy(*c)[0] ** 2 + geo.xy(*c)[1] ** 2))
-        # place: try offsets spiralling out from the wanted cell until nothing overlaps
-        want = geo.cell_near(*pos[s])
-        placed = None
-        for ring in range(0, 30):
-            cands = [(want[0] + dq, want[1] + dr) for dq in range(-ring, ring + 1) for dr in range(-ring, ring + 1)
-                     if max(abs(dq), abs(dr)) == ring]
-            cands.sort(key=lambda c: (geo.xy(*c)[0] - pos[s][0]) ** 2 + (geo.xy(*c)[1] - pos[s][1]) ** 2)
-            for off in cands:
-                cells = {(q + off[0], r + off[1]) for q, r in own}
-                if not cells & occupied:
-                    placed = cells
-                    break
-            if placed:
-                break
-        regions[s] = list(placed)
-        occupied |= placed
-    return to_records(geo, regions)
-
-
-def layout_squares():
-    geo = Square()
-    # Same anchors as the current layout, converted from hex units to square units.
-    anchors = {}
-    for s in SEATS:
-        x, y = bh.anchor_xy(s)
-        anchors[s] = (x * 0.93, y / 1.5 * SQRT3 * 1.05)
-    grown = grow_all(geo, anchors, set())
-    pool = [c for cells in grown.values() for c in cells]
-    return to_records(geo, compact(geo, lloyd(geo, pool, anchors)))
-
+# ----------------------------------------------------------------- the menu
 
 def main() -> None:
-    layouts = {
-        "current": {"label": "Current (published)", "shape": "hex", "hex": layout_current()},
-        "tuned": {"label": "Anchors closer to geography", "shape": "hex", "hex": layout_tuned()},
-        "outline": {"label": "Inside the US outline", "shape": "hex", "hex": layout_outline()},
-        "dorling": {"label": "Dorling bubbles", "shape": "hex", "hex": layout_dorling()},
-        "squares": {"label": "Square grid", "shape": "square", "hex": layout_squares()},
-    }
-    for name, lay in layouts.items():
-        assert len(lay["hex"]) == 435, (name, len(lay["hex"]))
-        ids = {h["id"] for h in lay["hex"]}
-        assert len(ids) == 435, name
+    layouts = {}
+
+    def add(key, label, geo, slack, deal):
+        field = Field(geo, slack)
+        print('building', key, flush=True)
+        regions = deal(field)
+        recs = to_records(geo, regions)
+        assert len(recs) == 435 and len({h["id"] for h in recs}) == 435, key
+        layouts[key] = {"label": label, "shape": geo.shape, "hex": recs}
+        print(f"{key:14s} {len(recs)} cells  (scale {field.k:.2f})")
+
+    layouts["current"] = {"label": "Current (published)", "shape": "hex",
+                          "hex": json.loads((DATA / "hex.json").read_text())}
+    add("geo", "True geography, same grid", Hex(), bh.OUTLINE_SLACK, deal_geo)
+    add("geo-roomy", "True geography, roomier grid", Hex(), 1.25, deal_geo)
+    add("geo-tight", "True geography, stronger pull to centre", Hex(), bh.OUTLINE_SLACK, lambda f: deal_geo(f, 0.4))
+    add("geo-flat", "True geography, flat-top hexagons", HexFlat(), 1.10, deal_geo)
+    add("geo-squares", "True geography, squares", Square(), 1.2, deal_geo)
+
     (DATA / "layouts.json").write_text(json.dumps(layouts, separators=(",", ":")))
-    print("wrote", DATA / "layouts.json", {k: len(v["hex"]) for k, v in layouts.items()})
+    print("wrote", DATA / "layouts.json")
 
 
 if __name__ == "__main__":
