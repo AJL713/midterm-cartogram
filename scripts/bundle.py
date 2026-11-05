@@ -83,6 +83,8 @@ def main() -> None:
         "geo": json.loads((data / "geo.json").read_text()),
     }
     payload["county_shapes"] = county_shapes(payload["results"].get("counties", {}))
+    if args.experimental and (data / "layouts.json").exists():  # EXPERIMENT: layout switcher
+        payload["layouts"] = json.loads((data / "layouts.json").read_text())
     data_js = "window.CARTO = " + json.dumps(payload, separators=(",", ":"), ensure_ascii=False) + ";"
     # "</" inside a script would end it early; escape it.
     data_js = data_js.replace("</", "<\\/")

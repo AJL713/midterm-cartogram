@@ -23,12 +23,18 @@ const PARTY = { D: "Democrat", R: "Republican", I: "Independent", L: "Libertaria
 const SVG_NS = "http://www.w3.org/2000/svg";
 
 // Pointy-top hexagon corners for radius 1, clockwise from the top.
-const CORNERS = [[0, -1], [0.866, -0.5], [0.866, 0.5], [0, 1], [-0.866, 0.5], [-0.866, -0.5]];
-// For each neighbour direction (axial q, r), the two corners of the shared edge.
-const EDGES = [
-  [[1, 0], 1, 2], [[1, -1], 0, 1], [[0, -1], 5, 0],
-  [[-1, 0], 4, 5], [[-1, 1], 3, 4], [[0, 1], 2, 3],
-];
+const CELL_SHAPES = {
+  hex: {
+    CORNERS: [[0, -1], [0.866, -0.5], [0.866, 0.5], [0, 1], [-0.866, 0.5], [-0.866, -0.5]],
+    // For each neighbour direction (axial q, r), the two corners of the shared edge.
+    EDGES: [[[1, 0], 1, 2], [[1, -1], 0, 1], [[0, -1], 5, 0], [[-1, 0], 4, 5], [[-1, 1], 3, 4], [[0, 1], 2, 3]],
+  },
+  square: {  // EXPERIMENT: square-grid layout
+    CORNERS: [[-0.866, -0.866], [0.866, -0.866], [0.866, 0.866], [-0.866, 0.866]],
+    EDGES: [[[1, 0], 1, 2], [[0, -1], 0, 1], [[-1, 0], 3, 0], [[0, 1], 2, 3]],
+  },
+};
+let { CORNERS, EDGES } = CELL_SHAPES.hex;
 
 const VIEWS = {
   house: { label: "House", office: "H" },
@@ -299,6 +305,7 @@ function drawCartogram() {
   BASE_VB = [minX, minY, w, h];
   svg.setAttribute("viewBox", BASE_VB.join(" "));
   const house = view === "house";
+  ({ CORNERS, EDGES } = CELL_SHAPES[(house && DATA.hexShape) || "hex"]);
   const size = house ? 1 : 0.94; // small gap between state tiles
 
   const seats = el("g", {}, svg);
@@ -1419,6 +1426,7 @@ function writeHash() {
 async function main() {
   if (!document.documentElement.lang) document.documentElement.lang = "en";
   DATA = await loadData();
+  if (DATA.layouts) layoutSwitcher();  // EXPERIMENT only: never present in the real build
   readHash();
   document.querySelectorAll("[data-view]").forEach((b) =>
     b.addEventListener("click", () => { if (b.dataset.view === view) return; smoothly(() => { view = b.dataset.view; writeHash(); render(); }); }));
@@ -1442,3 +1450,22 @@ async function main() {
 }
 
 main();
+
+
+/* ------------------------------------------------------------------ EXPERIMENT: layout switcher */
+// Temporary dropdown on the experiment build to compare House cartogram layouts
+// (scripts/layouts.py). Remove once a layout is chosen.
+function layoutSwitcher() {
+  const wrap = document.createElement("label");
+  wrap.className = "layout-switch";
+  wrap.innerHTML = `Layout <select id="layout-pick"></select>`;
+  const sel = wrap.querySelector("select");
+  for (const [k, l] of Object.entries(DATA.layouts)) {
+    const o = document.createElement("option"); o.value = k; o.textContent = l.label; sel.append(o);
+  }
+  sel.addEventListener("change", () => {
+    const l = DATA.layouts[sel.value];
+    smoothly(() => { DATA.hex = l.hex; DATA.hexShape = l.shape; zoomState = null; render(); });
+  });
+  document.querySelector(".controls").append(wrap);
+}

@@ -411,3 +411,6 @@ details.notes summary { padding: 12px 0 8px; font: 600 13px var(--body); letter-
 /* House cartogram: one- and two-seat states get a smaller name so neighbours don't collide. */
 .label.house.small { font-size: .8px; stroke-width: .22px; }
 #map.zoomed .label.house.small { font-size: calc(.8px / var(--z, 1)); stroke-width: calc(.22px / var(--z, 1)); }
+/* EXPERIMENT: layout switcher (experiment build only) */
+.layout-switch { display: inline-flex; align-items: center; gap: 6px; font: 600 12px/1 var(--display); text-transform: uppercase; letter-spacing: .06em; color: var(--ink-2); }
+.layout-switch select { font: 500 14px/1.2 var(--body); color: var(--ink); background: var(--panel); border: 1px solid var(--rule); border-radius: 999px; padding: 8px 12px; }
