@@ -402,6 +402,26 @@ details.notes summary { padding: 12px 0 8px; font: 600 13px var(--body); letter-
   #tip:not([hidden]), .state-card:not([hidden]), .zoom-out:not([hidden]), .final-banner:not([hidden]) { animation: none; }
   ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; }
 }
+
+/* ---------- steady tally board + changed-party switch ---------- */
+/* The line under each number is always there (House shows seats taken from the other
+   party), so the board never changes height when switching offices. */
+.side .sub, .side .sub:empty { display: block; min-height: 1.3em; }
+.bar span { transition: width .45s cubic-bezier(.3,.7,.2,1); }
+/* "Only show these on the map": a small on/off switch. The label never changes,
+   so the line doesn't reflow; the switch itself shows on or off. */
+.flip-switch { display: inline-flex; align-items: center; gap: 7px; padding: 3px 10px 3px 4px; border: 1px solid var(--rule);
+  border-radius: 999px; background: var(--panel); color: var(--ink); font: 500 13px/1.4 var(--body); cursor: pointer;
+  transition: border-color .2s, background-color .2s; }
+.flip-switch:hover { border-color: var(--ink-2); }
+.flip-switch .track { position: relative; box-sizing: border-box; width: 28px; height: 16px; border-radius: 999px;
+  border: 1.5px solid var(--ink-2); background: transparent; transition: background-color .2s, border-color .2s; }
+.flip-switch .track::after { content: ""; position: absolute; top: 2px; left: 2px; width: 9px; height: 9px; border-radius: 50%;
+  background: var(--ink-2); transition: transform .2s cubic-bezier(.3,.7,.2,1), background-color .2s; }
+.flip-switch[aria-pressed="true"] { border-color: var(--ink); }
+.flip-switch[aria-pressed="true"] .track { background: var(--ink); border-color: var(--ink); }
+.flip-switch[aria-pressed="true"] .track::after { transform: translateX(12px); background: var(--paper); }
+@media (prefers-reduced-motion: reduce) { .flip-switch, .flip-switch .track, .flip-switch .track::after, .bar span { transition: none; } }
 </style>
 
 <main class="wrap">
@@ -463,7 +483,7 @@ details.notes summary { padding: 12px 0 8px; font: 600 13px var(--body); letter-
     <p class="status"><span id="status"></span> <button type="button" class="q" data-term="majority" aria-label="What is a majority?">?</button></p>
     <p class="status" id="held-note" hidden></p>
     <p class="status changes"><span id="changes"></span> <button type="button" class="q" data-term="gain" aria-label="What counts as changing party?">?</button>
-      <button type="button" class="linkish" id="show-flips" aria-pressed="false">Show them on the map</button></p>
+      <button type="button" class="flip-switch" id="show-flips" aria-pressed="false"><span class="track" aria-hidden="true"></span>Only show these on the map</button></p>
     <p class="status asof">Results as of <span data-updated>…</span>, from Wikipedia's results pages (sources below).</p>
   </section>
 
@@ -945,10 +965,16 @@ function drawTally() {
   countTo(document.getElementById("d-num"), D);
   countTo(document.getElementById("r-num"), R);
   countTo(document.getElementById("u-num"), t.pending);
-  // The House number is just races won, so no sub-line; Senate and governor totals add seats not up.
-  const sub = (won, held) => (view === "house" ? "" : `${won} won Tuesday + ${held} not up`);
-  document.getElementById("d-sub").textContent = sub(t.won.D, t.held.D);
-  document.getElementById("r-sub").textContent = sub(t.won.R, t.held.R);
+  // Every view has a line under each number, so the board keeps the same height when
+  // switching. Senate and governor totals add seats not up; the House line says how
+  // many seats each party took from the other.
+  const gains = { D: 0, R: 0 };
+  for (const r of racesFor(VIEWS[view].office)) if (r.flip && r.winner in gains) gains[r.winner]++;
+  const from = { D: "Republicans", R: "Democrats" };
+  const sub = (p) => view !== "house" ? `${t.won[p]} won Tuesday + ${t.held[p]} not up`
+    : gains[p] ? `${gains[p]} seat${gains[p] > 1 ? "s" : ""} taken from ${from[p]}` : `No seats taken from ${from[p]}`;
+  document.getElementById("d-sub").textContent = sub("D");
+  document.getElementById("r-sub").textContent = sub("R");
   // Senate and governor totals include seats with no race this year.
   const note = document.getElementById("held-note");
   const notUp = t.held.D + t.held.R;
@@ -958,13 +984,13 @@ function drawTally() {
     `. <button type="button" class="q" data-term="notup" aria-label="Why are some seats not up?">?</button>`;
   note.hidden = view === "house";
 
+  // The five segments are made once and only their widths change, so switching
+  // views slides them to the new sizes instead of redrawing the bar.
   const bar = document.getElementById("bar");
-  bar.innerHTML =
-    `<span class="d hold" style="width:${pct(t.held.D)}"></span>` +
-    `<span class="d" style="width:${pct(t.won.D)}"></span>` +
-    `<span class="u" style="width:${pct(t.pending + t.won.other)}"></span>` +
-    `<span class="r" style="width:${pct(t.won.R)}"></span>` +
-    `<span class="r hold" style="width:${pct(t.held.R)}"></span>`;
+  if (bar.children.length !== 5)
+    bar.innerHTML = ["d hold", "d", "u", "r", "r hold"].map((c) => `<span class="${c}"></span>`).join("");
+  [t.held.D, t.won.D, t.pending + t.won.other, t.won.R, t.held.R]
+    .forEach((n, i) => { bar.children[i].style.width = pct(n); });
   bar.setAttribute("aria-label", `Democrats ${D}, not yet called ${t.pending}, Republicans ${R}, of ${t.seats}`);
 
   const tick = document.getElementById("tick");
@@ -1295,7 +1321,6 @@ function drawChanges() {
   document.getElementById("changes").innerHTML = text;
   const btn = document.getElementById("show-flips");
   btn.hidden = !n;
-  btn.textContent = flipsOnly ? "Show all seats again" : "Show them on the map";
   btn.setAttribute("aria-pressed", String(flipsOnly));
 }
 

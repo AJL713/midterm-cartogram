@@ -420,10 +420,16 @@ function drawTally() {
   countTo(document.getElementById("d-num"), D);
   countTo(document.getElementById("r-num"), R);
   countTo(document.getElementById("u-num"), t.pending);
-  // The House number is just races won, so no sub-line; Senate and governor totals add seats not up.
-  const sub = (won, held) => (view === "house" ? "" : `${won} won Tuesday + ${held} not up`);
-  document.getElementById("d-sub").textContent = sub(t.won.D, t.held.D);
-  document.getElementById("r-sub").textContent = sub(t.won.R, t.held.R);
+  // Every view has a line under each number, so the board keeps the same height when
+  // switching. Senate and governor totals add seats not up; the House line says how
+  // many seats each party took from the other.
+  const gains = { D: 0, R: 0 };
+  for (const r of racesFor(VIEWS[view].office)) if (r.flip && r.winner in gains) gains[r.winner]++;
+  const from = { D: "Republicans", R: "Democrats" };
+  const sub = (p) => view !== "house" ? `${t.won[p]} won Tuesday + ${t.held[p]} not up`
+    : gains[p] ? `${gains[p]} seat${gains[p] > 1 ? "s" : ""} taken from ${from[p]}` : `No seats taken from ${from[p]}`;
+  document.getElementById("d-sub").textContent = sub("D");
+  document.getElementById("r-sub").textContent = sub("R");
   // Senate and governor totals include seats with no race this year.
   const note = document.getElementById("held-note");
   const notUp = t.held.D + t.held.R;
@@ -433,13 +439,13 @@ function drawTally() {
     `. <button type="button" class="q" data-term="notup" aria-label="Why are some seats not up?">?</button>`;
   note.hidden = view === "house";
 
+  // The five segments are made once and only their widths change, so switching
+  // views slides them to the new sizes instead of redrawing the bar.
   const bar = document.getElementById("bar");
-  bar.innerHTML =
-    `<span class="d hold" style="width:${pct(t.held.D)}"></span>` +
-    `<span class="d" style="width:${pct(t.won.D)}"></span>` +
-    `<span class="u" style="width:${pct(t.pending + t.won.other)}"></span>` +
-    `<span class="r" style="width:${pct(t.won.R)}"></span>` +
-    `<span class="r hold" style="width:${pct(t.held.R)}"></span>`;
+  if (bar.children.length !== 5)
+    bar.innerHTML = ["d hold", "d", "u", "r", "r hold"].map((c) => `<span class="${c}"></span>`).join("");
+  [t.held.D, t.won.D, t.pending + t.won.other, t.won.R, t.held.R]
+    .forEach((n, i) => { bar.children[i].style.width = pct(n); });
   bar.setAttribute("aria-label", `Democrats ${D}, not yet called ${t.pending}, Republicans ${R}, of ${t.seats}`);
 
   const tick = document.getElementById("tick");
@@ -770,7 +776,6 @@ function drawChanges() {
   document.getElementById("changes").innerHTML = text;
   const btn = document.getElementById("show-flips");
   btn.hidden = !n;
-  btn.textContent = flipsOnly ? "Show all seats again" : "Show them on the map";
   btn.setAttribute("aria-pressed", String(flipsOnly));
 }
 
