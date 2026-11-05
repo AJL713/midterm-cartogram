@@ -1,0 +1,39 @@
+# Source: https://en.wikipedia.org/wiki/2026_United_States_gubernatorial_elections
+# Snapshot read 2026-11-04 ~16:25 UTC
+# Format: key|winner party (- = not called)|flip (1 = party gain)|winner name|status|other candidates (name/party;...)|lean (Cook PVI)|held by before (D/R/I, N = new seat, V = vacant)
+G-AL|R|0|Tommy Tuberville|called|Doug Jones/D||R
+G-AK|-|0||uncalled|Dave Bronson/R;Jonathan Kreiss-Tomkins/D;Treg Taylor/R;Bernadette Wilson/R||R
+G-AZ|D|0|Katie Hobbs|called|Andy Biggs/R;Teri Hourihan/O;Risa Lombardo/O||D
+G-AR|R|0|Sarah Huckabee Sanders|called|Fredrick Love/D;Colt Shelby/L||R
+G-CA|D|0|Xavier Becerra|called|Steve Hilton/R||D
+G-CO|D|0|Phil Weiser|called|Victor Marx/R;Stephen Hamilton/O;Greg Lopez/I;Eric Mulder/L;Jeff Peckman/O;Erik Underwood/O||D
+G-CT|D|0|Ned Lamont|called|Ryan Fazio/R||D
+G-FL|R|0|Byron Donalds|called|David Jolly/D;Dean Abrams/I;Charles Burkett/I;Jeffrey Datto/I;Moe Dimanche/I;Scott Jewett/L;Frank Russo/I||R
+G-GA|D|1|Keisha Lance Bottoms|called|Rick Jackson/R||R
+G-HI|D|0|Josh Green|called|Gary Cordery/R||D
+G-ID|R|0|Brad Little|called|Terri Pickens/D;Pro-Life/O;Paul Sand/L;John Stegner/I||R
+G-IL|D|0|JB Pritzker|called|Darren Bailey/R;Collin Corbett/I||D
+G-IA|D|1|Rob Sand|called|Zach Lahn/R||R
+G-KS|-|0||uncalled|Cindy Holscher/D;Ty Masterson/R||D
+G-ME|D|0|Hannah Pingree|called|Robert B. Charles/R;Rick Bennett/I||D
+G-MD|D|0|Wes Moore|called|Dan Cox/R;Andy Ellis/O;Cathy White/O||D
+G-MA|D|0|Maura Healey|called|Mike Minogue/R;Andrea James/I||D
+G-MI|D|0|Jocelyn Benson|called|John James/R;Donna Brandenburg/O;Anthony Hudson/L||D
+G-MN|D|0|Amy Klobuchar|called|Lisa Demuth/R;Steven Young/O||D
+G-NE|R|0|Jim Pillen|called|Lynne Walz/D;Rick Beard/O;Brett Lindstrom/O||R
+G-NV|D|1|Aaron Ford|called|Joe Lombardo/R;Danielle Ford/I||R
+G-NH|R|0|Kelly Ayotte|called|Cinde Warmington/D;Jon Kiper/O||R
+G-NM|D|0|Deb Haaland|called|Gregg Hull/R||D
+G-NY|D|0|Kathy Hochul|called|Bruce Blakeman/R||D
+G-OH|D|1|Amy Acton|called|Vivek Ramaswamy/R;Donald Kissick/L||R
+G-OK|R|0|Mike Mazzei|called|Cyndi Munson/D;Robert Brooks Sr./I;Orlando Bush/I;Jerry Griffin/I||R
+G-OR|D|0|Tina Kotek|called|Christine Drazan/R;Brett Smith/O||D
+G-PA|D|0|Josh Shapiro|called|Stacy Garrity/R;Ken Krawchuk/L||D
+G-RI|D|0|Helena Foulkes|called|Aaron Guckian/R;Ken Block/I;Jasjit Gotra/I;CD Reynolds/I||D
+G-SC|R|0|Alan Wilson|called|Jermaine Johnson/D;Michael Addison/O;Walid Hakim/O||R
+G-SD|R|0|Larry Rhoden|called|Dan Ahlers/D||R
+G-TN|R|0|Marsha Blackburn|called|Jerri Green/D;Misam Abidi/I;Santiago Asconape/I;Dean Brewer/I;Ray Brown/I;Taylor Hafley/I;David Hatley/I;Wendell Jackson/I;Charles Van Morgan/I;Eddie Lee Murphy/I;Lauren Pinkston/I;Karl Smithson/I;L. Webb Taylor/I;Robert Vick/I||R
+G-TX|D|1|Gina Hinojosa|called|Greg Abbott/R;Pat Dixon/L||R
+G-VT|R|0|Phil Scott|called|Amanda Janoo/D;June Goodband/O;Brian Judd/I;Dean Roy/O||R
+G-WI|D|0|David Crowley|called|Tom Tiffany/R||D
+G-WY|R|0|Eric Barlow|called|Kenneth Casner/D;Joseph Kibler/O||R

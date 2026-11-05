@@ -1,0 +1,6 @@
+numpy>=1.26
+scipy>=1.11
+shapely>=2.0
+requests>=2.31
+beautifulsoup4>=4.12
+pytest>=8.0

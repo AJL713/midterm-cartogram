@@ -1,0 +1,9369 @@
+{
+ "updated": "2026-11-05T01:40:00Z",
+ "source": {
+  "house": "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections",
+  "senate": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections",
+  "governors": "https://en.wikipedia.org/wiki/2026_United_States_gubernatorial_elections"
+ },
+ "context": {
+  "_about": "Facts the map needs that are not individual 2026 races. Sources: the Wikipedia Senate page's seat table and the gubernatorial page's infobox, read 2026-11-04.",
+  "house": {
+   "seats": 435,
+   "majority": 218
+  },
+  "senate": {
+   "seats": 100,
+   "majority": 51,
+   "not_up": {
+    "D": 32,
+    "I": 2,
+    "R": 31
+   },
+   "note": "The 2 independents not up in 2026 caucus with Democrats."
+  },
+  "governors": {
+   "seats": 50,
+   "majority": 26,
+   "not_up": {
+    "DE": "D",
+    "KY": "D",
+    "NJ": "D",
+    "NC": "D",
+    "VA": "D",
+    "WA": "D",
+    "IN": "R",
+    "LA": "R",
+    "MS": "R",
+    "MO": "R",
+    "MT": "R",
+    "ND": "R",
+    "UT": "R",
+    "WV": "R"
+   }
+  },
+  "runoffs": {
+   "_about": "Dates of runoff elections, by state and office (H/S/G). Only from the state's official election site. A race with status 'runoff' and no entry here shows 'Headed to a runoff' without a date.",
+   "LA-H": {
+    "date": "2026-12-12",
+    "source": "https://www.sos.la.gov/elections-voting/election-dates",
+    "note": "Louisiana Secretary of State: 'December 12, 2026 - Open U.S. Representative General' (Act 7 of 2026). Read 2026-11-05."
+   }
+  },
+  "updates": {
+   "_about": "When the scheduled updates stop. After race_calls_end (Pacific time) the page shows a 'final snapshot' banner. If updates are restarted, move these dates too.",
+   "race_calls_end": "2026-11-20",
+   "turnout_final": "2026-12-15"
+  }
+ },
+ "history": [
+  {
+   "t": "2026-11-03T23:00:00Z",
+   "H": [
+    1,
+    0,
+    434
+   ],
+   "S": [
+    0,
+    0,
+    35
+   ],
+   "G": [
+    0,
+    0,
+    36
+   ]
+  },
+  {
+   "t": "2026-11-04T01:00:00Z",
+   "H": [
+    11,
+    4,
+    420
+   ],
+   "S": [
+    2,
+    0,
+    33
+   ],
+   "G": [
+    0,
+    0,
+    36
+   ]
+  },
+  {
+   "t": "2026-11-04T02:00:00Z",
+   "H": [
+    11,
+    4,
+    420
+   ],
+   "S": [
+    9,
+    2,
+    24
+   ],
+   "G": [
+    0,
+    0,
+    36
+   ]
+  },
+  {
+   "t": "2026-11-04T03:00:00Z",
+   "H": [
+    24,
+    6,
+    405
+   ],
+   "S": [
+    11,
+    6,
+    18
+   ],
+   "G": [
+    9,
+    2,
+    25
+   ]
+  },
+  {
+   "t": "2026-11-04T04:00:00Z",
+   "H": [
+    26,
+    6,
+    403
+   ],
+   "S": [
+    13,
+    8,
+    14
+   ],
+   "G": [
+    10,
+    2,
+    24
+   ]
+  },
+  {
+   "t": "2026-11-04T05:00:00Z",
+   "H": [
+    28,
+    7,
+    400
+   ],
+   "S": [
+    17,
+    9,
+    9
+   ],
+   "G": [
+    16,
+    5,
+    15
+   ]
+  },
+  {
+   "t": "2026-11-04T06:00:00Z",
+   "H": [
+    29,
+    7,
+    399
+   ],
+   "S": [
+    19,
+    10,
+    6
+   ],
+   "G": [
+    17,
+    5,
+    14
+   ]
+  },
+  {
+   "t": "2026-11-04T07:00:00Z",
+   "H": [
+    39,
+    12,
+    384
+   ],
+   "S": [
+    20,
+    12,
+    3
+   ],
+   "G": [
+    19,
+    10,
+    7
+   ]
+  },
+  {
+   "t": "2026-11-04T08:00:00Z",
+   "H": [
+    82,
+    14,
+    339
+   ],
+   "S": [
+    20,
+    12,
+    3
+   ],
+   "G": [
+    20,
+    11,
+    5
+   ]
+  },
+  {
+   "t": "2026-11-04T09:00:00Z",
+   "H": [
+    93,
+    44,
+    298
+   ],
+   "S": [
+    20,
+    13,
+    2
+   ],
+   "G": [
+    20,
+    11,
+    5
+   ]
+  },
+  {
+   "t": "2026-11-04T10:00:00Z",
+   "H": [
+    118,
+    61,
+    256
+   ],
+   "S": [
+    20,
+    13,
+    2
+   ],
+   "G": [
+    20,
+    11,
+    5
+   ]
+  },
+  {
+   "t": "2026-11-04T11:00:00Z",
+   "H": [
+    129,
+    62,
+    244
+   ],
+   "S": [
+    20,
+    13,
+    2
+   ],
+   "G": [
+    21,
+    12,
+    3
+   ]
+  },
+  {
+   "t": "2026-11-04T12:00:00Z",
+   "H": [
+    148,
+    69,
+    218
+   ],
+   "S": [
+    20,
+    13,
+    2
+   ],
+   "G": [
+    21,
+    12,
+    3
+   ]
+  },
+  {
+   "t": "2026-11-04T13:00:00Z",
+   "H": [
+    164,
+    80,
+    191
+   ],
+   "S": [
+    20,
+    13,
+    2
+   ],
+   "G": [
+    21,
+    12,
+    3
+   ]
+  },
+  {
+   "t": "2026-11-04T14:00:00Z",
+   "H": [
+    187,
+    91,
+    157
+   ],
+   "S": [
+    20,
+    13,
+    2
+   ],
+   "G": [
+    21,
+    12,
+    3
+   ]
+  },
+  {
+   "t": "2026-11-04T15:00:00Z",
+   "H": [
+    205,
+    130,
+    100
+   ],
+   "S": [
+    20,
+    13,
+    2
+   ],
+   "G": [
+    21,
+    12,
+    3
+   ]
+  },
+  {
+   "t": "2026-11-04T16:00:00Z",
+   "H": [
+    225,
+    138,
+    72
+   ],
+   "S": [
+    20,
+    13,
+    2
+   ],
+   "G": [
+    21,
+    12,
+    3
+   ]
+  },
+  {
+   "t": "2026-11-04T19:00:00Z",
+   "H": [
+    228,
+    138,
+    69
+   ],
+   "S": [
+    20,
+    13,
+    2
+   ],
+   "G": [
+    21,
+    12,
+    3
+   ]
+  },
+  {
+   "t": "2026-11-04T20:00:00Z",
+   "H": [
+    232,
+    138,
+    65
+   ],
+   "S": [
+    20,
+    13,
+    2
+   ],
+   "G": [
+    21,
+    12,
+    3
+   ]
+  },
+  {
+   "t": "2026-11-05T01:40:00Z",
+   "H": [
+    236,
+    146,
+    53
+   ],
+   "S": [
+    20,
+    13,
+    2
+   ],
+   "G": [
+    22,
+    12,
+    2
+   ]
+  }
+ ],
+ "races": {
+  "G-AK": {
+   "office": "G",
+   "state": "AK",
+   "district": null,
+   "special": false,
+   "called": false,
+   "status": "uncalled",
+   "winner": null,
+   "winner_name": null,
+   "flip": false,
+   "margin": null,
+   "others": [
+    {
+     "n": "Dave Bronson",
+     "p": "R"
+    },
+    {
+     "n": "Jonathan Kreiss-Tomkins",
+     "p": "D"
+    },
+    {
+     "n": "Treg Taylor",
+     "p": "R"
+    },
+    {
+     "n": "Bernadette Wilson",
+     "p": "R"
+    }
+   ],
+   "pvi": null,
+   "held_by": "R"
+  },
+  "G-AL": {
+   "office": "G",
+   "state": "AL",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Tommy Tuberville",
+   "flip": false,
+   "margin": null,
+   "others": [
+    {
+     "n": "Doug Jones",
+     "p": "D"
+    }
+   ],
+   "pvi": null,
+   "held_by": "R"
+  },
+  "G-AR": {
+   "office": "G",
+   "state": "AR",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Sarah Huckabee Sanders",
+   "flip": false,
+   "margin": null,
+   "others": [
+    {
+     "n": "Fredrick Love",
+     "p": "D"
+    },
+    {
+     "n": "Colt Shelby",
+     "p": "L"
+    }
+   ],
+   "pvi": null,
+   "held_by": "R"
+  },
+  "G-AZ": {
+   "office": "G",
+   "state": "AZ",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Katie Hobbs",
+   "flip": false,
+   "margin": null,
+   "others": [
+    {
+     "n": "Andy Biggs",
+     "p": "R"
+    },
+    {
+     "n": "Teri Hourihan",
+     "p": "O"
+    },
+    {
+     "n": "Risa Lombardo",
+     "p": "O"
+    }
+   ],
+   "pvi": null,
+   "held_by": "D"
+  },
+  "G-CA": {
+   "office": "G",
+   "state": "CA",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Xavier Becerra",
+   "flip": false,
+   "margin": null,
+   "others": [
+    {
+     "n": "Steve Hilton",
+     "p": "R"
+    }
+   ],
+   "pvi": null,
+   "held_by": "D"
+  },
+  "G-CO": {
+   "office": "G",
+   "state": "CO",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Phil Weiser",
+   "flip": false,
+   "margin": null,
+   "others": [
+    {
+     "n": "Victor Marx",
+     "p": "R"
+    },
+    {
+     "n": "Stephen Hamilton",
+     "p": "O"
+    },
+    {
+     "n": "Greg Lopez",
+     "p": "I"
+    },
+    {
+     "n": "Eric Mulder",
+     "p": "L"
+    },
+    {
+     "n": "Jeff Peckman",
+     "p": "O"
+    },
+    {
+     "n": "Erik Underwood",
+     "p": "O"
+    }
+   ],
+   "pvi": null,
+   "held_by": "D"
+  },
+  "G-CT": {
+   "office": "G",
+   "state": "CT",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Ned Lamont",
+   "flip": false,
+   "margin": null,
+   "others": [
+    {
+     "n": "Ryan Fazio",
+     "p": "R"
+    }
+   ],
+   "pvi": null,
+   "held_by": "D"
+  },
+  "G-FL": {
+   "office": "G",
+   "state": "FL",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Byron Donalds",
+   "flip": false,
+   "margin": null,
+   "others": [
+    {
+     "n": "David Jolly",
+     "p": "D"
+    },
+    {
+     "n": "Dean Abrams",
+     "p": "I"
+    },
+    {
+     "n": "Charles Burkett",
+     "p": "I"
+    },
+    {
+     "n": "Jeffrey Datto",
+     "p": "I"
+    },
+    {
+     "n": "Moe Dimanche",
+     "p": "I"
+    },
+    {
+     "n": "Scott Jewett",
+     "p": "L"
+    },
+    {
+     "n": "Frank Russo",
+     "p": "I"
+    }
+   ],
+   "pvi": null,
+   "held_by": "R"
+  },
+  "G-GA": {
+   "office": "G",
+   "state": "GA",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Keisha Lance Bottoms",
+   "flip": true,
+   "margin": null,
+   "others": [
+    {
+     "n": "Rick Jackson",
+     "p": "R"
+    }
+   ],
+   "pvi": null,
+   "held_by": "R"
+  },
+  "G-HI": {
+   "office": "G",
+   "state": "HI",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Josh Green",
+   "flip": false,
+   "margin": null,
+   "others": [
+    {
+     "n": "Gary Cordery",
+     "p": "R"
+    }
+   ],
+   "pvi": null,
+   "held_by": "D"
+  },
+  "G-IA": {
+   "office": "G",
+   "state": "IA",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Rob Sand",
+   "flip": true,
+   "margin": null,
+   "others": [
+    {
+     "n": "Zach Lahn",
+     "p": "R"
+    }
+   ],
+   "pvi": null,
+   "held_by": "R"
+  },
+  "G-ID": {
+   "office": "G",
+   "state": "ID",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Brad Little",
+   "flip": false,
+   "margin": null,
+   "others": [
+    {
+     "n": "Terri Pickens",
+     "p": "D"
+    },
+    {
+     "n": "Pro-Life",
+     "p": "O"
+    },
+    {
+     "n": "Paul Sand",
+     "p": "L"
+    },
+    {
+     "n": "John Stegner",
+     "p": "I"
+    }
+   ],
+   "pvi": null,
+   "held_by": "R"
+  },
+  "G-IL": {
+   "office": "G",
+   "state": "IL",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "JB Pritzker",
+   "flip": false,
+   "margin": null,
+   "others": [
+    {
+     "n": "Darren Bailey",
+     "p": "R"
+    },
+    {
+     "n": "Collin Corbett",
+     "p": "I"
+    }
+   ],
+   "pvi": null,
+   "held_by": "D"
+  },
+  "G-KS": {
+   "office": "G",
+   "state": "KS",
+   "district": null,
+   "special": false,
+   "called": false,
+   "status": "uncalled",
+   "winner": null,
+   "winner_name": null,
+   "flip": false,
+   "margin": null,
+   "others": [
+    {
+     "n": "Cindy Holscher",
+     "p": "D"
+    },
+    {
+     "n": "Ty Masterson",
+     "p": "R"
+    }
+   ],
+   "pvi": null,
+   "held_by": "D"
+  },
+  "G-MA": {
+   "office": "G",
+   "state": "MA",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Maura Healey",
+   "flip": false,
+   "margin": null,
+   "others": [
+    {
+     "n": "Mike Minogue",
+     "p": "R"
+    },
+    {
+     "n": "Andrea James",
+     "p": "I"
+    }
+   ],
+   "pvi": null,
+   "held_by": "D"
+  },
+  "G-MD": {
+   "office": "G",
+   "state": "MD",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Wes Moore",
+   "flip": false,
+   "margin": null,
+   "others": [
+    {
+     "n": "Dan Cox",
+     "p": "R"
+    },
+    {
+     "n": "Andy Ellis",
+     "p": "O"
+    },
+    {
+     "n": "Cathy White",
+     "p": "O"
+    }
+   ],
+   "pvi": null,
+   "held_by": "D"
+  },
+  "G-ME": {
+   "office": "G",
+   "state": "ME",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Hannah Pingree",
+   "flip": false,
+   "margin": null,
+   "others": [
+    {
+     "n": "Robert B. Charles",
+     "p": "R"
+    },
+    {
+     "n": "Rick Bennett",
+     "p": "I"
+    }
+   ],
+   "pvi": null,
+   "held_by": "D"
+  },
+  "G-MI": {
+   "office": "G",
+   "state": "MI",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Jocelyn Benson",
+   "flip": false,
+   "margin": null,
+   "others": [
+    {
+     "n": "John James",
+     "p": "R"
+    },
+    {
+     "n": "Donna Brandenburg",
+     "p": "O"
+    },
+    {
+     "n": "Anthony Hudson",
+     "p": "L"
+    }
+   ],
+   "pvi": null,
+   "held_by": "D"
+  },
+  "G-MN": {
+   "office": "G",
+   "state": "MN",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Amy Klobuchar",
+   "flip": false,
+   "margin": null,
+   "others": [
+    {
+     "n": "Lisa Demuth",
+     "p": "R"
+    },
+    {
+     "n": "Steven Young",
+     "p": "O"
+    }
+   ],
+   "pvi": null,
+   "held_by": "D"
+  },
+  "G-NE": {
+   "office": "G",
+   "state": "NE",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Jim Pillen",
+   "flip": false,
+   "margin": null,
+   "others": [
+    {
+     "n": "Lynne Walz",
+     "p": "D"
+    },
+    {
+     "n": "Rick Beard",
+     "p": "O"
+    },
+    {
+     "n": "Brett Lindstrom",
+     "p": "O"
+    }
+   ],
+   "pvi": null,
+   "held_by": "R"
+  },
+  "G-NH": {
+   "office": "G",
+   "state": "NH",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Kelly Ayotte",
+   "flip": false,
+   "margin": null,
+   "others": [
+    {
+     "n": "Cinde Warmington",
+     "p": "D"
+    },
+    {
+     "n": "Jon Kiper",
+     "p": "O"
+    }
+   ],
+   "pvi": null,
+   "held_by": "R"
+  },
+  "G-NM": {
+   "office": "G",
+   "state": "NM",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Deb Haaland",
+   "flip": false,
+   "margin": null,
+   "others": [
+    {
+     "n": "Gregg Hull",
+     "p": "R"
+    }
+   ],
+   "pvi": null,
+   "held_by": "D"
+  },
+  "G-NV": {
+   "office": "G",
+   "state": "NV",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Aaron Ford",
+   "flip": true,
+   "margin": null,
+   "others": [
+    {
+     "n": "Joe Lombardo",
+     "p": "R"
+    },
+    {
+     "n": "Danielle Ford",
+     "p": "I"
+    }
+   ],
+   "pvi": null,
+   "held_by": "R"
+  },
+  "G-NY": {
+   "office": "G",
+   "state": "NY",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Kathy Hochul",
+   "flip": false,
+   "margin": null,
+   "others": [
+    {
+     "n": "Bruce Blakeman",
+     "p": "R"
+    }
+   ],
+   "pvi": null,
+   "held_by": "D"
+  },
+  "G-OH": {
+   "office": "G",
+   "state": "OH",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Amy Acton",
+   "flip": true,
+   "margin": null,
+   "others": [
+    {
+     "n": "Vivek Ramaswamy",
+     "p": "R"
+    },
+    {
+     "n": "Donald Kissick",
+     "p": "L"
+    }
+   ],
+   "pvi": null,
+   "held_by": "R"
+  },
+  "G-OK": {
+   "office": "G",
+   "state": "OK",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Mike Mazzei",
+   "flip": false,
+   "margin": null,
+   "others": [
+    {
+     "n": "Cyndi Munson",
+     "p": "D"
+    },
+    {
+     "n": "Robert Brooks Sr.",
+     "p": "I"
+    },
+    {
+     "n": "Orlando Bush",
+     "p": "I"
+    },
+    {
+     "n": "Jerry Griffin",
+     "p": "I"
+    }
+   ],
+   "pvi": null,
+   "held_by": "R"
+  },
+  "G-OR": {
+   "office": "G",
+   "state": "OR",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Tina Kotek",
+   "flip": false,
+   "margin": null,
+   "others": [
+    {
+     "n": "Christine Drazan",
+     "p": "R"
+    },
+    {
+     "n": "Brett Smith",
+     "p": "O"
+    }
+   ],
+   "pvi": null,
+   "held_by": "D"
+  },
+  "G-PA": {
+   "office": "G",
+   "state": "PA",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Josh Shapiro",
+   "flip": false,
+   "margin": null,
+   "others": [
+    {
+     "n": "Stacy Garrity",
+     "p": "R"
+    },
+    {
+     "n": "Ken Krawchuk",
+     "p": "L"
+    }
+   ],
+   "pvi": null,
+   "held_by": "D"
+  },
+  "G-RI": {
+   "office": "G",
+   "state": "RI",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Helena Foulkes",
+   "flip": false,
+   "margin": null,
+   "others": [
+    {
+     "n": "Aaron Guckian",
+     "p": "R"
+    },
+    {
+     "n": "Ken Block",
+     "p": "I"
+    },
+    {
+     "n": "Jasjit Gotra",
+     "p": "I"
+    },
+    {
+     "n": "CD Reynolds",
+     "p": "I"
+    }
+   ],
+   "pvi": null,
+   "held_by": "D"
+  },
+  "G-SC": {
+   "office": "G",
+   "state": "SC",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Alan Wilson",
+   "flip": false,
+   "margin": null,
+   "others": [
+    {
+     "n": "Jermaine Johnson",
+     "p": "D"
+    },
+    {
+     "n": "Michael Addison",
+     "p": "O"
+    },
+    {
+     "n": "Walid Hakim",
+     "p": "O"
+    }
+   ],
+   "pvi": null,
+   "held_by": "R"
+  },
+  "G-SD": {
+   "office": "G",
+   "state": "SD",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Larry Rhoden",
+   "flip": false,
+   "margin": null,
+   "others": [
+    {
+     "n": "Dan Ahlers",
+     "p": "D"
+    }
+   ],
+   "pvi": null,
+   "held_by": "R"
+  },
+  "G-TN": {
+   "office": "G",
+   "state": "TN",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Marsha Blackburn",
+   "flip": false,
+   "margin": null,
+   "others": [
+    {
+     "n": "Jerri Green",
+     "p": "D"
+    },
+    {
+     "n": "Misam Abidi",
+     "p": "I"
+    },
+    {
+     "n": "Santiago Asconape",
+     "p": "I"
+    },
+    {
+     "n": "Dean Brewer",
+     "p": "I"
+    },
+    {
+     "n": "Ray Brown",
+     "p": "I"
+    },
+    {
+     "n": "Taylor Hafley",
+     "p": "I"
+    },
+    {
+     "n": "David Hatley",
+     "p": "I"
+    },
+    {
+     "n": "Wendell Jackson",
+     "p": "I"
+    },
+    {
+     "n": "Charles Van Morgan",
+     "p": "I"
+    },
+    {
+     "n": "Eddie Lee Murphy",
+     "p": "I"
+    },
+    {
+     "n": "Lauren Pinkston",
+     "p": "I"
+    },
+    {
+     "n": "Karl Smithson",
+     "p": "I"
+    },
+    {
+     "n": "L. Webb Taylor",
+     "p": "I"
+    },
+    {
+     "n": "Robert Vick",
+     "p": "I"
+    }
+   ],
+   "pvi": null,
+   "held_by": "R"
+  },
+  "G-TX": {
+   "office": "G",
+   "state": "TX",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Gina Hinojosa",
+   "flip": true,
+   "margin": null,
+   "others": [
+    {
+     "n": "Greg Abbott",
+     "p": "R"
+    },
+    {
+     "n": "Pat Dixon",
+     "p": "L"
+    }
+   ],
+   "pvi": null,
+   "held_by": "R"
+  },
+  "G-VT": {
+   "office": "G",
+   "state": "VT",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Phil Scott",
+   "flip": false,
+   "margin": null,
+   "others": [
+    {
+     "n": "Amanda Janoo",
+     "p": "D"
+    },
+    {
+     "n": "June Goodband",
+     "p": "O"
+    },
+    {
+     "n": "Brian Judd",
+     "p": "I"
+    },
+    {
+     "n": "Dean Roy",
+     "p": "O"
+    }
+   ],
+   "pvi": null,
+   "held_by": "R"
+  },
+  "G-WI": {
+   "office": "G",
+   "state": "WI",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "David Crowley",
+   "flip": false,
+   "margin": null,
+   "others": [
+    {
+     "n": "Tom Tiffany",
+     "p": "R"
+    }
+   ],
+   "pvi": null,
+   "held_by": "D"
+  },
+  "G-WY": {
+   "office": "G",
+   "state": "WY",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Eric Barlow",
+   "flip": false,
+   "margin": null,
+   "others": [
+    {
+     "n": "Kenneth Casner",
+     "p": "D"
+    },
+    {
+     "n": "Joseph Kibler",
+     "p": "O"
+    }
+   ],
+   "pvi": null,
+   "held_by": "R"
+  },
+  "H-AK-00": {
+   "office": "H",
+   "state": "AK",
+   "district": 0,
+   "special": false,
+   "called": false,
+   "status": "uncalled",
+   "winner": null,
+   "winner_name": null,
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+6",
+   "held_by": "R"
+  },
+  "H-AL-01": {
+   "office": "H",
+   "state": "AL",
+   "district": 1,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Jerry Carl",
+   "flip": true,
+   "margin": null,
+   "others": [],
+   "pvi": "R+17",
+   "held_by": "N"
+  },
+  "H-AL-02": {
+   "office": "H",
+   "state": "AL",
+   "district": 2,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Shomari Figures",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+7",
+   "held_by": "D"
+  },
+  "H-AL-03": {
+   "office": "H",
+   "state": "AL",
+   "district": 3,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Mike Rogers",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+23",
+   "held_by": "R"
+  },
+  "H-AL-04": {
+   "office": "H",
+   "state": "AL",
+   "district": 4,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Robert Aderholt",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+33",
+   "held_by": "R"
+  },
+  "H-AL-05": {
+   "office": "H",
+   "state": "AL",
+   "district": 5,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Dale Strong",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+15",
+   "held_by": "R"
+  },
+  "H-AL-06": {
+   "office": "H",
+   "state": "AL",
+   "district": 6,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Gary Palmer",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+17",
+   "held_by": "R"
+  },
+  "H-AL-07": {
+   "office": "H",
+   "state": "AL",
+   "district": 7,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Terri Sewell",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+10",
+   "held_by": "D"
+  },
+  "H-AR-01": {
+   "office": "H",
+   "state": "AR",
+   "district": 1,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Rick Crawford",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+23",
+   "held_by": "R"
+  },
+  "H-AR-02": {
+   "office": "H",
+   "state": "AR",
+   "district": 2,
+   "special": false,
+   "called": false,
+   "status": "uncalled",
+   "winner": null,
+   "winner_name": null,
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+8",
+   "held_by": "R"
+  },
+  "H-AR-03": {
+   "office": "H",
+   "state": "AR",
+   "district": 3,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Steve Womack",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+13",
+   "held_by": "R"
+  },
+  "H-AR-04": {
+   "office": "H",
+   "state": "AR",
+   "district": 4,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Bruce Westerman",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+20",
+   "held_by": "R"
+  },
+  "H-AZ-01": {
+   "office": "H",
+   "state": "AZ",
+   "district": 1,
+   "special": false,
+   "called": false,
+   "status": "uncalled",
+   "winner": null,
+   "winner_name": null,
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+1",
+   "held_by": "R"
+  },
+  "H-AZ-02": {
+   "office": "H",
+   "state": "AZ",
+   "district": 2,
+   "special": false,
+   "called": false,
+   "status": "uncalled",
+   "winner": null,
+   "winner_name": null,
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+7",
+   "held_by": "R"
+  },
+  "H-AZ-03": {
+   "office": "H",
+   "state": "AZ",
+   "district": 3,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Yassamin Ansari",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+22",
+   "held_by": "D"
+  },
+  "H-AZ-04": {
+   "office": "H",
+   "state": "AZ",
+   "district": 4,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Greg Stanton",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+4",
+   "held_by": "D"
+  },
+  "H-AZ-05": {
+   "office": "H",
+   "state": "AZ",
+   "district": 5,
+   "special": false,
+   "called": false,
+   "status": "uncalled",
+   "winner": null,
+   "winner_name": null,
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+10",
+   "held_by": "R"
+  },
+  "H-AZ-06": {
+   "office": "H",
+   "state": "AZ",
+   "district": 6,
+   "special": false,
+   "called": false,
+   "status": "uncalled",
+   "winner": null,
+   "winner_name": null,
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "EVEN",
+   "held_by": "R"
+  },
+  "H-AZ-07": {
+   "office": "H",
+   "state": "AZ",
+   "district": 7,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Adelita Grijalva",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+13",
+   "held_by": "D"
+  },
+  "H-AZ-08": {
+   "office": "H",
+   "state": "AZ",
+   "district": 8,
+   "special": false,
+   "called": false,
+   "status": "uncalled",
+   "winner": null,
+   "winner_name": null,
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+8",
+   "held_by": "R"
+  },
+  "H-AZ-09": {
+   "office": "H",
+   "state": "AZ",
+   "district": 9,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Paul Gosar",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+15",
+   "held_by": "R"
+  },
+  "H-CA-01": {
+   "office": "H",
+   "state": "CA",
+   "district": 1,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Mike McGuire",
+   "flip": true,
+   "margin": null,
+   "others": [],
+   "pvi": "D+7",
+   "held_by": "R"
+  },
+  "H-CA-02": {
+   "office": "H",
+   "state": "CA",
+   "district": 2,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Jared Huffman",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+13",
+   "held_by": "D"
+  },
+  "H-CA-03": {
+   "office": "H",
+   "state": "CA",
+   "district": 3,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Ami Bera",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+6",
+   "held_by": "D"
+  },
+  "H-CA-04": {
+   "office": "H",
+   "state": "CA",
+   "district": 4,
+   "special": false,
+   "called": false,
+   "status": "uncalled",
+   "winner": null,
+   "winner_name": null,
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+8",
+   "held_by": "D"
+  },
+  "H-CA-05": {
+   "office": "H",
+   "state": "CA",
+   "district": 5,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Tom McClintock",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+10",
+   "held_by": "R"
+  },
+  "H-CA-06": {
+   "office": "H",
+   "state": "CA",
+   "district": 6,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Richard Pan",
+   "flip": true,
+   "margin": null,
+   "others": [],
+   "pvi": "D+5",
+   "held_by": "I"
+  },
+  "H-CA-07": {
+   "office": "H",
+   "state": "CA",
+   "district": 7,
+   "special": false,
+   "called": false,
+   "status": "uncalled",
+   "winner": null,
+   "winner_name": null,
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+7",
+   "held_by": "D"
+  },
+  "H-CA-08": {
+   "office": "H",
+   "state": "CA",
+   "district": 8,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "John Garamendi",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+19",
+   "held_by": "D"
+  },
+  "H-CA-09": {
+   "office": "H",
+   "state": "CA",
+   "district": 9,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Josh Harder",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+8",
+   "held_by": "D"
+  },
+  "H-CA-10": {
+   "office": "H",
+   "state": "CA",
+   "district": 10,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Mark DeSaulnier",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+18",
+   "held_by": "D"
+  },
+  "H-CA-11": {
+   "office": "H",
+   "state": "CA",
+   "district": 11,
+   "special": false,
+   "called": false,
+   "status": "uncalled",
+   "winner": null,
+   "winner_name": null,
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+36",
+   "held_by": "D"
+  },
+  "H-CA-12": {
+   "office": "H",
+   "state": "CA",
+   "district": 12,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Lateefah Simon",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+39",
+   "held_by": "D"
+  },
+  "H-CA-13": {
+   "office": "H",
+   "state": "CA",
+   "district": 13,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Adam Gray",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+2",
+   "held_by": "D"
+  },
+  "H-CA-14": {
+   "office": "H",
+   "state": "CA",
+   "district": 14,
+   "special": false,
+   "called": false,
+   "status": "uncalled",
+   "winner": null,
+   "winner_name": null,
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+19",
+   "held_by": "D"
+  },
+  "H-CA-15": {
+   "office": "H",
+   "state": "CA",
+   "district": 15,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Kevin Mullin",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+26",
+   "held_by": "D"
+  },
+  "H-CA-16": {
+   "office": "H",
+   "state": "CA",
+   "district": 16,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Sam Liccardo",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+25",
+   "held_by": "D"
+  },
+  "H-CA-17": {
+   "office": "H",
+   "state": "CA",
+   "district": 17,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Ro Khanna",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+21",
+   "held_by": "D"
+  },
+  "H-CA-18": {
+   "office": "H",
+   "state": "CA",
+   "district": 18,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Zoe Lofgren",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+16",
+   "held_by": "D"
+  },
+  "H-CA-19": {
+   "office": "H",
+   "state": "CA",
+   "district": 19,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Jimmy Panetta",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+18",
+   "held_by": "D"
+  },
+  "H-CA-20": {
+   "office": "H",
+   "state": "CA",
+   "district": 20,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Vince Fong",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+16",
+   "held_by": "R"
+  },
+  "H-CA-21": {
+   "office": "H",
+   "state": "CA",
+   "district": 21,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Jim Costa",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+5",
+   "held_by": "D"
+  },
+  "H-CA-22": {
+   "office": "H",
+   "state": "CA",
+   "district": 22,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Randy Villegas",
+   "flip": true,
+   "margin": null,
+   "others": [],
+   "pvi": "D+1",
+   "held_by": "R"
+  },
+  "H-CA-23": {
+   "office": "H",
+   "state": "CA",
+   "district": 23,
+   "special": false,
+   "called": false,
+   "status": "uncalled",
+   "winner": null,
+   "winner_name": null,
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+9",
+   "held_by": "R"
+  },
+  "H-CA-24": {
+   "office": "H",
+   "state": "CA",
+   "district": 24,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Salud Carbajal",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+13",
+   "held_by": "D"
+  },
+  "H-CA-25": {
+   "office": "H",
+   "state": "CA",
+   "district": 25,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Raul Ruiz",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+4",
+   "held_by": "D"
+  },
+  "H-CA-26": {
+   "office": "H",
+   "state": "CA",
+   "district": 26,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Jacqui Irwin",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+9",
+   "held_by": "D"
+  },
+  "H-CA-27": {
+   "office": "H",
+   "state": "CA",
+   "district": 27,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "George T. Whitesides",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+6",
+   "held_by": "D"
+  },
+  "H-CA-28": {
+   "office": "H",
+   "state": "CA",
+   "district": 28,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Judy Chu",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+14",
+   "held_by": "D"
+  },
+  "H-CA-29": {
+   "office": "H",
+   "state": "CA",
+   "district": 29,
+   "special": false,
+   "called": false,
+   "status": "uncalled",
+   "winner": null,
+   "winner_name": null,
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+19",
+   "held_by": "D"
+  },
+  "H-CA-30": {
+   "office": "H",
+   "state": "CA",
+   "district": 30,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Laura Friedman",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+21",
+   "held_by": "D"
+  },
+  "H-CA-31": {
+   "office": "H",
+   "state": "CA",
+   "district": 31,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Gil Cisneros",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+8",
+   "held_by": "D"
+  },
+  "H-CA-32": {
+   "office": "H",
+   "state": "CA",
+   "district": 32,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Brad Sherman",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+14",
+   "held_by": "D"
+  },
+  "H-CA-33": {
+   "office": "H",
+   "state": "CA",
+   "district": 33,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Pete Aguilar",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+7",
+   "held_by": "D"
+  },
+  "H-CA-34": {
+   "office": "H",
+   "state": "CA",
+   "district": 34,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Angela Gonzales-Torres",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+28",
+   "held_by": "D"
+  },
+  "H-CA-35": {
+   "office": "H",
+   "state": "CA",
+   "district": 35,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Norma Torres",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+6",
+   "held_by": "D"
+  },
+  "H-CA-36": {
+   "office": "H",
+   "state": "CA",
+   "district": 36,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Ted Lieu",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+21",
+   "held_by": "D"
+  },
+  "H-CA-37": {
+   "office": "H",
+   "state": "CA",
+   "district": 37,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Sydney Kamlager-Dove",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+33",
+   "held_by": "D"
+  },
+  "H-CA-38": {
+   "office": "H",
+   "state": "CA",
+   "district": 38,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Hilda Solis",
+   "flip": true,
+   "margin": null,
+   "others": [],
+   "pvi": "D+8",
+   "held_by": "N"
+  },
+  "H-CA-39": {
+   "office": "H",
+   "state": "CA",
+   "district": 39,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Mark Takano",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+7",
+   "held_by": "D"
+  },
+  "H-CA-40": {
+   "office": "H",
+   "state": "CA",
+   "district": 40,
+   "special": false,
+   "called": false,
+   "status": "uncalled",
+   "winner": null,
+   "winner_name": null,
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+6",
+   "held_by": "R"
+  },
+  "H-CA-41": {
+   "office": "H",
+   "state": "CA",
+   "district": 41,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Linda Sánchez",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+9",
+   "held_by": "D"
+  },
+  "H-CA-42": {
+   "office": "H",
+   "state": "CA",
+   "district": 42,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Robert Garcia",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+8",
+   "held_by": "D"
+  },
+  "H-CA-43": {
+   "office": "H",
+   "state": "CA",
+   "district": 43,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Maxine Waters",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+27",
+   "held_by": "D"
+  },
+  "H-CA-44": {
+   "office": "H",
+   "state": "CA",
+   "district": 44,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Nanette Barragán",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+20",
+   "held_by": "D"
+  },
+  "H-CA-45": {
+   "office": "H",
+   "state": "CA",
+   "district": 45,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Derek Tran",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+3",
+   "held_by": "D"
+  },
+  "H-CA-46": {
+   "office": "H",
+   "state": "CA",
+   "district": 46,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Lou Correa",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+10",
+   "held_by": "D"
+  },
+  "H-CA-47": {
+   "office": "H",
+   "state": "CA",
+   "district": 47,
+   "special": false,
+   "called": false,
+   "status": "uncalled",
+   "winner": null,
+   "winner_name": null,
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+6",
+   "held_by": "D"
+  },
+  "H-CA-48": {
+   "office": "H",
+   "state": "CA",
+   "district": 48,
+   "special": false,
+   "called": false,
+   "status": "uncalled",
+   "winner": null,
+   "winner_name": null,
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+2",
+   "held_by": "R"
+  },
+  "H-CA-49": {
+   "office": "H",
+   "state": "CA",
+   "district": 49,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Mike Levin",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+7",
+   "held_by": "D"
+  },
+  "H-CA-50": {
+   "office": "H",
+   "state": "CA",
+   "district": 50,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Scott Peters",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+10",
+   "held_by": "D"
+  },
+  "H-CA-51": {
+   "office": "H",
+   "state": "CA",
+   "district": 51,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Sara Jacobs",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+10",
+   "held_by": "D"
+  },
+  "H-CA-52": {
+   "office": "H",
+   "state": "CA",
+   "district": 52,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Juan Vargas",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+11",
+   "held_by": "D"
+  },
+  "H-CO-01": {
+   "office": "H",
+   "state": "CO",
+   "district": 1,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Melat Kiros",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+29",
+   "held_by": "D"
+  },
+  "H-CO-02": {
+   "office": "H",
+   "state": "CO",
+   "district": 2,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Joe Neguse",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+20",
+   "held_by": "D"
+  },
+  "H-CO-03": {
+   "office": "H",
+   "state": "CO",
+   "district": 3,
+   "special": false,
+   "called": false,
+   "status": "uncalled",
+   "winner": null,
+   "winner_name": null,
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+5",
+   "held_by": "R"
+  },
+  "H-CO-04": {
+   "office": "H",
+   "state": "CO",
+   "district": 4,
+   "special": false,
+   "called": false,
+   "status": "uncalled",
+   "winner": null,
+   "winner_name": null,
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+9",
+   "held_by": "R"
+  },
+  "H-CO-05": {
+   "office": "H",
+   "state": "CO",
+   "district": 5,
+   "special": false,
+   "called": false,
+   "status": "uncalled",
+   "winner": null,
+   "winner_name": null,
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+5",
+   "held_by": "R"
+  },
+  "H-CO-06": {
+   "office": "H",
+   "state": "CO",
+   "district": 6,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Jason Crow",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+11",
+   "held_by": "D"
+  },
+  "H-CO-07": {
+   "office": "H",
+   "state": "CO",
+   "district": 7,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Brittany Pettersen",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+8",
+   "held_by": "D"
+  },
+  "H-CO-08": {
+   "office": "H",
+   "state": "CO",
+   "district": 8,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Manny Rutinel",
+   "flip": true,
+   "margin": null,
+   "others": [],
+   "pvi": "EVEN",
+   "held_by": "R"
+  },
+  "H-CT-01": {
+   "office": "H",
+   "state": "CT",
+   "district": 1,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Luke Bronin",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+12",
+   "held_by": "D"
+  },
+  "H-CT-02": {
+   "office": "H",
+   "state": "CT",
+   "district": 2,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Joe Courtney",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+4",
+   "held_by": "D"
+  },
+  "H-CT-03": {
+   "office": "H",
+   "state": "CT",
+   "district": 3,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Rosa DeLauro",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+8",
+   "held_by": "D"
+  },
+  "H-CT-04": {
+   "office": "H",
+   "state": "CT",
+   "district": 4,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Jim Himes",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+13",
+   "held_by": "D"
+  },
+  "H-CT-05": {
+   "office": "H",
+   "state": "CT",
+   "district": 5,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Jahana Hayes",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+3",
+   "held_by": "D"
+  },
+  "H-DE-00": {
+   "office": "H",
+   "state": "DE",
+   "district": 0,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Sarah McBride",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+8",
+   "held_by": "D"
+  },
+  "H-FL-01": {
+   "office": "H",
+   "state": "FL",
+   "district": 1,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Jimmy Patronis",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+18",
+   "held_by": "R"
+  },
+  "H-FL-02": {
+   "office": "H",
+   "state": "FL",
+   "district": 2,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Austin Rogers",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+8",
+   "held_by": "R"
+  },
+  "H-FL-03": {
+   "office": "H",
+   "state": "FL",
+   "district": 3,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Kat Cammack",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+10",
+   "held_by": "R"
+  },
+  "H-FL-04": {
+   "office": "H",
+   "state": "FL",
+   "district": 4,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Aaron Bean",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+5",
+   "held_by": "R"
+  },
+  "H-FL-05": {
+   "office": "H",
+   "state": "FL",
+   "district": 5,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "John Rutherford",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+10",
+   "held_by": "R"
+  },
+  "H-FL-06": {
+   "office": "H",
+   "state": "FL",
+   "district": 6,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Randy Fine",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+14",
+   "held_by": "R"
+  },
+  "H-FL-07": {
+   "office": "H",
+   "state": "FL",
+   "district": 7,
+   "special": false,
+   "called": false,
+   "status": "uncalled",
+   "winner": null,
+   "winner_name": null,
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+5",
+   "held_by": "R"
+  },
+  "H-FL-08": {
+   "office": "H",
+   "state": "FL",
+   "district": 8,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Mike Haridopolos",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+8",
+   "held_by": "R"
+  },
+  "H-FL-09": {
+   "office": "H",
+   "state": "FL",
+   "district": 9,
+   "special": false,
+   "called": false,
+   "status": "uncalled",
+   "winner": null,
+   "winner_name": null,
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+8",
+   "held_by": "D"
+  },
+  "H-FL-10": {
+   "office": "H",
+   "state": "FL",
+   "district": 10,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Maxwell Frost",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+13",
+   "held_by": "D"
+  },
+  "H-FL-11": {
+   "office": "H",
+   "state": "FL",
+   "district": 11,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Joe Strada",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+7",
+   "held_by": "R"
+  },
+  "H-FL-12": {
+   "office": "H",
+   "state": "FL",
+   "district": 12,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Gus Bilirakis",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+7",
+   "held_by": "R"
+  },
+  "H-FL-13": {
+   "office": "H",
+   "state": "FL",
+   "district": 13,
+   "special": false,
+   "called": false,
+   "status": "uncalled",
+   "winner": null,
+   "winner_name": null,
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+6",
+   "held_by": "R"
+  },
+  "H-FL-14": {
+   "office": "H",
+   "state": "FL",
+   "district": 14,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Kathy Castor",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+4",
+   "held_by": "D"
+  },
+  "H-FL-15": {
+   "office": "H",
+   "state": "FL",
+   "district": 15,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Laurel Lee",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+9",
+   "held_by": "R"
+  },
+  "H-FL-16": {
+   "office": "H",
+   "state": "FL",
+   "district": 16,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Sydney Gruters",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+6",
+   "held_by": "R"
+  },
+  "H-FL-17": {
+   "office": "H",
+   "state": "FL",
+   "district": 17,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Greg Steube",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+10",
+   "held_by": "R"
+  },
+  "H-FL-18": {
+   "office": "H",
+   "state": "FL",
+   "district": 18,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Scott Franklin",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+8",
+   "held_by": "R"
+  },
+  "H-FL-19": {
+   "office": "H",
+   "state": "FL",
+   "district": 19,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Jim Schwartzel",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+14",
+   "held_by": "R"
+  },
+  "H-FL-20": {
+   "office": "H",
+   "state": "FL",
+   "district": 20,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Debbie Wasserman Schultz",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+20",
+   "held_by": "V"
+  },
+  "H-FL-21": {
+   "office": "H",
+   "state": "FL",
+   "district": 21,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Brian Mast",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+7",
+   "held_by": "R"
+  },
+  "H-FL-22": {
+   "office": "H",
+   "state": "FL",
+   "district": 22,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Pia Dandiya",
+   "flip": true,
+   "margin": null,
+   "others": [],
+   "pvi": "R+4",
+   "held_by": "N"
+  },
+  "H-FL-23": {
+   "office": "H",
+   "state": "FL",
+   "district": 23,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Lois Frankel",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+9",
+   "held_by": "D"
+  },
+  "H-FL-24": {
+   "office": "H",
+   "state": "FL",
+   "district": 24,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Oliver Gilbert",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+22",
+   "held_by": "D"
+  },
+  "H-FL-25": {
+   "office": "H",
+   "state": "FL",
+   "district": 25,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Jared Moskowitz",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+3",
+   "held_by": "D"
+  },
+  "H-FL-26": {
+   "office": "H",
+   "state": "FL",
+   "district": 26,
+   "special": false,
+   "called": false,
+   "status": "uncalled",
+   "winner": null,
+   "winner_name": null,
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+7",
+   "held_by": "R"
+  },
+  "H-FL-27": {
+   "office": "H",
+   "state": "FL",
+   "district": 27,
+   "special": false,
+   "called": false,
+   "status": "uncalled",
+   "winner": null,
+   "winner_name": null,
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+6",
+   "held_by": "R"
+  },
+  "H-FL-28": {
+   "office": "H",
+   "state": "FL",
+   "district": 28,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Carlos A. Giménez",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+10",
+   "held_by": "R"
+  },
+  "H-GA-01": {
+   "office": "H",
+   "state": "GA",
+   "district": 1,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Jim Kingston",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+8",
+   "held_by": "R"
+  },
+  "H-GA-02": {
+   "office": "H",
+   "state": "GA",
+   "district": 2,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Sanford Bishop",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+4",
+   "held_by": "D"
+  },
+  "H-GA-03": {
+   "office": "H",
+   "state": "GA",
+   "district": 3,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Brian Jack",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+15",
+   "held_by": "R"
+  },
+  "H-GA-04": {
+   "office": "H",
+   "state": "GA",
+   "district": 4,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Hank Johnson",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+27",
+   "held_by": "D"
+  },
+  "H-GA-05": {
+   "office": "H",
+   "state": "GA",
+   "district": 5,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Nikema Williams",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+36",
+   "held_by": "D"
+  },
+  "H-GA-06": {
+   "office": "H",
+   "state": "GA",
+   "district": 6,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Lucy McBath",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+25",
+   "held_by": "D"
+  },
+  "H-GA-07": {
+   "office": "H",
+   "state": "GA",
+   "district": 7,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Rich McCormick",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+11",
+   "held_by": "R"
+  },
+  "H-GA-08": {
+   "office": "H",
+   "state": "GA",
+   "district": 8,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Austin Scott",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+15",
+   "held_by": "R"
+  },
+  "H-GA-09": {
+   "office": "H",
+   "state": "GA",
+   "district": 9,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Andrew Clyde",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+17",
+   "held_by": "R"
+  },
+  "H-GA-10": {
+   "office": "H",
+   "state": "GA",
+   "district": 10,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Houston Gaines",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+11",
+   "held_by": "R"
+  },
+  "H-GA-11": {
+   "office": "H",
+   "state": "GA",
+   "district": 11,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "John Cowan",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+12",
+   "held_by": "R"
+  },
+  "H-GA-12": {
+   "office": "H",
+   "state": "GA",
+   "district": 12,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Rick Allen",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+7",
+   "held_by": "R"
+  },
+  "H-GA-13": {
+   "office": "H",
+   "state": "GA",
+   "district": 13,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Jasmine Clark",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+21",
+   "held_by": "D"
+  },
+  "H-GA-14": {
+   "office": "H",
+   "state": "GA",
+   "district": 14,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Clay Fuller",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+19",
+   "held_by": "R"
+  },
+  "H-HI-01": {
+   "office": "H",
+   "state": "HI",
+   "district": 1,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Ed Case",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+13",
+   "held_by": "D"
+  },
+  "H-HI-02": {
+   "office": "H",
+   "state": "HI",
+   "district": 2,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Jill Tokuda",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+12",
+   "held_by": "D"
+  },
+  "H-IA-01": {
+   "office": "H",
+   "state": "IA",
+   "district": 1,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Christina Bohannan",
+   "flip": true,
+   "margin": null,
+   "others": [],
+   "pvi": "R+4",
+   "held_by": "R"
+  },
+  "H-IA-02": {
+   "office": "H",
+   "state": "IA",
+   "district": 2,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Lindsay James",
+   "flip": true,
+   "margin": null,
+   "others": [],
+   "pvi": "R+4",
+   "held_by": "R"
+  },
+  "H-IA-03": {
+   "office": "H",
+   "state": "IA",
+   "district": 3,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Sarah Trone Garriott",
+   "flip": true,
+   "margin": null,
+   "others": [],
+   "pvi": "R+2",
+   "held_by": "R"
+  },
+  "H-IA-04": {
+   "office": "H",
+   "state": "IA",
+   "district": 4,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Chris McGowan",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+15",
+   "held_by": "R"
+  },
+  "H-ID-01": {
+   "office": "H",
+   "state": "ID",
+   "district": 1,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Russ Fulcher",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+22",
+   "held_by": "R"
+  },
+  "H-ID-02": {
+   "office": "H",
+   "state": "ID",
+   "district": 2,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Mike Simpson",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+13",
+   "held_by": "R"
+  },
+  "H-IL-01": {
+   "office": "H",
+   "state": "IL",
+   "district": 1,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Jonathan Jackson",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+18",
+   "held_by": "D"
+  },
+  "H-IL-02": {
+   "office": "H",
+   "state": "IL",
+   "district": 2,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Donna Miller",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+18",
+   "held_by": "D"
+  },
+  "H-IL-03": {
+   "office": "H",
+   "state": "IL",
+   "district": 3,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Delia Ramirez",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+17",
+   "held_by": "D"
+  },
+  "H-IL-04": {
+   "office": "H",
+   "state": "IL",
+   "district": 4,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Patty García",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+17",
+   "held_by": "D"
+  },
+  "H-IL-05": {
+   "office": "H",
+   "state": "IL",
+   "district": 5,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Mike Quigley",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+19",
+   "held_by": "D"
+  },
+  "H-IL-06": {
+   "office": "H",
+   "state": "IL",
+   "district": 6,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Sean Casten",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+3",
+   "held_by": "D"
+  },
+  "H-IL-07": {
+   "office": "H",
+   "state": "IL",
+   "district": 7,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "La Shawn Ford",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+34",
+   "held_by": "D"
+  },
+  "H-IL-08": {
+   "office": "H",
+   "state": "IL",
+   "district": 8,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Melissa Bean",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+5",
+   "held_by": "D"
+  },
+  "H-IL-09": {
+   "office": "H",
+   "state": "IL",
+   "district": 9,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Daniel Biss",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+19",
+   "held_by": "D"
+  },
+  "H-IL-10": {
+   "office": "H",
+   "state": "IL",
+   "district": 10,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Brad Schneider",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+12",
+   "held_by": "D"
+  },
+  "H-IL-11": {
+   "office": "H",
+   "state": "IL",
+   "district": 11,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Bill Foster",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+6",
+   "held_by": "D"
+  },
+  "H-IL-12": {
+   "office": "H",
+   "state": "IL",
+   "district": 12,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Mike Bost",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+22",
+   "held_by": "R"
+  },
+  "H-IL-13": {
+   "office": "H",
+   "state": "IL",
+   "district": 13,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Nikki Budzinski",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+5",
+   "held_by": "D"
+  },
+  "H-IL-14": {
+   "office": "H",
+   "state": "IL",
+   "district": 14,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Lauren Underwood",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+3",
+   "held_by": "D"
+  },
+  "H-IL-15": {
+   "office": "H",
+   "state": "IL",
+   "district": 15,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Mary Miller",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+20",
+   "held_by": "R"
+  },
+  "H-IL-16": {
+   "office": "H",
+   "state": "IL",
+   "district": 16,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Darin LaHood",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+11",
+   "held_by": "R"
+  },
+  "H-IL-17": {
+   "office": "H",
+   "state": "IL",
+   "district": 17,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Eric Sorensen",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+3",
+   "held_by": "D"
+  },
+  "H-IN-01": {
+   "office": "H",
+   "state": "IN",
+   "district": 1,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Frank J. Mrvan",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+1",
+   "held_by": "D"
+  },
+  "H-IN-02": {
+   "office": "H",
+   "state": "IN",
+   "district": 2,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Rudy Yakym",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+13",
+   "held_by": "R"
+  },
+  "H-IN-03": {
+   "office": "H",
+   "state": "IN",
+   "district": 3,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Marlin Stutzman",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+16",
+   "held_by": "R"
+  },
+  "H-IN-04": {
+   "office": "H",
+   "state": "IN",
+   "district": 4,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Jim Baird",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+15",
+   "held_by": "R"
+  },
+  "H-IN-05": {
+   "office": "H",
+   "state": "IN",
+   "district": 5,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "J. D. Ford",
+   "flip": true,
+   "margin": null,
+   "others": [],
+   "pvi": "R+8",
+   "held_by": "R"
+  },
+  "H-IN-06": {
+   "office": "H",
+   "state": "IN",
+   "district": 6,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Jefferson Shreve",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+16",
+   "held_by": "R"
+  },
+  "H-IN-07": {
+   "office": "H",
+   "state": "IN",
+   "district": 7,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "André Carson",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+21",
+   "held_by": "D"
+  },
+  "H-IN-08": {
+   "office": "H",
+   "state": "IN",
+   "district": 8,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Mark Messmer",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+18",
+   "held_by": "R"
+  },
+  "H-IN-09": {
+   "office": "H",
+   "state": "IN",
+   "district": 9,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Erin Houchin",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+15",
+   "held_by": "R"
+  },
+  "H-KS-01": {
+   "office": "H",
+   "state": "KS",
+   "district": 1,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Tracey Mann",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+16",
+   "held_by": "R"
+  },
+  "H-KS-02": {
+   "office": "H",
+   "state": "KS",
+   "district": 2,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Derek Schmidt",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+10",
+   "held_by": "R"
+  },
+  "H-KS-03": {
+   "office": "H",
+   "state": "KS",
+   "district": 3,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Sharice Davids",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+2",
+   "held_by": "D"
+  },
+  "H-KS-04": {
+   "office": "H",
+   "state": "KS",
+   "district": 4,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Ron Estes",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+12",
+   "held_by": "R"
+  },
+  "H-KY-01": {
+   "office": "H",
+   "state": "KY",
+   "district": 1,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "James Comer",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+23",
+   "held_by": "R"
+  },
+  "H-KY-02": {
+   "office": "H",
+   "state": "KY",
+   "district": 2,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Brett Guthrie",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+20",
+   "held_by": "R"
+  },
+  "H-KY-03": {
+   "office": "H",
+   "state": "KY",
+   "district": 3,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Morgan McGarvey",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+10",
+   "held_by": "D"
+  },
+  "H-KY-04": {
+   "office": "H",
+   "state": "KY",
+   "district": 4,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Ed Gallrein",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+18",
+   "held_by": "R"
+  },
+  "H-KY-05": {
+   "office": "H",
+   "state": "KY",
+   "district": 5,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Hal Rogers",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+32",
+   "held_by": "R"
+  },
+  "H-KY-06": {
+   "office": "H",
+   "state": "KY",
+   "district": 6,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Zach Dembo",
+   "flip": true,
+   "margin": null,
+   "others": [],
+   "pvi": "R+7",
+   "held_by": "R"
+  },
+  "H-LA-01": {
+   "office": "H",
+   "state": "LA",
+   "district": 1,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Steve Scalise",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+20",
+   "held_by": "R"
+  },
+  "H-LA-02": {
+   "office": "H",
+   "state": "LA",
+   "district": 2,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Troy Carter",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+25",
+   "held_by": "D"
+  },
+  "H-LA-03": {
+   "office": "H",
+   "state": "LA",
+   "district": 3,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Clay Higgins",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+18",
+   "held_by": "R"
+  },
+  "H-LA-04": {
+   "office": "H",
+   "state": "LA",
+   "district": 4,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Mike Johnson",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+17",
+   "held_by": "R"
+  },
+  "H-LA-05": {
+   "office": "H",
+   "state": "LA",
+   "district": 5,
+   "special": false,
+   "called": false,
+   "status": "runoff",
+   "winner": null,
+   "winner_name": null,
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+17",
+   "held_by": "R"
+  },
+  "H-LA-06": {
+   "office": "H",
+   "state": "LA",
+   "district": 6,
+   "special": false,
+   "called": false,
+   "status": "uncalled",
+   "winner": null,
+   "winner_name": null,
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+16",
+   "held_by": "D"
+  },
+  "H-MA-01": {
+   "office": "H",
+   "state": "MA",
+   "district": 1,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Richard Neal",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+8",
+   "held_by": "D"
+  },
+  "H-MA-02": {
+   "office": "H",
+   "state": "MA",
+   "district": 2,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Jim McGovern",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+13",
+   "held_by": "D"
+  },
+  "H-MA-03": {
+   "office": "H",
+   "state": "MA",
+   "district": 3,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Lori Trahan",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+11",
+   "held_by": "D"
+  },
+  "H-MA-04": {
+   "office": "H",
+   "state": "MA",
+   "district": 4,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Jake Auchincloss",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+11",
+   "held_by": "D"
+  },
+  "H-MA-05": {
+   "office": "H",
+   "state": "MA",
+   "district": 5,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Katherine Clark",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+24",
+   "held_by": "D"
+  },
+  "H-MA-06": {
+   "office": "H",
+   "state": "MA",
+   "district": 6,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Dan Koh",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+11",
+   "held_by": "D"
+  },
+  "H-MA-07": {
+   "office": "H",
+   "state": "MA",
+   "district": 7,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Ayanna Pressley",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+34",
+   "held_by": "D"
+  },
+  "H-MA-08": {
+   "office": "H",
+   "state": "MA",
+   "district": 8,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Stephen Lynch",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+15",
+   "held_by": "D"
+  },
+  "H-MA-09": {
+   "office": "H",
+   "state": "MA",
+   "district": 9,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Bill Keating",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+6",
+   "held_by": "D"
+  },
+  "H-MD-01": {
+   "office": "H",
+   "state": "MD",
+   "district": 1,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Andy Harris",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+8",
+   "held_by": "R"
+  },
+  "H-MD-02": {
+   "office": "H",
+   "state": "MD",
+   "district": 2,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Johnny Olszewski",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+10",
+   "held_by": "D"
+  },
+  "H-MD-03": {
+   "office": "H",
+   "state": "MD",
+   "district": 3,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Sarah Elfreth",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+12",
+   "held_by": "D"
+  },
+  "H-MD-04": {
+   "office": "H",
+   "state": "MD",
+   "district": 4,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Glenn Ivey",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+39",
+   "held_by": "D"
+  },
+  "H-MD-05": {
+   "office": "H",
+   "state": "MD",
+   "district": 5,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Adrian Boafo",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+17",
+   "held_by": "D"
+  },
+  "H-MD-06": {
+   "office": "H",
+   "state": "MD",
+   "district": 6,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "April McClain Delaney",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+3",
+   "held_by": "D"
+  },
+  "H-MD-07": {
+   "office": "H",
+   "state": "MD",
+   "district": 7,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Kweisi Mfume",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+31",
+   "held_by": "D"
+  },
+  "H-MD-08": {
+   "office": "H",
+   "state": "MD",
+   "district": 8,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Jamie Raskin",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+30",
+   "held_by": "D"
+  },
+  "H-ME-01": {
+   "office": "H",
+   "state": "ME",
+   "district": 1,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Chellie Pingree",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+11",
+   "held_by": "D"
+  },
+  "H-ME-02": {
+   "office": "H",
+   "state": "ME",
+   "district": 2,
+   "special": false,
+   "called": false,
+   "status": "uncalled",
+   "winner": null,
+   "winner_name": null,
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+4",
+   "held_by": "D"
+  },
+  "H-MI-01": {
+   "office": "H",
+   "state": "MI",
+   "district": 1,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Jack Bergman",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+11",
+   "held_by": "R"
+  },
+  "H-MI-02": {
+   "office": "H",
+   "state": "MI",
+   "district": 2,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "John Moolenaar",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+15",
+   "held_by": "R"
+  },
+  "H-MI-03": {
+   "office": "H",
+   "state": "MI",
+   "district": 3,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Hillary Scholten",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+4",
+   "held_by": "D"
+  },
+  "H-MI-04": {
+   "office": "H",
+   "state": "MI",
+   "district": 4,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Sean McCann",
+   "flip": true,
+   "margin": null,
+   "others": [],
+   "pvi": "R+3",
+   "held_by": "R"
+  },
+  "H-MI-05": {
+   "office": "H",
+   "state": "MI",
+   "district": 5,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Tim Walberg",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+13",
+   "held_by": "R"
+  },
+  "H-MI-06": {
+   "office": "H",
+   "state": "MI",
+   "district": 6,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Debbie Dingell",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+12",
+   "held_by": "D"
+  },
+  "H-MI-07": {
+   "office": "H",
+   "state": "MI",
+   "district": 7,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "William Lawrence",
+   "flip": true,
+   "margin": null,
+   "others": [],
+   "pvi": "EVEN",
+   "held_by": "R"
+  },
+  "H-MI-08": {
+   "office": "H",
+   "state": "MI",
+   "district": 8,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Kristen McDonald Rivet",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+1",
+   "held_by": "D"
+  },
+  "H-MI-09": {
+   "office": "H",
+   "state": "MI",
+   "district": 9,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Lisa McClain",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+16",
+   "held_by": "R"
+  },
+  "H-MI-10": {
+   "office": "H",
+   "state": "MI",
+   "district": 10,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Christina Hines",
+   "flip": true,
+   "margin": null,
+   "others": [],
+   "pvi": "R+3",
+   "held_by": "R"
+  },
+  "H-MI-11": {
+   "office": "H",
+   "state": "MI",
+   "district": 11,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Jeremy Moss",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+9",
+   "held_by": "D"
+  },
+  "H-MI-12": {
+   "office": "H",
+   "state": "MI",
+   "district": 12,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Rashida Tlaib",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+21",
+   "held_by": "D"
+  },
+  "H-MI-13": {
+   "office": "H",
+   "state": "MI",
+   "district": 13,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Donavan McKinney",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+22",
+   "held_by": "D"
+  },
+  "H-MN-01": {
+   "office": "H",
+   "state": "MN",
+   "district": 1,
+   "special": false,
+   "called": false,
+   "status": "uncalled",
+   "winner": null,
+   "winner_name": null,
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+6",
+   "held_by": "R"
+  },
+  "H-MN-02": {
+   "office": "H",
+   "state": "MN",
+   "district": 2,
+   "special": false,
+   "called": false,
+   "status": "uncalled",
+   "winner": null,
+   "winner_name": null,
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+3",
+   "held_by": "D"
+  },
+  "H-MN-03": {
+   "office": "H",
+   "state": "MN",
+   "district": 3,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Kelly Morrison",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+11",
+   "held_by": "D"
+  },
+  "H-MN-04": {
+   "office": "H",
+   "state": "MN",
+   "district": 4,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Betty McCollum",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+18",
+   "held_by": "D"
+  },
+  "H-MN-05": {
+   "office": "H",
+   "state": "MN",
+   "district": 5,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Ilhan Omar",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+32",
+   "held_by": "D"
+  },
+  "H-MN-06": {
+   "office": "H",
+   "state": "MN",
+   "district": 6,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Tom Emmer",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+10",
+   "held_by": "R"
+  },
+  "H-MN-07": {
+   "office": "H",
+   "state": "MN",
+   "district": 7,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Michelle Fischbach",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+18",
+   "held_by": "R"
+  },
+  "H-MN-08": {
+   "office": "H",
+   "state": "MN",
+   "district": 8,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Pete Stauber",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+7",
+   "held_by": "R"
+  },
+  "H-MO-01": {
+   "office": "H",
+   "state": "MO",
+   "district": 1,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Wesley Bell",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+29",
+   "held_by": "D"
+  },
+  "H-MO-02": {
+   "office": "H",
+   "state": "MO",
+   "district": 2,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Fred Wellman",
+   "flip": true,
+   "margin": null,
+   "others": [],
+   "pvi": "R+4",
+   "held_by": "R"
+  },
+  "H-MO-03": {
+   "office": "H",
+   "state": "MO",
+   "district": 3,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Bob Onder",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+13",
+   "held_by": "R"
+  },
+  "H-MO-04": {
+   "office": "H",
+   "state": "MO",
+   "district": 4,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Mark Alford",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+21",
+   "held_by": "R"
+  },
+  "H-MO-05": {
+   "office": "H",
+   "state": "MO",
+   "district": 5,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Emanuel Cleaver",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+12",
+   "held_by": "D"
+  },
+  "H-MO-06": {
+   "office": "H",
+   "state": "MO",
+   "district": 6,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Chris Stigall",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+19",
+   "held_by": "R"
+  },
+  "H-MO-07": {
+   "office": "H",
+   "state": "MO",
+   "district": 7,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Eric Burlison",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+21",
+   "held_by": "R"
+  },
+  "H-MO-08": {
+   "office": "H",
+   "state": "MO",
+   "district": 8,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Jason Smith",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+27",
+   "held_by": "R"
+  },
+  "H-MS-01": {
+   "office": "H",
+   "state": "MS",
+   "district": 1,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Trent Kelly",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+18",
+   "held_by": "R"
+  },
+  "H-MS-02": {
+   "office": "H",
+   "state": "MS",
+   "district": 2,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Bennie Thompson",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+11",
+   "held_by": "D"
+  },
+  "H-MS-03": {
+   "office": "H",
+   "state": "MS",
+   "district": 3,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Michael Guest",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+14",
+   "held_by": "R"
+  },
+  "H-MS-04": {
+   "office": "H",
+   "state": "MS",
+   "district": 4,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Mike Ezell",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+21",
+   "held_by": "R"
+  },
+  "H-MT-01": {
+   "office": "H",
+   "state": "MT",
+   "district": 1,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Sam Forstag",
+   "flip": true,
+   "margin": null,
+   "others": [],
+   "pvi": "R+5",
+   "held_by": "R"
+  },
+  "H-MT-02": {
+   "office": "H",
+   "state": "MT",
+   "district": 2,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Troy Downing",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+15",
+   "held_by": "R"
+  },
+  "H-NC-01": {
+   "office": "H",
+   "state": "NC",
+   "district": 1,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Don Davis",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+5",
+   "held_by": "D"
+  },
+  "H-NC-02": {
+   "office": "H",
+   "state": "NC",
+   "district": 2,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Deborah Ross",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+17",
+   "held_by": "D"
+  },
+  "H-NC-03": {
+   "office": "H",
+   "state": "NC",
+   "district": 3,
+   "special": false,
+   "called": false,
+   "status": "uncalled",
+   "winner": null,
+   "winner_name": null,
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+6",
+   "held_by": "R"
+  },
+  "H-NC-04": {
+   "office": "H",
+   "state": "NC",
+   "district": 4,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Valerie Foushee",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+23",
+   "held_by": "D"
+  },
+  "H-NC-05": {
+   "office": "H",
+   "state": "NC",
+   "district": 5,
+   "special": false,
+   "called": false,
+   "status": "uncalled",
+   "winner": null,
+   "winner_name": null,
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+9",
+   "held_by": "R"
+  },
+  "H-NC-06": {
+   "office": "H",
+   "state": "NC",
+   "district": 6,
+   "special": false,
+   "called": false,
+   "status": "uncalled",
+   "winner": null,
+   "winner_name": null,
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+9",
+   "held_by": "R"
+  },
+  "H-NC-07": {
+   "office": "H",
+   "state": "NC",
+   "district": 7,
+   "special": false,
+   "called": false,
+   "status": "uncalled",
+   "winner": null,
+   "winner_name": null,
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+7",
+   "held_by": "R"
+  },
+  "H-NC-08": {
+   "office": "H",
+   "state": "NC",
+   "district": 8,
+   "special": false,
+   "called": false,
+   "status": "uncalled",
+   "winner": null,
+   "winner_name": null,
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+10",
+   "held_by": "R"
+  },
+  "H-NC-09": {
+   "office": "H",
+   "state": "NC",
+   "district": 9,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Richard Ojeda",
+   "flip": true,
+   "margin": null,
+   "others": [],
+   "pvi": "R+8",
+   "held_by": "R"
+  },
+  "H-NC-10": {
+   "office": "H",
+   "state": "NC",
+   "district": 10,
+   "special": false,
+   "called": false,
+   "status": "uncalled",
+   "winner": null,
+   "winner_name": null,
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+9",
+   "held_by": "R"
+  },
+  "H-NC-11": {
+   "office": "H",
+   "state": "NC",
+   "district": 11,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Jamie Ager",
+   "flip": true,
+   "margin": null,
+   "others": [],
+   "pvi": "R+5",
+   "held_by": "R"
+  },
+  "H-NC-12": {
+   "office": "H",
+   "state": "NC",
+   "district": 12,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Alma Adams",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+24",
+   "held_by": "D"
+  },
+  "H-NC-13": {
+   "office": "H",
+   "state": "NC",
+   "district": 13,
+   "special": false,
+   "called": false,
+   "status": "uncalled",
+   "winner": null,
+   "winner_name": null,
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+8",
+   "held_by": "R"
+  },
+  "H-NC-14": {
+   "office": "H",
+   "state": "NC",
+   "district": 14,
+   "special": false,
+   "called": false,
+   "status": "uncalled",
+   "winner": null,
+   "winner_name": null,
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+8",
+   "held_by": "R"
+  },
+  "H-ND-00": {
+   "office": "H",
+   "state": "ND",
+   "district": 0,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Julie Fedorchak",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+18",
+   "held_by": "R"
+  },
+  "H-NE-01": {
+   "office": "H",
+   "state": "NE",
+   "district": 1,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Mike Flood",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+6",
+   "held_by": "R"
+  },
+  "H-NE-02": {
+   "office": "H",
+   "state": "NE",
+   "district": 2,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Denise Powell",
+   "flip": true,
+   "margin": null,
+   "others": [],
+   "pvi": "D+3",
+   "held_by": "R"
+  },
+  "H-NE-03": {
+   "office": "H",
+   "state": "NE",
+   "district": 3,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Adrian Smith",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+27",
+   "held_by": "R"
+  },
+  "H-NH-01": {
+   "office": "H",
+   "state": "NH",
+   "district": 1,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Stefany Shaheen",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+2",
+   "held_by": "D"
+  },
+  "H-NH-02": {
+   "office": "H",
+   "state": "NH",
+   "district": 2,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Maggie Goodlander",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+2",
+   "held_by": "D"
+  },
+  "H-NJ-01": {
+   "office": "H",
+   "state": "NJ",
+   "district": 1,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Donald Norcross",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+10",
+   "held_by": "D"
+  },
+  "H-NJ-02": {
+   "office": "H",
+   "state": "NJ",
+   "district": 2,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Zack Mullock",
+   "flip": true,
+   "margin": null,
+   "others": [],
+   "pvi": "R+5",
+   "held_by": "R"
+  },
+  "H-NJ-03": {
+   "office": "H",
+   "state": "NJ",
+   "district": 3,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Herb Conaway",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+5",
+   "held_by": "D"
+  },
+  "H-NJ-04": {
+   "office": "H",
+   "state": "NJ",
+   "district": 4,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Chris Smith",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+14",
+   "held_by": "R"
+  },
+  "H-NJ-05": {
+   "office": "H",
+   "state": "NJ",
+   "district": 5,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Josh Gottheimer",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+2",
+   "held_by": "D"
+  },
+  "H-NJ-06": {
+   "office": "H",
+   "state": "NJ",
+   "district": 6,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Frank Pallone",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+5",
+   "held_by": "D"
+  },
+  "H-NJ-07": {
+   "office": "H",
+   "state": "NJ",
+   "district": 7,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Rebecca Bennett",
+   "flip": true,
+   "margin": null,
+   "others": [],
+   "pvi": "EVEN",
+   "held_by": "R"
+  },
+  "H-NJ-08": {
+   "office": "H",
+   "state": "NJ",
+   "district": 8,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Rob Menendez",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+15",
+   "held_by": "D"
+  },
+  "H-NJ-09": {
+   "office": "H",
+   "state": "NJ",
+   "district": 9,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Nellie Pou",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+2",
+   "held_by": "D"
+  },
+  "H-NJ-10": {
+   "office": "H",
+   "state": "NJ",
+   "district": 10,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "LaMonica McIver",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+27",
+   "held_by": "D"
+  },
+  "H-NJ-11": {
+   "office": "H",
+   "state": "NJ",
+   "district": 11,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Analilia Mejia",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+5",
+   "held_by": "D"
+  },
+  "H-NJ-12": {
+   "office": "H",
+   "state": "NJ",
+   "district": 12,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Adam Hamawy",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+13",
+   "held_by": "D"
+  },
+  "H-NM-01": {
+   "office": "H",
+   "state": "NM",
+   "district": 1,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Melanie Stansbury",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+7",
+   "held_by": "D"
+  },
+  "H-NM-02": {
+   "office": "H",
+   "state": "NM",
+   "district": 2,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Gabe Vasquez",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "EVEN",
+   "held_by": "D"
+  },
+  "H-NM-03": {
+   "office": "H",
+   "state": "NM",
+   "district": 3,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Teresa Leger Fernández",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+3",
+   "held_by": "D"
+  },
+  "H-NV-01": {
+   "office": "H",
+   "state": "NV",
+   "district": 1,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Dina Titus",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+2",
+   "held_by": "D"
+  },
+  "H-NV-02": {
+   "office": "H",
+   "state": "NV",
+   "district": 2,
+   "special": false,
+   "called": false,
+   "status": "uncalled",
+   "winner": null,
+   "winner_name": null,
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+7",
+   "held_by": "R"
+  },
+  "H-NV-03": {
+   "office": "H",
+   "state": "NV",
+   "district": 3,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Susie Lee",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+1",
+   "held_by": "D"
+  },
+  "H-NV-04": {
+   "office": "H",
+   "state": "NV",
+   "district": 4,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Steven Horsford",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+2",
+   "held_by": "D"
+  },
+  "H-NY-01": {
+   "office": "H",
+   "state": "NY",
+   "district": 1,
+   "special": false,
+   "called": false,
+   "status": "uncalled",
+   "winner": null,
+   "winner_name": null,
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+4",
+   "held_by": "R"
+  },
+  "H-NY-02": {
+   "office": "H",
+   "state": "NY",
+   "district": 2,
+   "special": false,
+   "called": false,
+   "status": "uncalled",
+   "winner": null,
+   "winner_name": null,
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+6",
+   "held_by": "R"
+  },
+  "H-NY-03": {
+   "office": "H",
+   "state": "NY",
+   "district": 3,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Tom Suozzi",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "EVEN",
+   "held_by": "D"
+  },
+  "H-NY-04": {
+   "office": "H",
+   "state": "NY",
+   "district": 4,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Laura Gillen",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+2",
+   "held_by": "D"
+  },
+  "H-NY-05": {
+   "office": "H",
+   "state": "NY",
+   "district": 5,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Gregory Meeks",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+24",
+   "held_by": "D"
+  },
+  "H-NY-06": {
+   "office": "H",
+   "state": "NY",
+   "district": 6,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Grace Meng",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+6",
+   "held_by": "D"
+  },
+  "H-NY-07": {
+   "office": "H",
+   "state": "NY",
+   "district": 7,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Claire Valdez",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+25",
+   "held_by": "D"
+  },
+  "H-NY-08": {
+   "office": "H",
+   "state": "NY",
+   "district": 8,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Hakeem Jeffries",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+24",
+   "held_by": "D"
+  },
+  "H-NY-09": {
+   "office": "H",
+   "state": "NY",
+   "district": 9,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Yvette Clarke",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+22",
+   "held_by": "D"
+  },
+  "H-NY-10": {
+   "office": "H",
+   "state": "NY",
+   "district": 10,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Brad Lander",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+32",
+   "held_by": "D"
+  },
+  "H-NY-11": {
+   "office": "H",
+   "state": "NY",
+   "district": 11,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Nicole Malliotakis",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+10",
+   "held_by": "R"
+  },
+  "H-NY-12": {
+   "office": "H",
+   "state": "NY",
+   "district": 12,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Micah Lasher",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+33",
+   "held_by": "D"
+  },
+  "H-NY-13": {
+   "office": "H",
+   "state": "NY",
+   "district": 13,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Darializa Avila Chevalier",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+32",
+   "held_by": "D"
+  },
+  "H-NY-14": {
+   "office": "H",
+   "state": "NY",
+   "district": 14,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Alexandria Ocasio-Cortez",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+19",
+   "held_by": "D"
+  },
+  "H-NY-15": {
+   "office": "H",
+   "state": "NY",
+   "district": 15,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Ritchie Torres",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+27",
+   "held_by": "D"
+  },
+  "H-NY-16": {
+   "office": "H",
+   "state": "NY",
+   "district": 16,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "George Latimer",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+18",
+   "held_by": "D"
+  },
+  "H-NY-17": {
+   "office": "H",
+   "state": "NY",
+   "district": 17,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Cait Conley",
+   "flip": true,
+   "margin": null,
+   "others": [],
+   "pvi": "D+1",
+   "held_by": "R"
+  },
+  "H-NY-18": {
+   "office": "H",
+   "state": "NY",
+   "district": 18,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Pat Ryan",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+2",
+   "held_by": "D"
+  },
+  "H-NY-19": {
+   "office": "H",
+   "state": "NY",
+   "district": 19,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Josh Riley",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+1",
+   "held_by": "D"
+  },
+  "H-NY-20": {
+   "office": "H",
+   "state": "NY",
+   "district": 20,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Paul Tonko",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+8",
+   "held_by": "D"
+  },
+  "H-NY-21": {
+   "office": "H",
+   "state": "NY",
+   "district": 21,
+   "special": false,
+   "called": false,
+   "status": "uncalled",
+   "winner": null,
+   "winner_name": null,
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+10",
+   "held_by": "R"
+  },
+  "H-NY-22": {
+   "office": "H",
+   "state": "NY",
+   "district": 22,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "John Mannion",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+4",
+   "held_by": "D"
+  },
+  "H-NY-23": {
+   "office": "H",
+   "state": "NY",
+   "district": 23,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Nick Langworthy",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+10",
+   "held_by": "R"
+  },
+  "H-NY-24": {
+   "office": "H",
+   "state": "NY",
+   "district": 24,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Claudia Tenney",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+11",
+   "held_by": "R"
+  },
+  "H-NY-25": {
+   "office": "H",
+   "state": "NY",
+   "district": 25,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Joseph Morelle",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+10",
+   "held_by": "D"
+  },
+  "H-NY-26": {
+   "office": "H",
+   "state": "NY",
+   "district": 26,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Tim Kennedy",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+11",
+   "held_by": "D"
+  },
+  "H-OH-01": {
+   "office": "H",
+   "state": "OH",
+   "district": 1,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Greg Landsman",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+1",
+   "held_by": "D"
+  },
+  "H-OH-02": {
+   "office": "H",
+   "state": "OH",
+   "district": 2,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "David Taylor",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+21",
+   "held_by": "R"
+  },
+  "H-OH-03": {
+   "office": "H",
+   "state": "OH",
+   "district": 3,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Joyce Beatty",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+21",
+   "held_by": "D"
+  },
+  "H-OH-04": {
+   "office": "H",
+   "state": "OH",
+   "district": 4,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Jim Jordan",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+21",
+   "held_by": "R"
+  },
+  "H-OH-05": {
+   "office": "H",
+   "state": "OH",
+   "district": 5,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Bob Latta",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+12",
+   "held_by": "R"
+  },
+  "H-OH-06": {
+   "office": "H",
+   "state": "OH",
+   "district": 6,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Michael Rulli",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+17",
+   "held_by": "R"
+  },
+  "H-OH-07": {
+   "office": "H",
+   "state": "OH",
+   "district": 7,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Brian Poindexter",
+   "flip": true,
+   "margin": null,
+   "others": [],
+   "pvi": "R+5",
+   "held_by": "R"
+  },
+  "H-OH-08": {
+   "office": "H",
+   "state": "OH",
+   "district": 8,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Warren Davidson",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+8",
+   "held_by": "R"
+  },
+  "H-OH-09": {
+   "office": "H",
+   "state": "OH",
+   "district": 9,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Marcy Kaptur",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+5",
+   "held_by": "D"
+  },
+  "H-OH-10": {
+   "office": "H",
+   "state": "OH",
+   "district": 10,
+   "special": false,
+   "called": false,
+   "status": "uncalled",
+   "winner": null,
+   "winner_name": null,
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+4",
+   "held_by": "R"
+  },
+  "H-OH-11": {
+   "office": "H",
+   "state": "OH",
+   "district": 11,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Shontel Brown",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+28",
+   "held_by": "D"
+  },
+  "H-OH-12": {
+   "office": "H",
+   "state": "OH",
+   "district": 12,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Troy Balderson",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+15",
+   "held_by": "R"
+  },
+  "H-OH-13": {
+   "office": "H",
+   "state": "OH",
+   "district": 13,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Emilia Sykes",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+2",
+   "held_by": "D"
+  },
+  "H-OH-14": {
+   "office": "H",
+   "state": "OH",
+   "district": 14,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "David Joyce",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+10",
+   "held_by": "R"
+  },
+  "H-OH-15": {
+   "office": "H",
+   "state": "OH",
+   "district": 15,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Don Leonard",
+   "flip": true,
+   "margin": null,
+   "others": [],
+   "pvi": "R+5",
+   "held_by": "R"
+  },
+  "H-OK-01": {
+   "office": "H",
+   "state": "OK",
+   "district": 1,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Mark Tedford",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+11",
+   "held_by": "R"
+  },
+  "H-OK-02": {
+   "office": "H",
+   "state": "OK",
+   "district": 2,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Josh Brecheen",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+28",
+   "held_by": "R"
+  },
+  "H-OK-03": {
+   "office": "H",
+   "state": "OK",
+   "district": 3,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Frank Lucas",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+23",
+   "held_by": "R"
+  },
+  "H-OK-04": {
+   "office": "H",
+   "state": "OK",
+   "district": 4,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Tom Cole",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+17",
+   "held_by": "R"
+  },
+  "H-OK-05": {
+   "office": "H",
+   "state": "OK",
+   "district": 5,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Stephanie Bice",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+9",
+   "held_by": "R"
+  },
+  "H-OR-01": {
+   "office": "H",
+   "state": "OR",
+   "district": 1,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Suzanne Bonamici",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+20",
+   "held_by": "D"
+  },
+  "H-OR-02": {
+   "office": "H",
+   "state": "OR",
+   "district": 2,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Cliff Bentz",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+14",
+   "held_by": "R"
+  },
+  "H-OR-03": {
+   "office": "H",
+   "state": "OR",
+   "district": 3,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Maxine Dexter",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+24",
+   "held_by": "D"
+  },
+  "H-OR-04": {
+   "office": "H",
+   "state": "OR",
+   "district": 4,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Val Hoyle",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+6",
+   "held_by": "D"
+  },
+  "H-OR-05": {
+   "office": "H",
+   "state": "OR",
+   "district": 5,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Janelle Bynum",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+4",
+   "held_by": "D"
+  },
+  "H-OR-06": {
+   "office": "H",
+   "state": "OR",
+   "district": 6,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Andrea Salinas",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+6",
+   "held_by": "D"
+  },
+  "H-PA-01": {
+   "office": "H",
+   "state": "PA",
+   "district": 1,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Bob Harvie",
+   "flip": true,
+   "margin": null,
+   "others": [],
+   "pvi": "D+1",
+   "held_by": "R"
+  },
+  "H-PA-02": {
+   "office": "H",
+   "state": "PA",
+   "district": 2,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Brendan Boyle",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+19",
+   "held_by": "D"
+  },
+  "H-PA-03": {
+   "office": "H",
+   "state": "PA",
+   "district": 3,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Chris Rabb",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+40",
+   "held_by": "D"
+  },
+  "H-PA-04": {
+   "office": "H",
+   "state": "PA",
+   "district": 4,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Madeleine Dean",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+8",
+   "held_by": "D"
+  },
+  "H-PA-05": {
+   "office": "H",
+   "state": "PA",
+   "district": 5,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Mary Gay Scanlon",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+15",
+   "held_by": "D"
+  },
+  "H-PA-06": {
+   "office": "H",
+   "state": "PA",
+   "district": 6,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Chrissy Houlahan",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+6",
+   "held_by": "D"
+  },
+  "H-PA-07": {
+   "office": "H",
+   "state": "PA",
+   "district": 7,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Bob Brooks",
+   "flip": true,
+   "margin": null,
+   "others": [],
+   "pvi": "R+1",
+   "held_by": "R"
+  },
+  "H-PA-08": {
+   "office": "H",
+   "state": "PA",
+   "district": 8,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Paige Cognetti",
+   "flip": true,
+   "margin": null,
+   "others": [],
+   "pvi": "R+4",
+   "held_by": "R"
+  },
+  "H-PA-09": {
+   "office": "H",
+   "state": "PA",
+   "district": 9,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Dan Meuser",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+19",
+   "held_by": "R"
+  },
+  "H-PA-10": {
+   "office": "H",
+   "state": "PA",
+   "district": 10,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Janelle Stelson",
+   "flip": true,
+   "margin": null,
+   "others": [],
+   "pvi": "R+3",
+   "held_by": "R"
+  },
+  "H-PA-11": {
+   "office": "H",
+   "state": "PA",
+   "district": 11,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Lloyd Smucker",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+11",
+   "held_by": "R"
+  },
+  "H-PA-12": {
+   "office": "H",
+   "state": "PA",
+   "district": 12,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Summer Lee",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+10",
+   "held_by": "D"
+  },
+  "H-PA-13": {
+   "office": "H",
+   "state": "PA",
+   "district": 13,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "John Joyce",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+23",
+   "held_by": "R"
+  },
+  "H-PA-14": {
+   "office": "H",
+   "state": "PA",
+   "district": 14,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Guy Reschenthaler",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+17",
+   "held_by": "R"
+  },
+  "H-PA-15": {
+   "office": "H",
+   "state": "PA",
+   "district": 15,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Glenn Thompson",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+19",
+   "held_by": "R"
+  },
+  "H-PA-16": {
+   "office": "H",
+   "state": "PA",
+   "district": 16,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Mike Kelly",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+11",
+   "held_by": "R"
+  },
+  "H-PA-17": {
+   "office": "H",
+   "state": "PA",
+   "district": 17,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Chris Deluzio",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+3",
+   "held_by": "D"
+  },
+  "H-RI-01": {
+   "office": "H",
+   "state": "RI",
+   "district": 1,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Gabe Amo",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+12",
+   "held_by": "D"
+  },
+  "H-RI-02": {
+   "office": "H",
+   "state": "RI",
+   "district": 2,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Seth Magaziner",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+4",
+   "held_by": "D"
+  },
+  "H-SC-01": {
+   "office": "H",
+   "state": "SC",
+   "district": 1,
+   "special": false,
+   "called": false,
+   "status": "uncalled",
+   "winner": null,
+   "winner_name": null,
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+6",
+   "held_by": "R"
+  },
+  "H-SC-02": {
+   "office": "H",
+   "state": "SC",
+   "district": 2,
+   "special": false,
+   "called": false,
+   "status": "uncalled",
+   "winner": null,
+   "winner_name": null,
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+7",
+   "held_by": "R"
+  },
+  "H-SC-03": {
+   "office": "H",
+   "state": "SC",
+   "district": 3,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Sheri Biggs",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+21",
+   "held_by": "R"
+  },
+  "H-SC-04": {
+   "office": "H",
+   "state": "SC",
+   "district": 4,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "William Timmons",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+11",
+   "held_by": "R"
+  },
+  "H-SC-05": {
+   "office": "H",
+   "state": "SC",
+   "district": 5,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Wes Climer",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+11",
+   "held_by": "R"
+  },
+  "H-SC-06": {
+   "office": "H",
+   "state": "SC",
+   "district": 6,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Jim Clyburn",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+13",
+   "held_by": "D"
+  },
+  "H-SC-07": {
+   "office": "H",
+   "state": "SC",
+   "district": 7,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Russell Fry",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+12",
+   "held_by": "R"
+  },
+  "H-SD-00": {
+   "office": "H",
+   "state": "SD",
+   "district": 0,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Marty Jackley",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+15",
+   "held_by": "R"
+  },
+  "H-TN-01": {
+   "office": "H",
+   "state": "TN",
+   "district": 1,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Diana Harshbarger",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+29",
+   "held_by": "R"
+  },
+  "H-TN-02": {
+   "office": "H",
+   "state": "TN",
+   "district": 2,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Tim Burchett",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+17",
+   "held_by": "R"
+  },
+  "H-TN-03": {
+   "office": "H",
+   "state": "TN",
+   "district": 3,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Chuck Fleischmann",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+18",
+   "held_by": "R"
+  },
+  "H-TN-04": {
+   "office": "H",
+   "state": "TN",
+   "district": 4,
+   "special": false,
+   "called": false,
+   "status": "uncalled",
+   "winner": null,
+   "winner_name": null,
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+11",
+   "held_by": "R"
+  },
+  "H-TN-05": {
+   "office": "H",
+   "state": "TN",
+   "district": 5,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Charlie Hatcher",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+10",
+   "held_by": "R"
+  },
+  "H-TN-06": {
+   "office": "H",
+   "state": "TN",
+   "district": 6,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Johnny Garrett",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+13",
+   "held_by": "R"
+  },
+  "H-TN-07": {
+   "office": "H",
+   "state": "TN",
+   "district": 7,
+   "special": false,
+   "called": false,
+   "status": "uncalled",
+   "winner": null,
+   "winner_name": null,
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+11",
+   "held_by": "R"
+  },
+  "H-TN-08": {
+   "office": "H",
+   "state": "TN",
+   "district": 8,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "David Kustoff",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+10",
+   "held_by": "R"
+  },
+  "H-TN-09": {
+   "office": "H",
+   "state": "TN",
+   "district": 9,
+   "special": false,
+   "called": false,
+   "status": "uncalled",
+   "winner": null,
+   "winner_name": null,
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+9",
+   "held_by": "D"
+  },
+  "H-TX-01": {
+   "office": "H",
+   "state": "TX",
+   "district": 1,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Nathaniel Moran",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+24",
+   "held_by": "R"
+  },
+  "H-TX-02": {
+   "office": "H",
+   "state": "TX",
+   "district": 2,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Steve Toth",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+11",
+   "held_by": "R"
+  },
+  "H-TX-03": {
+   "office": "H",
+   "state": "TX",
+   "district": 3,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Keith Self",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+11",
+   "held_by": "R"
+  },
+  "H-TX-04": {
+   "office": "H",
+   "state": "TX",
+   "district": 4,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Pat Fallon",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+12",
+   "held_by": "R"
+  },
+  "H-TX-05": {
+   "office": "H",
+   "state": "TX",
+   "district": 5,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Lance Gooden",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+10",
+   "held_by": "R"
+  },
+  "H-TX-06": {
+   "office": "H",
+   "state": "TX",
+   "district": 6,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Jake Ellzey",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+11",
+   "held_by": "R"
+  },
+  "H-TX-07": {
+   "office": "H",
+   "state": "TX",
+   "district": 7,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Lizzie Fletcher",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+13",
+   "held_by": "D"
+  },
+  "H-TX-08": {
+   "office": "H",
+   "state": "TX",
+   "district": 8,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Jessica Steinmann",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+13",
+   "held_by": "R"
+  },
+  "H-TX-09": {
+   "office": "H",
+   "state": "TX",
+   "district": 9,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Leticia Gutierrez",
+   "flip": true,
+   "margin": null,
+   "others": [],
+   "pvi": "R+9",
+   "held_by": "N"
+  },
+  "H-TX-10": {
+   "office": "H",
+   "state": "TX",
+   "district": 10,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Chris Gober",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+10",
+   "held_by": "R"
+  },
+  "H-TX-11": {
+   "office": "H",
+   "state": "TX",
+   "district": 11,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "August Pfluger",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+17",
+   "held_by": "R"
+  },
+  "H-TX-12": {
+   "office": "H",
+   "state": "TX",
+   "district": 12,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Craig Goldman",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+11",
+   "held_by": "R"
+  },
+  "H-TX-13": {
+   "office": "H",
+   "state": "TX",
+   "district": 13,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Ronny Jackson",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+23",
+   "held_by": "R"
+  },
+  "H-TX-14": {
+   "office": "H",
+   "state": "TX",
+   "district": 14,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Randy Weber",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+12",
+   "held_by": "R"
+  },
+  "H-TX-15": {
+   "office": "H",
+   "state": "TX",
+   "district": 15,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Bobby Pulido",
+   "flip": true,
+   "margin": null,
+   "others": [],
+   "pvi": "R+7",
+   "held_by": "R"
+  },
+  "H-TX-16": {
+   "office": "H",
+   "state": "TX",
+   "district": 16,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Veronica Escobar",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+11",
+   "held_by": "D"
+  },
+  "H-TX-17": {
+   "office": "H",
+   "state": "TX",
+   "district": 17,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Pete Sessions",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+10",
+   "held_by": "R"
+  },
+  "H-TX-18": {
+   "office": "H",
+   "state": "TX",
+   "district": 18,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Christian Menefee",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+29",
+   "held_by": "D"
+  },
+  "H-TX-19": {
+   "office": "H",
+   "state": "TX",
+   "district": 19,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Tom Sell",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+25",
+   "held_by": "R"
+  },
+  "H-TX-20": {
+   "office": "H",
+   "state": "TX",
+   "district": 20,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Joaquin Castro",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+16",
+   "held_by": "D"
+  },
+  "H-TX-21": {
+   "office": "H",
+   "state": "TX",
+   "district": 21,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Mark Teixeira",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+10",
+   "held_by": "R"
+  },
+  "H-TX-22": {
+   "office": "H",
+   "state": "TX",
+   "district": 22,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Trever Nehls",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+11",
+   "held_by": "R"
+  },
+  "H-TX-23": {
+   "office": "H",
+   "state": "TX",
+   "district": 23,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Katy Padilla Stout",
+   "flip": true,
+   "margin": null,
+   "others": [],
+   "pvi": "R+7",
+   "held_by": "V"
+  },
+  "H-TX-24": {
+   "office": "H",
+   "state": "TX",
+   "district": 24,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Beth Van Duyne",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+8",
+   "held_by": "R"
+  },
+  "H-TX-25": {
+   "office": "H",
+   "state": "TX",
+   "district": 25,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Roger Williams",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+11",
+   "held_by": "R"
+  },
+  "H-TX-26": {
+   "office": "H",
+   "state": "TX",
+   "district": 26,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Brandon Gill",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+11",
+   "held_by": "R"
+  },
+  "H-TX-27": {
+   "office": "H",
+   "state": "TX",
+   "district": 27,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Michael Cloud",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+10",
+   "held_by": "R"
+  },
+  "H-TX-28": {
+   "office": "H",
+   "state": "TX",
+   "district": 28,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Henry Cuellar",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+3",
+   "held_by": "D"
+  },
+  "H-TX-29": {
+   "office": "H",
+   "state": "TX",
+   "district": 29,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Sylvia Garcia",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+17",
+   "held_by": "D"
+  },
+  "H-TX-30": {
+   "office": "H",
+   "state": "TX",
+   "district": 30,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Frederick Haynes III",
+   "flip": true,
+   "margin": null,
+   "others": [],
+   "pvi": "D+25",
+   "held_by": "N"
+  },
+  "H-TX-31": {
+   "office": "H",
+   "state": "TX",
+   "district": 31,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "John Carter",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+11",
+   "held_by": "R"
+  },
+  "H-TX-32": {
+   "office": "H",
+   "state": "TX",
+   "district": 32,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Jace Yarbrough",
+   "flip": true,
+   "margin": null,
+   "others": [],
+   "pvi": "R+8",
+   "held_by": "N"
+  },
+  "H-TX-33": {
+   "office": "H",
+   "state": "TX",
+   "district": 33,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Colin Allred",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+18",
+   "held_by": "D"
+  },
+  "H-TX-34": {
+   "office": "H",
+   "state": "TX",
+   "district": 34,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Vicente Gonzalez",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+3",
+   "held_by": "D"
+  },
+  "H-TX-35": {
+   "office": "H",
+   "state": "TX",
+   "district": 35,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Johnny Garcia",
+   "flip": true,
+   "margin": null,
+   "others": [],
+   "pvi": "R+4",
+   "held_by": "N"
+  },
+  "H-TX-36": {
+   "office": "H",
+   "state": "TX",
+   "district": 36,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Brian Babin",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+12",
+   "held_by": "R"
+  },
+  "H-TX-37": {
+   "office": "H",
+   "state": "TX",
+   "district": 37,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Greg Casar",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+30",
+   "held_by": "D"
+  },
+  "H-TX-38": {
+   "office": "H",
+   "state": "TX",
+   "district": 38,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Jon Bonck",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+10",
+   "held_by": "R"
+  },
+  "H-UT-01": {
+   "office": "H",
+   "state": "UT",
+   "district": 1,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Ben McAdams",
+   "flip": true,
+   "margin": null,
+   "others": [],
+   "pvi": "D+12",
+   "held_by": "N"
+  },
+  "H-UT-02": {
+   "office": "H",
+   "state": "UT",
+   "district": 2,
+   "special": false,
+   "called": false,
+   "status": "uncalled",
+   "winner": null,
+   "winner_name": null,
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+15",
+   "held_by": "R"
+  },
+  "H-UT-03": {
+   "office": "H",
+   "state": "UT",
+   "district": 3,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Celeste Maloy",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+21",
+   "held_by": "R"
+  },
+  "H-UT-04": {
+   "office": "H",
+   "state": "UT",
+   "district": 4,
+   "special": false,
+   "called": false,
+   "status": "uncalled",
+   "winner": null,
+   "winner_name": null,
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+17",
+   "held_by": "R"
+  },
+  "H-VA-01": {
+   "office": "H",
+   "state": "VA",
+   "district": 1,
+   "special": false,
+   "called": false,
+   "status": "uncalled",
+   "winner": null,
+   "winner_name": null,
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+3",
+   "held_by": "R"
+  },
+  "H-VA-02": {
+   "office": "H",
+   "state": "VA",
+   "district": 2,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Elaine Luria",
+   "flip": true,
+   "margin": null,
+   "others": [],
+   "pvi": "EVEN",
+   "held_by": "R"
+  },
+  "H-VA-03": {
+   "office": "H",
+   "state": "VA",
+   "district": 3,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Bobby Scott",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+18",
+   "held_by": "D"
+  },
+  "H-VA-04": {
+   "office": "H",
+   "state": "VA",
+   "district": 4,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Jennifer McClellan",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+17",
+   "held_by": "D"
+  },
+  "H-VA-05": {
+   "office": "H",
+   "state": "VA",
+   "district": 5,
+   "special": false,
+   "called": false,
+   "status": "uncalled",
+   "winner": null,
+   "winner_name": null,
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+6",
+   "held_by": "R"
+  },
+  "H-VA-06": {
+   "office": "H",
+   "state": "VA",
+   "district": 6,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Ben Cline",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+12",
+   "held_by": "R"
+  },
+  "H-VA-07": {
+   "office": "H",
+   "state": "VA",
+   "district": 7,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Eugene Vindman",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+2",
+   "held_by": "D"
+  },
+  "H-VA-08": {
+   "office": "H",
+   "state": "VA",
+   "district": 8,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Don Beyer",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+26",
+   "held_by": "D"
+  },
+  "H-VA-09": {
+   "office": "H",
+   "state": "VA",
+   "district": 9,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Morgan Griffith",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+22",
+   "held_by": "R"
+  },
+  "H-VA-10": {
+   "office": "H",
+   "state": "VA",
+   "district": 10,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Suhas Subramanyam",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+6",
+   "held_by": "D"
+  },
+  "H-VA-11": {
+   "office": "H",
+   "state": "VA",
+   "district": 11,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "James Walkinshaw",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+18",
+   "held_by": "D"
+  },
+  "H-VT-00": {
+   "office": "H",
+   "state": "VT",
+   "district": 0,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Becca Balint",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+17",
+   "held_by": "D"
+  },
+  "H-WA-01": {
+   "office": "H",
+   "state": "WA",
+   "district": 1,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Suzan DelBene",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+15",
+   "held_by": "D"
+  },
+  "H-WA-02": {
+   "office": "H",
+   "state": "WA",
+   "district": 2,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Rick Larsen",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+12",
+   "held_by": "D"
+  },
+  "H-WA-03": {
+   "office": "H",
+   "state": "WA",
+   "district": 3,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Marie Gluesenkamp Perez",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+2",
+   "held_by": "D"
+  },
+  "H-WA-04": {
+   "office": "H",
+   "state": "WA",
+   "district": 4,
+   "special": false,
+   "called": false,
+   "status": "uncalled",
+   "winner": null,
+   "winner_name": null,
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+10",
+   "held_by": "R"
+  },
+  "H-WA-05": {
+   "office": "H",
+   "state": "WA",
+   "district": 5,
+   "special": false,
+   "called": false,
+   "status": "uncalled",
+   "winner": null,
+   "winner_name": null,
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+5",
+   "held_by": "R"
+  },
+  "H-WA-06": {
+   "office": "H",
+   "state": "WA",
+   "district": 6,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Emily Randall",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+10",
+   "held_by": "D"
+  },
+  "H-WA-07": {
+   "office": "H",
+   "state": "WA",
+   "district": 7,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Pramila Jayapal",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+39",
+   "held_by": "D"
+  },
+  "H-WA-08": {
+   "office": "H",
+   "state": "WA",
+   "district": 8,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Kim Schrier",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+3",
+   "held_by": "D"
+  },
+  "H-WA-09": {
+   "office": "H",
+   "state": "WA",
+   "district": 9,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Adam Smith",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+22",
+   "held_by": "D"
+  },
+  "H-WA-10": {
+   "office": "H",
+   "state": "WA",
+   "district": 10,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Marilyn Strickland",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+9",
+   "held_by": "D"
+  },
+  "H-WI-01": {
+   "office": "H",
+   "state": "WI",
+   "district": 1,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Mitchell Berman",
+   "flip": true,
+   "margin": null,
+   "others": [],
+   "pvi": "R+2",
+   "held_by": "R"
+  },
+  "H-WI-02": {
+   "office": "H",
+   "state": "WI",
+   "district": 2,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Mark Pocan",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+21",
+   "held_by": "D"
+  },
+  "H-WI-03": {
+   "office": "H",
+   "state": "WI",
+   "district": 3,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Rebecca Cooke",
+   "flip": true,
+   "margin": null,
+   "others": [],
+   "pvi": "R+3",
+   "held_by": "R"
+  },
+  "H-WI-04": {
+   "office": "H",
+   "state": "WI",
+   "district": 4,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Gwen Moore",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "D+26",
+   "held_by": "D"
+  },
+  "H-WI-05": {
+   "office": "H",
+   "state": "WI",
+   "district": 5,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Scott Fitzgerald",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+11",
+   "held_by": "R"
+  },
+  "H-WI-06": {
+   "office": "H",
+   "state": "WI",
+   "district": 6,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Glenn Grothman",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+8",
+   "held_by": "R"
+  },
+  "H-WI-07": {
+   "office": "H",
+   "state": "WI",
+   "district": 7,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Michael Alfonso",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+11",
+   "held_by": "R"
+  },
+  "H-WI-08": {
+   "office": "H",
+   "state": "WI",
+   "district": 8,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Tony Wied",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+8",
+   "held_by": "R"
+  },
+  "H-WV-01": {
+   "office": "H",
+   "state": "WV",
+   "district": 1,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Carol Miller",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+22",
+   "held_by": "R"
+  },
+  "H-WV-02": {
+   "office": "H",
+   "state": "WV",
+   "district": 2,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Riley Moore",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+20",
+   "held_by": "R"
+  },
+  "H-WY-00": {
+   "office": "H",
+   "state": "WY",
+   "district": 0,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Chuck Gray",
+   "flip": false,
+   "margin": null,
+   "others": [],
+   "pvi": "R+23",
+   "held_by": "R"
+  },
+  "S-AK": {
+   "office": "S",
+   "state": "AK",
+   "district": null,
+   "special": false,
+   "called": false,
+   "status": "uncalled",
+   "winner": null,
+   "winner_name": null,
+   "flip": false,
+   "margin": null,
+   "others": [
+    {
+     "n": "Gerald Heikes",
+     "p": "R"
+    },
+    {
+     "n": "Mary Peltola",
+     "p": "D"
+    },
+    {
+     "n": "Dan J. Sullivan",
+     "p": "R"
+    },
+    {
+     "n": "Dan S. Sullivan",
+     "p": "R"
+    }
+   ],
+   "pvi": "R+6",
+   "held_by": "R"
+  },
+  "S-AL": {
+   "office": "S",
+   "state": "AL",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Barry Moore",
+   "flip": false,
+   "margin": null,
+   "others": [
+    {
+     "n": "Everett Wess",
+     "p": "D"
+    }
+   ],
+   "pvi": "R+15",
+   "held_by": "R"
+  },
+  "S-AR": {
+   "office": "S",
+   "state": "AR",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Tom Cotton",
+   "flip": false,
+   "margin": null,
+   "others": [
+    {
+     "n": "Hallie Shoffner",
+     "p": "D"
+    },
+    {
+     "n": "Jeff Wadlin",
+     "p": "L"
+    }
+   ],
+   "pvi": "R+15",
+   "held_by": "R"
+  },
+  "S-CO": {
+   "office": "S",
+   "state": "CO",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "John Hickenlooper",
+   "flip": false,
+   "margin": null,
+   "others": [
+    {
+     "n": "Mark Baisley",
+     "p": "R"
+    },
+    {
+     "n": "Bob Chew",
+     "p": "O"
+    },
+    {
+     "n": "Blake Huber",
+     "p": "L"
+    },
+    {
+     "n": "Adam Withrow",
+     "p": "O"
+    }
+   ],
+   "pvi": "D+6",
+   "held_by": "D"
+  },
+  "S-DE": {
+   "office": "S",
+   "state": "DE",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Chris Coons",
+   "flip": false,
+   "margin": null,
+   "others": [
+    {
+     "n": "Michael Katz",
+     "p": "R"
+    }
+   ],
+   "pvi": "D+8",
+   "held_by": "D"
+  },
+  "S-FL": {
+   "office": "S",
+   "state": "FL",
+   "district": null,
+   "special": true,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Ashley Moody",
+   "flip": false,
+   "margin": null,
+   "others": [
+    {
+     "n": "Angie Nixon",
+     "p": "D"
+    },
+    {
+     "n": "Neil Gillespie",
+     "p": "I"
+    }
+   ],
+   "pvi": "R+5",
+   "held_by": "R"
+  },
+  "S-GA": {
+   "office": "S",
+   "state": "GA",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Jon Ossoff",
+   "flip": false,
+   "margin": null,
+   "others": [
+    {
+     "n": "Mike Collins",
+     "p": "R"
+    }
+   ],
+   "pvi": "R+1",
+   "held_by": "D"
+  },
+  "S-IA": {
+   "office": "S",
+   "state": "IA",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Josh Turek",
+   "flip": true,
+   "margin": null,
+   "others": [
+    {
+     "n": "Ashley Hinson",
+     "p": "R"
+    },
+    {
+     "n": "Thomas Laehn",
+     "p": "L"
+    }
+   ],
+   "pvi": "R+6",
+   "held_by": "R"
+  },
+  "S-ID": {
+   "office": "S",
+   "state": "ID",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Jim Risch",
+   "flip": false,
+   "margin": null,
+   "others": [
+    {
+     "n": "Todd Achilles",
+     "p": "I"
+    },
+    {
+     "n": "Natalie Fleming",
+     "p": "I"
+    },
+    {
+     "n": "Matt Loesby",
+     "p": "L"
+    }
+   ],
+   "pvi": "R+18",
+   "held_by": "R"
+  },
+  "S-IL": {
+   "office": "S",
+   "state": "IL",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Juliana Stratton",
+   "flip": false,
+   "margin": null,
+   "others": [
+    {
+     "n": "Don Tracy",
+     "p": "R"
+    },
+    {
+     "n": "Whitfield Harrington Jr.",
+     "p": "I"
+    }
+   ],
+   "pvi": "D+6",
+   "held_by": "D"
+  },
+  "S-KS": {
+   "office": "S",
+   "state": "KS",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Adam Hamilton",
+   "flip": true,
+   "margin": null,
+   "others": [
+    {
+     "n": "Roger Marshall",
+     "p": "R"
+    },
+    {
+     "n": "David Graham",
+     "p": "L"
+    }
+   ],
+   "pvi": "R+8",
+   "held_by": "R"
+  },
+  "S-KY": {
+   "office": "S",
+   "state": "KY",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Andy Barr",
+   "flip": false,
+   "margin": null,
+   "others": [
+    {
+     "n": "Charles Booker",
+     "p": "D"
+    },
+    {
+     "n": "Christopher Campbell",
+     "p": "I"
+    }
+   ],
+   "pvi": "R+15",
+   "held_by": "R"
+  },
+  "S-LA": {
+   "office": "S",
+   "state": "LA",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Julia Letlow",
+   "flip": false,
+   "margin": null,
+   "others": [
+    {
+     "n": "Jamie Davis",
+     "p": "D"
+    }
+   ],
+   "pvi": "R+11",
+   "held_by": "R"
+  },
+  "S-MA": {
+   "office": "S",
+   "state": "MA",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Ed Markey",
+   "flip": false,
+   "margin": null,
+   "others": [
+    {
+     "n": "John Deaton",
+     "p": "R"
+    },
+    {
+     "n": "Shiva Ayyadurai",
+     "p": "I"
+    },
+    {
+     "n": "Joe Tache",
+     "p": "O"
+    }
+   ],
+   "pvi": "D+14",
+   "held_by": "D"
+  },
+  "S-ME": {
+   "office": "S",
+   "state": "ME",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Troy Jackson",
+   "flip": true,
+   "margin": null,
+   "others": [
+    {
+     "n": "Susan Collins",
+     "p": "R"
+    }
+   ],
+   "pvi": "D+4",
+   "held_by": "R"
+  },
+  "S-MI": {
+   "office": "S",
+   "state": "MI",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Abdul El-Sayed",
+   "flip": false,
+   "margin": null,
+   "others": [
+    {
+     "n": "Mike Rogers",
+     "p": "R"
+    },
+    {
+     "n": "Lydia Christensen",
+     "p": "L"
+    },
+    {
+     "n": "Walter P. Kristy",
+     "p": "O"
+    },
+    {
+     "n": "Tim Long",
+     "p": "O"
+    },
+    {
+     "n": "Douglas P. Marsh",
+     "p": "O"
+    }
+   ],
+   "pvi": "EVEN",
+   "held_by": "D"
+  },
+  "S-MN": {
+   "office": "S",
+   "state": "MN",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Peggy Flanagan",
+   "flip": false,
+   "margin": null,
+   "others": [
+    {
+     "n": "Michele Tafoya",
+     "p": "R"
+    },
+    {
+     "n": "Marisa Simonetti",
+     "p": "I"
+    },
+    {
+     "n": "Rebecca Whiting",
+     "p": "L"
+    }
+   ],
+   "pvi": "D+3",
+   "held_by": "D"
+  },
+  "S-MS": {
+   "office": "S",
+   "state": "MS",
+   "district": null,
+   "special": false,
+   "called": false,
+   "status": "uncalled",
+   "winner": null,
+   "winner_name": null,
+   "flip": false,
+   "margin": null,
+   "others": [
+    {
+     "n": "Scott Colom",
+     "p": "D"
+    },
+    {
+     "n": "Cindy Hyde-Smith",
+     "p": "R"
+    },
+    {
+     "n": "Ty Pinkins",
+     "p": "I"
+    }
+   ],
+   "pvi": "R+11",
+   "held_by": "R"
+  },
+  "S-MT": {
+   "office": "S",
+   "state": "MT",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Kurt Alme",
+   "flip": false,
+   "margin": null,
+   "others": [
+    {
+     "n": "Seth Bodnar",
+     "p": "I"
+    },
+    {
+     "n": "Alani Bankhead",
+     "p": "D"
+    },
+    {
+     "n": "Kyle Austin",
+     "p": "L"
+    }
+   ],
+   "pvi": "R+10",
+   "held_by": "R"
+  },
+  "S-NC": {
+   "office": "S",
+   "state": "NC",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Roy Cooper",
+   "flip": true,
+   "margin": null,
+   "others": [
+    {
+     "n": "Michael Whatley",
+     "p": "R"
+    },
+    {
+     "n": "Shannon Bray",
+     "p": "L"
+    },
+    {
+     "n": "Michael Dublin",
+     "p": "O"
+    }
+   ],
+   "pvi": "R+1",
+   "held_by": "R"
+  },
+  "S-NE": {
+   "office": "S",
+   "state": "NE",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Pete Ricketts",
+   "flip": false,
+   "margin": null,
+   "others": [
+    {
+     "n": "Dan Osborn",
+     "p": "I"
+    },
+    {
+     "n": "Chuck Conboy",
+     "p": "O"
+    },
+    {
+     "n": "Mike Marvin",
+     "p": "O"
+    },
+    {
+     "n": "Robin Richards",
+     "p": "O"
+    }
+   ],
+   "pvi": "R+10",
+   "held_by": "R"
+  },
+  "S-NH": {
+   "office": "S",
+   "state": "NH",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Chris Pappas",
+   "flip": false,
+   "margin": null,
+   "others": [
+    {
+     "n": "John E. Sununu",
+     "p": "R"
+    },
+    {
+     "n": "Edmond LaPlante",
+     "p": "O"
+    }
+   ],
+   "pvi": "D+2",
+   "held_by": "D"
+  },
+  "S-NJ": {
+   "office": "S",
+   "state": "NJ",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Cory Booker",
+   "flip": false,
+   "margin": null,
+   "others": [
+    {
+     "n": "Justin Murphy",
+     "p": "R"
+    },
+    {
+     "n": "Veronica Fernandez",
+     "p": "I"
+    },
+    {
+     "n": "Joanne Kuniansky",
+     "p": "O"
+    }
+   ],
+   "pvi": "D+4",
+   "held_by": "D"
+  },
+  "S-NM": {
+   "office": "S",
+   "state": "NM",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Ben Ray Luján",
+   "flip": false,
+   "margin": null,
+   "others": [
+    {
+     "n": "Larry Marker",
+     "p": "R"
+    }
+   ],
+   "pvi": "D+4",
+   "held_by": "D"
+  },
+  "S-OH": {
+   "office": "S",
+   "state": "OH",
+   "district": null,
+   "special": true,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Sherrod Brown",
+   "flip": true,
+   "margin": null,
+   "others": [
+    {
+     "n": "Jon Husted",
+     "p": "R"
+    },
+    {
+     "n": "Greg Levy",
+     "p": "I"
+    },
+    {
+     "n": "William Redpath",
+     "p": "L"
+    }
+   ],
+   "pvi": "R+5",
+   "held_by": "R"
+  },
+  "S-OK": {
+   "office": "S",
+   "state": "OK",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Kevin Hern",
+   "flip": false,
+   "margin": null,
+   "others": [
+    {
+     "n": "N'Kiyla Jasmine Thomas",
+     "p": "D"
+    },
+    {
+     "n": "Ron Meinhardt",
+     "p": "I"
+    },
+    {
+     "n": "Curtis Stinnett",
+     "p": "I"
+    },
+    {
+     "n": "Sevier White",
+     "p": "L"
+    }
+   ],
+   "pvi": "R+17",
+   "held_by": "R"
+  },
+  "S-OR": {
+   "office": "S",
+   "state": "OR",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Jeff Merkley",
+   "flip": false,
+   "margin": null,
+   "others": [
+    {
+     "n": "David Brock Smith",
+     "p": "R"
+    },
+    {
+     "n": "Gary Lyndon Dye",
+     "p": "L"
+    },
+    {
+     "n": "Chris Henry",
+     "p": "O"
+    }
+   ],
+   "pvi": "D+8",
+   "held_by": "D"
+  },
+  "S-RI": {
+   "office": "S",
+   "state": "RI",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Jack Reed",
+   "flip": false,
+   "margin": null,
+   "others": [
+    {
+     "n": "Raymond McKay",
+     "p": "R"
+    },
+    {
+     "n": "Michael Bahry",
+     "p": "I"
+    }
+   ],
+   "pvi": "D+8",
+   "held_by": "D"
+  },
+  "S-SC": {
+   "office": "S",
+   "state": "SC",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Annie Andrews",
+   "flip": true,
+   "margin": null,
+   "others": [
+    {
+     "n": "Darline Graham",
+     "p": "R"
+    },
+    {
+     "n": "Mark Hackett",
+     "p": "O"
+    },
+    {
+     "n": "Kasie Whitener",
+     "p": "L"
+    }
+   ],
+   "pvi": "R+8",
+   "held_by": "R"
+  },
+  "S-SD": {
+   "office": "S",
+   "state": "SD",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Mike Rounds",
+   "flip": false,
+   "margin": null,
+   "others": [
+    {
+     "n": "Brian Bengs",
+     "p": "I"
+    }
+   ],
+   "pvi": "R+15",
+   "held_by": "R"
+  },
+  "S-TN": {
+   "office": "S",
+   "state": "TN",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Bill Hagerty",
+   "flip": false,
+   "margin": null,
+   "others": [
+    {
+     "n": "Marquita Bradshaw",
+     "p": "D"
+    },
+    {
+     "n": "Tharon Chandler",
+     "p": "I"
+    },
+    {
+     "n": "Andrew Gerena",
+     "p": "I"
+    },
+    {
+     "n": "Jeremy Hearn",
+     "p": "I"
+    },
+    {
+     "n": "Robert Jones",
+     "p": "I"
+    },
+    {
+     "n": "James Macon III",
+     "p": "I"
+    },
+    {
+     "n": "Yoshi Matthews",
+     "p": "I"
+    },
+    {
+     "n": "David Sutman Jr.",
+     "p": "I"
+    },
+    {
+     "n": "Catherine Whitson",
+     "p": "I"
+    }
+   ],
+   "pvi": "R+14",
+   "held_by": "R"
+  },
+  "S-TX": {
+   "office": "S",
+   "state": "TX",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "James Talarico",
+   "flip": true,
+   "margin": null,
+   "others": [
+    {
+     "n": "Ted Brown",
+     "p": "L"
+    },
+    {
+     "n": "Ken Paxton",
+     "p": "R"
+    }
+   ],
+   "pvi": "R+6",
+   "held_by": "R"
+  },
+  "S-VA": {
+   "office": "S",
+   "state": "VA",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Mark Warner",
+   "flip": false,
+   "margin": null,
+   "others": [
+    {
+     "n": "Bert Mizusawa",
+     "p": "R"
+    }
+   ],
+   "pvi": "D+3",
+   "held_by": "D"
+  },
+  "S-WV": {
+   "office": "S",
+   "state": "WV",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Shelley Moore Capito",
+   "flip": false,
+   "margin": null,
+   "others": [
+    {
+     "n": "Rachel Fetty Anderson",
+     "p": "D"
+    },
+    {
+     "n": "S. Marshall Wilson",
+     "p": "O"
+    }
+   ],
+   "pvi": "R+21",
+   "held_by": "R"
+  },
+  "S-WY": {
+   "office": "S",
+   "state": "WY",
+   "district": null,
+   "special": false,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Harriet Hageman",
+   "flip": false,
+   "margin": null,
+   "others": [
+    {
+     "n": "James W. Byrd",
+     "p": "D"
+    }
+   ],
+   "pvi": "R+23",
+   "held_by": "R"
+  }
+ },
+ "counties": {},
+ "county_sources": {},
+ "turnout": {
+  "2022": {
+   "US": [
+    46.12,
+    112030874,
+    242907672
+   ],
+   "AL": [
+    37.53,
+    1424087,
+    3794939
+   ],
+   "AK": [
+    50.46,
+    267047,
+    529263
+   ],
+   "AZ": [
+    49.29,
+    2592313,
+    5259832
+   ],
+   "AR": [
+    41.75,
+    914227,
+    2189865
+   ],
+   "CA": [
+    42.98,
+    11146610,
+    25936947
+   ],
+   "CO": [
+    58.35,
+    2540666,
+    4354215
+   ],
+   "CT": [
+    49.01,
+    1297811,
+    2648135
+   ],
+   "DE": [
+    42.88,
+    325632,
+    759489
+   ],
+   "DC": [
+    40.95,
+    205774,
+    502519
+   ],
+   "FL": [
+    48.75,
+    7796916,
+    15992455
+   ],
+   "GA": [
+    52.23,
+    3964926,
+    7590660
+   ],
+   "HI": [
+    40.63,
+    423443,
+    1042235
+   ],
+   "ID": [
+    42.79,
+    595350,
+    1391199
+   ],
+   "IL": [
+    45.95,
+    4144125,
+    9019092
+   ],
+   "IN": [
+    37.48,
+    1880755,
+    5018237
+   ],
+   "IA": [
+    52.45,
+    1230417,
+    2345722
+   ],
+   "KS": [
+    47.89,
+    1008998,
+    2107086
+   ],
+   "KY": [
+    44.93,
+    1502550,
+    3344079
+   ],
+   "LA": [
+    42.09,
+    1410466,
+    3351228
+   ],
+   "ME": [
+    60.75,
+    680909,
+    1120883
+   ],
+   "MD": [
+    46.35,
+    2031635,
+    4383608
+   ],
+   "MA": [
+    48.96,
+    2511461,
+    5129325
+   ],
+   "MI": [
+    59.13,
+    4500400,
+    7610641
+   ],
+   "MN": [
+    60.64,
+    2526646,
+    4166526
+   ],
+   "MS": [
+    32.69,
+    709100,
+    2169095
+   ],
+   "MO": [
+    49.78,
+    2304250,
+    4628893
+   ],
+   "MT": [
+    53.6,
+    468326,
+    873758
+   ],
+   "NE": [
+    48.55,
+    682716,
+    1406264
+   ],
+   "NV": [
+    46.1,
+    1023617,
+    2220187
+   ],
+   "NH": [
+    56.25,
+    626931,
+    1114584
+   ],
+   "NJ": [
+    41.17,
+    2645539,
+    6426071
+   ],
+   "NM": [
+    46.42,
+    714754,
+    1539903
+   ],
+   "NY": [
+    42.58,
+    5962278,
+    14001265
+   ],
+   "NC": [
+    47.84,
+    3790202,
+    7922995
+   ],
+   "ND": [
+    42.12,
+    242566,
+    575882
+   ],
+   "OH": [
+    47.2,
+    4201368,
+    8901077
+   ],
+   "OK": [
+    39.89,
+    1153284,
+    2891104
+   ],
+   "OR": [
+    62.85,
+    1997689,
+    3178593
+   ],
+   "PA": [
+    54.61,
+    5410022,
+    9907048
+   ],
+   "RI": [
+    44.09,
+    361449,
+    819753
+   ],
+   "SC": [
+    42.85,
+    1718626,
+    4011126
+   ],
+   "SD": [
+    53.06,
+    354670,
+    668380
+   ],
+   "TN": [
+    33.48,
+    1756397,
+    5245909
+   ],
+   "TX": [
+    41.75,
+    8151590,
+    19523011
+   ],
+   "UT": [
+    47.35,
+    1084634,
+    2290732
+   ],
+   "VT": [
+    55.82,
+    291955,
+    523045
+   ],
+   "VA": [
+    47.73,
+    3021956,
+    6331826
+   ],
+   "WA": [
+    55.09,
+    3067686,
+    5568721
+   ],
+   "WV": [
+    35.51,
+    494753,
+    1393321
+   ],
+   "WI": [
+    60.32,
+    2673154,
+    4431848
+   ],
+   "WY": [
+    45.37,
+    198198,
+    436858
+   ]
+  },
+  "2026": {
+   "US": [
+    49.42,
+    124330000,
+    251588219
+   ],
+   "AL": [
+    44.22,
+    1751000,
+    3959631
+   ],
+   "AK": [
+    45.44,
+    247000,
+    543594
+   ],
+   "AZ": [
+    44.33,
+    2475000,
+    5582558
+   ],
+   "AR": [
+    39.67,
+    896000,
+    2258698
+   ],
+   "CA": [
+    48.75,
+    13150000,
+    26975668
+   ],
+   "CO": [
+    61.82,
+    2800000,
+    4529484
+   ],
+   "CT": [
+    49.38,
+    1365000,
+    2764230
+   ],
+   "DE": [
+    47.98,
+    383000,
+    798311
+   ],
+   "DC": [
+    41.14,
+    216000,
+    525068
+   ],
+   "FL": [
+    48.65,
+    8310000,
+    17082876
+   ],
+   "GA": [
+    54.26,
+    4400000,
+    8109595
+   ],
+   "HI": [
+    37.96,
+    403000,
+    1061698
+   ],
+   "ID": [
+    46.21,
+    696000,
+    1506064
+   ],
+   "IL": [
+    47.59,
+    4430000,
+    9308092
+   ],
+   "IN": [
+    39.45,
+    2045000,
+    5183690
+   ],
+   "IA": [
+    57.77,
+    1388000,
+    2402474
+   ],
+   "KS": [
+    53.26,
+    1158000,
+    2174165
+   ],
+   "KY": [
+    41.97,
+    1435000,
+    3419315
+   ],
+   "LA": [
+    43.45,
+    1475000,
+    3395047
+   ],
+   "ME": [
+    65.86,
+    761000,
+    1155427
+   ],
+   "MD": [
+    51.69,
+    2340000,
+    4527315
+   ],
+   "MA": [
+    53.48,
+    2825000,
+    5281884
+   ],
+   "MI": [
+    63.65,
+    4962000,
+    7795255
+   ],
+   "MN": [
+    66.52,
+    2930000,
+    4404656
+   ],
+   "MS": [
+    44.5,
+    980000,
+    2202083
+   ],
+   "MO": [
+    45.08,
+    2168000,
+    4808744
+   ],
+   "MT": [
+    55.99,
+    508000,
+    907352
+   ],
+   "NE": [
+    57.77,
+    844000,
+    1461019
+   ],
+   "NV": [
+    46.99,
+    1117000,
+    2377039
+   ],
+   "NH": [
+    59.37,
+    680000,
+    1145431
+   ],
+   "NJ": [
+    45.48,
+    3055000,
+    6717813
+   ],
+   "NM": [
+    47.38,
+    750000,
+    1582834
+   ],
+   "NY": [
+    47.41,
+    6845000,
+    14437679
+   ],
+   "NC": [
+    50.2,
+    4235000,
+    8435462
+   ],
+   "ND": [
+    40.68,
+    244000,
+    599775
+   ],
+   "OH": [
+    52.23,
+    4755000,
+    9104755
+   ],
+   "OK": [
+    37.11,
+    1125000,
+    3031199
+   ],
+   "OR": [
+    61.71,
+    2025000,
+    3281307
+   ],
+   "PA": [
+    51.5,
+    5195000,
+    10087026
+   ],
+   "RI": [
+    44.37,
+    381000,
+    858733
+   ],
+   "SC": [
+    49.88,
+    2150000,
+    4310047
+   ],
+   "SD": [
+    46.42,
+    323000,
+    695871
+   ],
+   "TN": [
+    38.18,
+    2090000,
+    5473359
+   ],
+   "TX": [
+    48.82,
+    10365000,
+    21229663
+   ],
+   "UT": [
+    47.63,
+    1184000,
+    2485622
+   ],
+   "VT": [
+    58.94,
+    310000,
+    525941
+   ],
+   "VA": [
+    56.21,
+    3695000,
+    6573770
+   ],
+   "WA": [
+    51.39,
+    3020000,
+    5876925
+   ],
+   "WV": [
+    35.05,
+    488000,
+    1392266
+   ],
+   "WI": [
+    60.33,
+    2760000,
+    4574796
+   ],
+   "WY": [
+    43.64,
+    197000,
+    451426
+   ]
+  },
+  "notes": {
+   "2022": [
+    "Source: https://election.lab.ufl.edu/voter-turnout/2022-general-election-turnout/ (UF Election Lab, Michael McDonald)",
+    "Snapshot: page last updated October 6, 2024 (final, certified counts); read 2026-11-05 00:05 UTC"
+   ],
+   "2026": [
+    "Source: https://election.lab.ufl.edu/2026-general-election-turnout/ (UF Election Lab, Michael McDonald)",
+    "Snapshot: early estimate from AP election-night turnout, revised until states certify; read 2026-11-05 00:05 UTC"
+   ]
+  }
+ }
+}

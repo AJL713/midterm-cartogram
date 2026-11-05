@@ -1,0 +1,439 @@
+# Source: https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections
+# Snapshot: page last edited 2026-11-05 01:40 UTC, read 2026-11-05 01:48 UTC
+# Format: key|winner party (- = not called)|flip (1 = party gain)|winner name|status|other candidates (name/party;...)|lean (Cook PVI)|held by before (D/R/I, N = new seat, V = vacant)
+# Party codes: D, R, I (independent), L (Libertarian), O (other)
+H-AL-01|R|1|Jerry Carl|called||R+17|N
+H-AL-02|D|0|Shomari Figures|called||R+7|D
+H-AL-03|R|0|Mike Rogers|called||R+23|R
+H-AL-04|R|0|Robert Aderholt|called||R+33|R
+H-AL-05|R|0|Dale Strong|called||R+15|R
+H-AL-06|R|0|Gary Palmer|called||R+17|R
+H-AL-07|D|0|Terri Sewell|called||D+10|D
+H-AK-00|-|0||uncalled||R+6|R
+H-AZ-01|-|0||uncalled||R+1|R
+H-AZ-02|-|0||uncalled||R+7|R
+H-AZ-03|D|0|Yassamin Ansari|called||D+22|D
+H-AZ-04|D|0|Greg Stanton|called||D+4|D
+H-AZ-05|-|0||uncalled||R+10|R
+H-AZ-06|-|0||uncalled||EVEN|R
+H-AZ-07|D|0|Adelita Grijalva|called||D+13|D
+H-AZ-08|-|0||uncalled||R+8|R
+H-AZ-09|R|0|Paul Gosar|called||R+15|R
+H-AR-01|R|0|Rick Crawford|called||R+23|R
+H-AR-02|-|0||uncalled||R+8|R
+H-AR-03|R|0|Steve Womack|called||R+13|R
+H-AR-04|R|0|Bruce Westerman|called||R+20|R
+H-CA-01|D|1|Mike McGuire|called||D+7|R
+H-CA-02|D|0|Jared Huffman|called||D+13|D
+H-CA-03|D|0|Ami Bera|called||D+6|D
+H-CA-04|-|0||uncalled||D+8|D
+H-CA-05|R|0|Tom McClintock|called||R+10|R
+H-CA-06|D|1|Richard Pan|called||D+5|I
+H-CA-07|-|0||uncalled||D+7|D
+H-CA-08|D|0|John Garamendi|called||D+19|D
+H-CA-09|D|0|Josh Harder|called||D+8|D
+H-CA-10|D|0|Mark DeSaulnier|called||D+18|D
+H-CA-11|-|0||uncalled||D+36|D
+H-CA-12|D|0|Lateefah Simon|called||D+39|D
+H-CA-13|D|0|Adam Gray|called||D+2|D
+H-CA-14|-|0||uncalled||D+19|D
+H-CA-15|D|0|Kevin Mullin|called||D+26|D
+H-CA-16|D|0|Sam Liccardo|called||D+25|D
+H-CA-17|D|0|Ro Khanna|called||D+21|D
+H-CA-18|D|0|Zoe Lofgren|called||D+16|D
+H-CA-19|D|0|Jimmy Panetta|called||D+18|D
+H-CA-20|R|0|Vince Fong|called||R+16|R
+H-CA-21|D|0|Jim Costa|called||D+5|D
+H-CA-22|D|1|Randy Villegas|called||D+1|R
+H-CA-23|-|0||uncalled||R+9|R
+H-CA-24|D|0|Salud Carbajal|called||D+13|D
+H-CA-25|D|0|Raul Ruiz|called||D+4|D
+H-CA-26|D|0|Jacqui Irwin|called||D+9|D
+H-CA-27|D|0|George T. Whitesides|called||D+6|D
+H-CA-28|D|0|Judy Chu|called||D+14|D
+H-CA-29|-|0||uncalled||D+19|D
+H-CA-30|D|0|Laura Friedman|called||D+21|D
+H-CA-31|D|0|Gil Cisneros|called||D+8|D
+H-CA-32|D|0|Brad Sherman|called||D+14|D
+H-CA-33|D|0|Pete Aguilar|called||D+7|D
+H-CA-34|D|0|Angela Gonzales-Torres|called||D+28|D
+H-CA-35|D|0|Norma Torres|called||D+6|D
+H-CA-36|D|0|Ted Lieu|called||D+21|D
+H-CA-37|D|0|Sydney Kamlager-Dove|called||D+33|D
+H-CA-38|D|1|Hilda Solis|called||D+8|N
+H-CA-39|D|0|Mark Takano|called||D+7|D
+H-CA-40|-|0||uncalled||R+6|R
+H-CA-41|D|0|Linda Sánchez|called||D+9|D
+H-CA-42|D|0|Robert Garcia|called||D+8|D
+H-CA-43|D|0|Maxine Waters|called||D+27|D
+H-CA-44|D|0|Nanette Barragán|called||D+20|D
+H-CA-45|D|0|Derek Tran|called||D+3|D
+H-CA-46|D|0|Lou Correa|called||D+10|D
+H-CA-47|-|0||uncalled||D+6|D
+H-CA-48|-|0||uncalled||D+2|R
+H-CA-49|D|0|Mike Levin|called||D+7|D
+H-CA-50|D|0|Scott Peters|called||D+10|D
+H-CA-51|D|0|Sara Jacobs|called||D+10|D
+H-CA-52|D|0|Juan Vargas|called||D+11|D
+H-CO-01|D|0|Melat Kiros|called||D+29|D
+H-CO-02|D|0|Joe Neguse|called||D+20|D
+H-CO-03|-|0||uncalled||R+5|R
+H-CO-04|-|0||uncalled||R+9|R
+H-CO-05|-|0||uncalled||R+5|R
+H-CO-06|D|0|Jason Crow|called||D+11|D
+H-CO-07|D|0|Brittany Pettersen|called||D+8|D
+H-CO-08|D|1|Manny Rutinel|called||EVEN|R
+H-CT-01|D|0|Luke Bronin|called||D+12|D
+H-CT-02|D|0|Joe Courtney|called||D+4|D
+H-CT-03|D|0|Rosa DeLauro|called||D+8|D
+H-CT-04|D|0|Jim Himes|called||D+13|D
+H-CT-05|D|0|Jahana Hayes|called||D+3|D
+H-DE-00|D|0|Sarah McBride|called||D+8|D
+H-FL-01|R|0|Jimmy Patronis|called||R+18|R
+H-FL-02|R|0|Austin Rogers|called||R+8|R
+H-FL-03|R|0|Kat Cammack|called||R+10|R
+H-FL-04|R|0|Aaron Bean|called||R+5|R
+H-FL-05|R|0|John Rutherford|called||R+10|R
+H-FL-06|R|0|Randy Fine|called||R+14|R
+H-FL-07|-|0||uncalled||R+5|R
+H-FL-08|R|0|Mike Haridopolos|called||R+8|R
+H-FL-09|-|0||uncalled||R+8|D
+H-FL-10|D|0|Maxwell Frost|called||D+13|D
+H-FL-11|R|0|Joe Strada|called||R+7|R
+H-FL-12|R|0|Gus Bilirakis|called||R+7|R
+H-FL-13|-|0||uncalled||R+6|R
+H-FL-14|D|0|Kathy Castor|called||R+4|D
+H-FL-15|R|0|Laurel Lee|called||R+9|R
+H-FL-16|R|0|Sydney Gruters|called||R+6|R
+H-FL-17|R|0|Greg Steube|called||R+10|R
+H-FL-18|R|0|Scott Franklin|called||R+8|R
+H-FL-19|R|0|Jim Schwartzel|called||R+14|R
+H-FL-20|D|0|Debbie Wasserman Schultz|called||D+20|V
+H-FL-21|R|0|Brian Mast|called||R+7|R
+H-FL-22|D|1|Pia Dandiya|called||R+4|N
+H-FL-23|D|0|Lois Frankel|called||D+9|D
+H-FL-24|D|0|Oliver Gilbert|called||D+22|D
+H-FL-25|D|0|Jared Moskowitz|called||R+3|D
+H-FL-26|-|0||uncalled||R+7|R
+H-FL-27|-|0||uncalled||R+6|R
+H-FL-28|R|0|Carlos A. Giménez|called||R+10|R
+H-GA-01|R|0|Jim Kingston|called||R+8|R
+H-GA-02|D|0|Sanford Bishop|called||D+4|D
+H-GA-03|R|0|Brian Jack|called||R+15|R
+H-GA-04|D|0|Hank Johnson|called||D+27|D
+H-GA-05|D|0|Nikema Williams|called||D+36|D
+H-GA-06|D|0|Lucy McBath|called||D+25|D
+H-GA-07|R|0|Rich McCormick|called||R+11|R
+H-GA-08|R|0|Austin Scott|called||R+15|R
+H-GA-09|R|0|Andrew Clyde|called||R+17|R
+H-GA-10|R|0|Houston Gaines|called||R+11|R
+H-GA-11|R|0|John Cowan|called||R+12|R
+H-GA-12|R|0|Rick Allen|called||R+7|R
+H-GA-13|D|0|Jasmine Clark|called||D+21|D
+H-GA-14|R|0|Clay Fuller|called||R+19|R
+H-HI-01|D|0|Ed Case|called||D+13|D
+H-HI-02|D|0|Jill Tokuda|called||D+12|D
+H-ID-01|R|0|Russ Fulcher|called||R+22|R
+H-ID-02|R|0|Mike Simpson|called||R+13|R
+H-IL-01|D|0|Jonathan Jackson|called||D+18|D
+H-IL-02|D|0|Donna Miller|called||D+18|D
+H-IL-03|D|0|Delia Ramirez|called||D+17|D
+H-IL-04|D|0|Patty García|called||D+17|D
+H-IL-05|D|0|Mike Quigley|called||D+19|D
+H-IL-06|D|0|Sean Casten|called||D+3|D
+H-IL-07|D|0|La Shawn Ford|called||D+34|D
+H-IL-08|D|0|Melissa Bean|called||D+5|D
+H-IL-09|D|0|Daniel Biss|called||D+19|D
+H-IL-10|D|0|Brad Schneider|called||D+12|D
+H-IL-11|D|0|Bill Foster|called||D+6|D
+H-IL-12|R|0|Mike Bost|called||R+22|R
+H-IL-13|D|0|Nikki Budzinski|called||D+5|D
+H-IL-14|D|0|Lauren Underwood|called||D+3|D
+H-IL-15|R|0|Mary Miller|called||R+20|R
+H-IL-16|R|0|Darin LaHood|called||R+11|R
+H-IL-17|D|0|Eric Sorensen|called||D+3|D
+H-IN-01|D|0|Frank J. Mrvan|called||D+1|D
+H-IN-02|R|0|Rudy Yakym|called||R+13|R
+H-IN-03|R|0|Marlin Stutzman|called||R+16|R
+H-IN-04|R|0|Jim Baird|called||R+15|R
+H-IN-05|D|1|J. D. Ford|called||R+8|R
+H-IN-06|R|0|Jefferson Shreve|called||R+16|R
+H-IN-07|D|0|André Carson|called||D+21|D
+H-IN-08|R|0|Mark Messmer|called||R+18|R
+H-IN-09|R|0|Erin Houchin|called||R+15|R
+H-IA-01|D|1|Christina Bohannan|called||R+4|R
+H-IA-02|D|1|Lindsay James|called||R+4|R
+H-IA-03|D|1|Sarah Trone Garriott|called||R+2|R
+H-IA-04|R|0|Chris McGowan|called||R+15|R
+H-KS-01|R|0|Tracey Mann|called||R+16|R
+H-KS-02|R|0|Derek Schmidt|called||R+10|R
+H-KS-03|D|0|Sharice Davids|called||D+2|D
+H-KS-04|R|0|Ron Estes|called||R+12|R
+H-KY-01|R|0|James Comer|called||R+23|R
+H-KY-02|R|0|Brett Guthrie|called||R+20|R
+H-KY-03|D|0|Morgan McGarvey|called||D+10|D
+H-KY-04|R|0|Ed Gallrein|called||R+18|R
+H-KY-05|R|0|Hal Rogers|called||R+32|R
+H-KY-06|D|1|Zach Dembo|called||R+7|R
+H-LA-01|R|0|Steve Scalise|called||R+20|R
+H-LA-02|D|0|Troy Carter|called||D+25|D
+H-LA-03|R|0|Clay Higgins|called||R+18|R
+H-LA-04|R|0|Mike Johnson|called||R+17|R
+H-LA-05|-|0||runoff||R+17|R
+H-LA-06|-|0||uncalled||R+16|D
+H-ME-01|D|0|Chellie Pingree|called||D+11|D
+H-ME-02|-|0||uncalled||R+4|D
+H-MD-01|R|0|Andy Harris|called||R+8|R
+H-MD-02|D|0|Johnny Olszewski|called||D+10|D
+H-MD-03|D|0|Sarah Elfreth|called||D+12|D
+H-MD-04|D|0|Glenn Ivey|called||D+39|D
+H-MD-05|D|0|Adrian Boafo|called||D+17|D
+H-MD-06|D|0|April McClain Delaney|called||D+3|D
+H-MD-07|D|0|Kweisi Mfume|called||D+31|D
+H-MD-08|D|0|Jamie Raskin|called||D+30|D
+H-MA-01|D|0|Richard Neal|called||D+8|D
+H-MA-02|D|0|Jim McGovern|called||D+13|D
+H-MA-03|D|0|Lori Trahan|called||D+11|D
+H-MA-04|D|0|Jake Auchincloss|called||D+11|D
+H-MA-05|D|0|Katherine Clark|called||D+24|D
+H-MA-06|D|0|Dan Koh|called||D+11|D
+H-MA-07|D|0|Ayanna Pressley|called||D+34|D
+H-MA-08|D|0|Stephen Lynch|called||D+15|D
+H-MA-09|D|0|Bill Keating|called||D+6|D
+H-MI-01|R|0|Jack Bergman|called||R+11|R
+H-MI-02|R|0|John Moolenaar|called||R+15|R
+H-MI-03|D|0|Hillary Scholten|called||D+4|D
+H-MI-04|D|1|Sean McCann|called||R+3|R
+H-MI-05|R|0|Tim Walberg|called||R+13|R
+H-MI-06|D|0|Debbie Dingell|called||D+12|D
+H-MI-07|D|1|William Lawrence|called||EVEN|R
+H-MI-08|D|0|Kristen McDonald Rivet|called||R+1|D
+H-MI-09|R|0|Lisa McClain|called||R+16|R
+H-MI-10|D|1|Christina Hines|called||R+3|R
+H-MI-11|D|0|Jeremy Moss|called||D+9|D
+H-MI-12|D|0|Rashida Tlaib|called||D+21|D
+H-MI-13|D|0|Donavan McKinney|called||D+22|D
+H-MN-01|-|0||uncalled||R+6|R
+H-MN-02|-|0||uncalled||D+3|D
+H-MN-03|D|0|Kelly Morrison|called||D+11|D
+H-MN-04|D|0|Betty McCollum|called||D+18|D
+H-MN-05|D|0|Ilhan Omar|called||D+32|D
+H-MN-06|R|0|Tom Emmer|called||R+10|R
+H-MN-07|R|0|Michelle Fischbach|called||R+18|R
+H-MN-08|R|0|Pete Stauber|called||R+7|R
+H-MS-01|R|0|Trent Kelly|called||R+18|R
+H-MS-02|D|0|Bennie Thompson|called||D+11|D
+H-MS-03|R|0|Michael Guest|called||R+14|R
+H-MS-04|R|0|Mike Ezell|called||R+21|R
+H-MO-01|D|0|Wesley Bell|called||D+29|D
+H-MO-02|D|1|Fred Wellman|called||R+4|R
+H-MO-03|R|0|Bob Onder|called||R+13|R
+H-MO-04|R|0|Mark Alford|called||R+21|R
+H-MO-05|D|0|Emanuel Cleaver|called||D+12|D
+H-MO-06|R|0|Chris Stigall|called||R+19|R
+H-MO-07|R|0|Eric Burlison|called||R+21|R
+H-MO-08|R|0|Jason Smith|called||R+27|R
+H-MT-01|D|1|Sam Forstag|called||R+5|R
+H-MT-02|R|0|Troy Downing|called||R+15|R
+H-NE-01|R|0|Mike Flood|called||R+6|R
+H-NE-02|D|1|Denise Powell|called||D+3|R
+H-NE-03|R|0|Adrian Smith|called||R+27|R
+H-NV-01|D|0|Dina Titus|called||D+2|D
+H-NV-02|-|0||uncalled||R+7|R
+H-NV-03|D|0|Susie Lee|called||D+1|D
+H-NV-04|D|0|Steven Horsford|called||D+2|D
+H-NH-01|D|0|Stefany Shaheen|called||D+2|D
+H-NH-02|D|0|Maggie Goodlander|called||D+2|D
+H-NJ-01|D|0|Donald Norcross|called||D+10|D
+H-NJ-02|D|1|Zack Mullock|called||R+5|R
+H-NJ-03|D|0|Herb Conaway|called||D+5|D
+H-NJ-04|R|0|Chris Smith|called||R+14|R
+H-NJ-05|D|0|Josh Gottheimer|called||D+2|D
+H-NJ-06|D|0|Frank Pallone|called||D+5|D
+H-NJ-07|D|1|Rebecca Bennett|called||EVEN|R
+H-NJ-08|D|0|Rob Menendez|called||D+15|D
+H-NJ-09|D|0|Nellie Pou|called||D+2|D
+H-NJ-10|D|0|LaMonica McIver|called||D+27|D
+H-NJ-11|D|0|Analilia Mejia|called||D+5|D
+H-NJ-12|D|0|Adam Hamawy|called||D+13|D
+H-NM-01|D|0|Melanie Stansbury|called||D+7|D
+H-NM-02|D|0|Gabe Vasquez|called||EVEN|D
+H-NM-03|D|0|Teresa Leger Fernández|called||D+3|D
+H-NY-01|-|0||uncalled||R+4|R
+H-NY-02|-|0||uncalled||R+6|R
+H-NY-03|D|0|Tom Suozzi|called||EVEN|D
+H-NY-04|D|0|Laura Gillen|called||D+2|D
+H-NY-05|D|0|Gregory Meeks|called||D+24|D
+H-NY-06|D|0|Grace Meng|called||D+6|D
+H-NY-07|D|0|Claire Valdez|called||D+25|D
+H-NY-08|D|0|Hakeem Jeffries|called||D+24|D
+H-NY-09|D|0|Yvette Clarke|called||D+22|D
+H-NY-10|D|0|Brad Lander|called||D+32|D
+H-NY-11|R|0|Nicole Malliotakis|called||R+10|R
+H-NY-12|D|0|Micah Lasher|called||D+33|D
+H-NY-13|D|0|Darializa Avila Chevalier|called||D+32|D
+H-NY-14|D|0|Alexandria Ocasio-Cortez|called||D+19|D
+H-NY-15|D|0|Ritchie Torres|called||D+27|D
+H-NY-16|D|0|George Latimer|called||D+18|D
+H-NY-17|D|1|Cait Conley|called||D+1|R
+H-NY-18|D|0|Pat Ryan|called||D+2|D
+H-NY-19|D|0|Josh Riley|called||D+1|D
+H-NY-20|D|0|Paul Tonko|called||D+8|D
+H-NY-21|-|0||uncalled||R+10|R
+H-NY-22|D|0|John Mannion|called||D+4|D
+H-NY-23|R|0|Nick Langworthy|called||R+10|R
+H-NY-24|R|0|Claudia Tenney|called||R+11|R
+H-NY-25|D|0|Joseph Morelle|called||D+10|D
+H-NY-26|D|0|Tim Kennedy|called||D+11|D
+H-NC-01|D|0|Don Davis|called||R+5|D
+H-NC-02|D|0|Deborah Ross|called||D+17|D
+H-NC-03|-|0||uncalled||R+6|R
+H-NC-04|D|0|Valerie Foushee|called||D+23|D
+H-NC-05|-|0||uncalled||R+9|R
+H-NC-06|-|0||uncalled||R+9|R
+H-NC-07|-|0||uncalled||R+7|R
+H-NC-08|-|0||uncalled||R+10|R
+H-NC-09|D|1|Richard Ojeda|called||R+8|R
+H-NC-10|-|0||uncalled||R+9|R
+H-NC-11|D|1|Jamie Ager|called||R+5|R
+H-NC-12|D|0|Alma Adams|called||D+24|D
+H-NC-13|-|0||uncalled||R+8|R
+H-NC-14|-|0||uncalled||R+8|R
+H-ND-00|R|0|Julie Fedorchak|called||R+18|R
+H-OH-01|D|0|Greg Landsman|called||R+1|D
+H-OH-02|R|0|David Taylor|called||R+21|R
+H-OH-03|D|0|Joyce Beatty|called||D+21|D
+H-OH-04|R|0|Jim Jordan|called||R+21|R
+H-OH-05|R|0|Bob Latta|called||R+12|R
+H-OH-06|R|0|Michael Rulli|called||R+17|R
+H-OH-07|D|1|Brian Poindexter|called||R+5|R
+H-OH-08|R|0|Warren Davidson|called||R+8|R
+H-OH-09|D|0|Marcy Kaptur|called||R+5|D
+H-OH-10|-|0||uncalled||R+4|R
+H-OH-11|D|0|Shontel Brown|called||D+28|D
+H-OH-12|R|0|Troy Balderson|called||R+15|R
+H-OH-13|D|0|Emilia Sykes|called||D+2|D
+H-OH-14|R|0|David Joyce|called||R+10|R
+H-OH-15|D|1|Don Leonard|called||R+5|R
+H-OK-01|R|0|Mark Tedford|called||R+11|R
+H-OK-02|R|0|Josh Brecheen|called||R+28|R
+H-OK-03|R|0|Frank Lucas|called||R+23|R
+H-OK-04|R|0|Tom Cole|called||R+17|R
+H-OK-05|R|0|Stephanie Bice|called||R+9|R
+H-OR-01|D|0|Suzanne Bonamici|called||D+20|D
+H-OR-02|R|0|Cliff Bentz|called||R+14|R
+H-OR-03|D|0|Maxine Dexter|called||D+24|D
+H-OR-04|D|0|Val Hoyle|called||D+6|D
+H-OR-05|D|0|Janelle Bynum|called||D+4|D
+H-OR-06|D|0|Andrea Salinas|called||D+6|D
+H-PA-01|D|1|Bob Harvie|called||D+1|R
+H-PA-02|D|0|Brendan Boyle|called||D+19|D
+H-PA-03|D|0|Chris Rabb|called||D+40|D
+H-PA-04|D|0|Madeleine Dean|called||D+8|D
+H-PA-05|D|0|Mary Gay Scanlon|called||D+15|D
+H-PA-06|D|0|Chrissy Houlahan|called||D+6|D
+H-PA-07|D|1|Bob Brooks|called||R+1|R
+H-PA-08|D|1|Paige Cognetti|called||R+4|R
+H-PA-09|R|0|Dan Meuser|called||R+19|R
+H-PA-10|D|1|Janelle Stelson|called||R+3|R
+H-PA-11|R|0|Lloyd Smucker|called||R+11|R
+H-PA-12|D|0|Summer Lee|called||D+10|D
+H-PA-13|R|0|John Joyce|called||R+23|R
+H-PA-14|R|0|Guy Reschenthaler|called||R+17|R
+H-PA-15|R|0|Glenn Thompson|called||R+19|R
+H-PA-16|R|0|Mike Kelly|called||R+11|R
+H-PA-17|D|0|Chris Deluzio|called||D+3|D
+H-RI-01|D|0|Gabe Amo|called||D+12|D
+H-RI-02|D|0|Seth Magaziner|called||D+4|D
+H-SC-01|-|0||uncalled||R+6|R
+H-SC-02|-|0||uncalled||R+7|R
+H-SC-03|R|0|Sheri Biggs|called||R+21|R
+H-SC-04|R|0|William Timmons|called||R+11|R
+H-SC-05|R|0|Wes Climer|called||R+11|R
+H-SC-06|D|0|Jim Clyburn|called||D+13|D
+H-SC-07|R|0|Russell Fry|called||R+12|R
+H-SD-00|R|0|Marty Jackley|called||R+15|R
+H-TN-01|R|0|Diana Harshbarger|called||R+29|R
+H-TN-02|R|0|Tim Burchett|called||R+17|R
+H-TN-03|R|0|Chuck Fleischmann|called||R+18|R
+H-TN-04|-|0||uncalled||R+11|R
+H-TN-05|R|0|Charlie Hatcher|called||R+10|R
+H-TN-06|R|0|Johnny Garrett|called||R+13|R
+H-TN-07|-|0||uncalled||R+11|R
+H-TN-08|R|0|David Kustoff|called||R+10|R
+H-TN-09|-|0||uncalled||R+9|D
+H-TX-01|R|0|Nathaniel Moran|called||R+24|R
+H-TX-02|R|0|Steve Toth|called||R+11|R
+H-TX-03|R|0|Keith Self|called||R+11|R
+H-TX-04|R|0|Pat Fallon|called||R+12|R
+H-TX-05|R|0|Lance Gooden|called||R+10|R
+H-TX-06|R|0|Jake Ellzey|called||R+11|R
+H-TX-07|D|0|Lizzie Fletcher|called||D+13|D
+H-TX-08|R|0|Jessica Steinmann|called||R+13|R
+H-TX-09|D|1|Leticia Gutierrez|called||R+9|N
+H-TX-10|R|0|Chris Gober|called||R+10|R
+H-TX-11|R|0|August Pfluger|called||R+17|R
+H-TX-12|R|0|Craig Goldman|called||R+11|R
+H-TX-13|R|0|Ronny Jackson|called||R+23|R
+H-TX-14|R|0|Randy Weber|called||R+12|R
+H-TX-15|D|1|Bobby Pulido|called||R+7|R
+H-TX-16|D|0|Veronica Escobar|called||D+11|D
+H-TX-17|R|0|Pete Sessions|called||R+10|R
+H-TX-18|D|0|Christian Menefee|called||D+29|D
+H-TX-19|R|0|Tom Sell|called||R+25|R
+H-TX-20|D|0|Joaquin Castro|called||D+16|D
+H-TX-21|R|0|Mark Teixeira|called||R+10|R
+H-TX-22|R|0|Trever Nehls|called||R+11|R
+H-TX-23|D|1|Katy Padilla Stout|called||R+7|V
+H-TX-24|R|0|Beth Van Duyne|called||R+8|R
+H-TX-25|R|0|Roger Williams|called||R+11|R
+H-TX-26|R|0|Brandon Gill|called||R+11|R
+H-TX-27|R|0|Michael Cloud|called||R+10|R
+H-TX-28|D|0|Henry Cuellar|called||R+3|D
+H-TX-29|D|0|Sylvia Garcia|called||D+17|D
+H-TX-30|D|1|Frederick Haynes III|called||D+25|N
+H-TX-31|R|0|John Carter|called||R+11|R
+H-TX-32|R|1|Jace Yarbrough|called||R+8|N
+H-TX-33|D|0|Colin Allred|called||D+18|D
+H-TX-34|D|0|Vicente Gonzalez|called||R+3|D
+H-TX-35|D|1|Johnny Garcia|called||R+4|N
+H-TX-36|R|0|Brian Babin|called||R+12|R
+H-TX-37|D|0|Greg Casar|called||D+30|D
+H-TX-38|R|0|Jon Bonck|called||R+10|R
+H-UT-01|D|1|Ben McAdams|called||D+12|N
+H-UT-02|-|0||uncalled||R+15|R
+H-UT-03|R|0|Celeste Maloy|called||R+21|R
+H-UT-04|-|0||uncalled||R+17|R
+H-VT-00|D|0|Becca Balint|called||D+17|D
+H-VA-01|-|0||uncalled||R+3|R
+H-VA-02|D|1|Elaine Luria|called||EVEN|R
+H-VA-03|D|0|Bobby Scott|called||D+18|D
+H-VA-04|D|0|Jennifer McClellan|called||D+17|D
+H-VA-05|-|0||uncalled||R+6|R
+H-VA-06|R|0|Ben Cline|called||R+12|R
+H-VA-07|D|0|Eugene Vindman|called||D+2|D
+H-VA-08|D|0|Don Beyer|called||D+26|D
+H-VA-09|R|0|Morgan Griffith|called||R+22|R
+H-VA-10|D|0|Suhas Subramanyam|called||D+6|D
+H-VA-11|D|0|James Walkinshaw|called||D+18|D
+H-WA-01|D|0|Suzan DelBene|called||D+15|D
+H-WA-02|D|0|Rick Larsen|called||D+12|D
+H-WA-03|D|0|Marie Gluesenkamp Perez|called||R+2|D
+H-WA-04|-|0||uncalled||R+10|R
+H-WA-05|-|0||uncalled||R+5|R
+H-WA-06|D|0|Emily Randall|called||D+10|D
+H-WA-07|D|0|Pramila Jayapal|called||D+39|D
+H-WA-08|D|0|Kim Schrier|called||D+3|D
+H-WA-09|D|0|Adam Smith|called||D+22|D
+H-WA-10|D|0|Marilyn Strickland|called||D+9|D
+H-WV-01|R|0|Carol Miller|called||R+22|R
+H-WV-02|R|0|Riley Moore|called||R+20|R
+H-WI-01|D|1|Mitchell Berman|called||R+2|R
+H-WI-02|D|0|Mark Pocan|called||D+21|D
+H-WI-03|D|1|Rebecca Cooke|called||R+3|R
+H-WI-04|D|0|Gwen Moore|called||D+26|D
+H-WI-05|R|0|Scott Fitzgerald|called||R+11|R
+H-WI-06|R|0|Glenn Grothman|called||R+8|R
+H-WI-07|R|0|Michael Alfonso|called||R+11|R
+H-WI-08|R|0|Tony Wied|called||R+8|R
+H-WY-00|R|0|Chuck Gray|called||R+23|R

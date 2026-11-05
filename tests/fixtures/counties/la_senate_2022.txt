@@ -1,0 +1,66 @@
+# Source: https://en.wikipedia.org/wiki/2022_United_States_Senate_election_in_Louisiana
+#COUNTIES rows=64 candidates=John KennedyRepublican/R;Gary ChambersDemocratic/D;Luke MixonDemocratic/D;Syrita SteibDemocratic/D;Various candidatesOther parties/O
+Acadia|2789|15864|19647
+Allen|1007|5033|6386
+Ascension|11505|27149|40776
+Assumption|2124|5126|7655
+Avoyelles|2805|8102|11422
+Beauregard|1262|8979|10830
+Bienville|1735|2704|4769
+Bossier|6904|23910|32181
+Caddo|28187|33687|66349
+Calcasieu|13404|36865|53673
+Caldwell|366|2738|3219
+Cameron|143|2158|2447
+Catahoula|791|2590|3568
+Claiborne|1242|2898|4425
+Concordia|1707|3912|5947
+De Soto|2587|6284|9247
+East Baton Rouge|68378|63024|137079
+East Carroll|994|833|1983
+East Feliciana|2538|4560|7430
+Evangeline|2328|7841|11116
+Franklin|1065|4871|6149
+Grant|549|5550|6350
+Iberia|4744|13796|19632
+Iberville|5252|6196|12154
+Jackson|1382|4045|5670
+Jefferson|43179|68954|118183
+Jefferson Davis|1571|7965|10109
+La Salle|322|4486|4983
+Lafayette|19925|48435|72444
+Lafourche|4609|24016|30177
+Lincoln|3870|8155|12583
+Livingston|5190|35213|42271
+Madison|1143|1419|2726
+Morehouse|2352|4455|7189
+Natchitoches|3253|6600|10294
+Orleans|88397|17931|110985
+Ouachita|12501|28727|43052
+Plaquemines|1936|5398|7869
+Pointe Coupee|3108|6039|9631
+Rapides|10125|27110|39079
+Red River|647|1714|2488
+Richland|1570|4771|6719
+Sabine|828|6316|7488
+St. Bernard|3095|6950|10739
+St. Charles|5320|11876|18016
+St. Helena|1856|2034|4170
+St. James|4044|4468|8838
+St. John the Baptist|6602|4457|11643
+St. Landry|8775|16217|26942
+St. Martin|3822|12317|17144
+St. Mary|3724|9755|14461
+St. Tammany|21525|68694|94655
+Tangipahoa|8750|24754|35489
+Tensas|627|900|1652
+Terrebonne|5166|20731|27366
+Union|1321|6070|7680
+Vermilion|2427|14573|17953
+Vernon|1281|9413|11239
+Washington|3367|9020|13171
+Webster|3166|8188|11990
+West Baton Rouge|3862|5815|10104
+West Carroll|338|2964|3389
+West Feliciana|1315|2800|4277
+Winn|681|3153|3998

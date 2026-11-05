@@ -1,0 +1,3 @@
+{
+ "_how_to_use": "Hand corrections, applied after the snapshot. Add an entry when you confirm a call from a second source, e.g. \"H-WA-03\": {\"winner\": \"D\", \"winner_name\": \"Full Name\", \"status\": \"called\", \"note\": \"AP call via apnews.com, 2026-11-05\"}. Remove it once Wikipedia catches up."
+}

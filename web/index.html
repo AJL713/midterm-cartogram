@@ -1,0 +1,132 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Seats, Not Acres</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Cartogram of the 2026 US midterm results: every House district, Senate race and governorship drawn at equal size.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Seats, not acres: 2026 midterm results">
+<meta property="og:description" content="An unofficial map of the 2026 US midterm results where every House seat, Senate race and governorship is the same size. Updated from Wikipedia.">
+<meta name="twitter:card" content="summary_large_image">
+<!--SITE_TAGS-->
+<link rel="stylesheet" href="style.css">
+<!--INLINE_CSS-->
+
+<main class="wrap">
+  <header>
+    <p class="eyebrow">U.S. midterm elections · November 3, 2026</p>
+    <h1>Seats, not acres</h1>
+    <p class="lede">Every House district, Senate race and governorship drawn at the same size, so a seat in Manhattan counts as much on the map as a seat in Montana.</p>
+    <p class="unofficial">Unofficial results, compiled from Wikipedia. Official results come from each state's election office.</p>
+    <p class="final-banner" id="final-banner" role="status" hidden></p>
+  </header>
+
+  <div class="controls">
+    <div class="tabs" role="group" aria-label="Office">
+      <button type="button" data-view="house" aria-pressed="true">House</button>
+      <button type="button" data-view="senate" aria-pressed="false">Senate</button>
+      <button type="button" data-view="governors" aria-pressed="false">Governors</button>
+    </div>
+    <div class="tabs styles" role="group" aria-label="Map style">
+      <button type="button" data-style="cartogram" aria-pressed="true">Cartogram</button>
+      <button type="button" data-style="map" aria-pressed="false">Map</button>
+      <button type="button" data-style="dots" aria-pressed="false">Population</button>
+    </div>
+    <div class="finder">
+      <label for="find" class="sr-only">Find a race</label>
+      <input id="find" type="search" list="find-list" placeholder="Find a state, district or candidate" autocomplete="off" enterkeyhint="search">
+      <datalist id="find-list"></datalist>
+      <p class="find-msg" id="find-msg" role="status"></p>
+    </div>
+  </div>
+
+  <section class="tally" aria-label="Seat count">
+    <div class="tally-row">
+      <div class="side dem"><span class="num" id="d-num">0</span><span class="who">Democrats</span><span class="sub" id="d-sub"></span></div>
+      <div class="mid"><strong id="u-num">0</strong>not yet called <button type="button" class="q" data-term="pending" aria-label="What does not yet called mean?">?</button></div>
+      <div class="side right rep"><span class="num" id="r-num">0</span><span class="who">Republicans</span><span class="sub" id="r-sub"></span></div>
+    </div>
+    <div class="bar" id="bar" role="img"></div>
+    <div class="tick" id="tick"><span></span></div>
+  </section>
+
+  <figure>
+    <a class="skip" href="#after-map">Skip past the map</a>
+    <button type="button" class="zoom-out" id="zoom-out" hidden>← Whole country</button>
+    <div class="zoom-ctrls" role="group" aria-label="Zoom">
+      <button type="button" id="zoom-in-btn" aria-label="Zoom in">+</button>
+      <button type="button" id="zoom-out-btn" aria-label="Zoom out">−</button>
+    </div>
+    <p class="wheel-hint" id="wheel-hint" hidden>Hold Ctrl (⌘ on a Mac) and scroll to zoom, or pinch</p>
+    <svg id="map" role="group" aria-label="Map of results. Use the search box to jump to a state, then Tab through its seats; Enter opens one." aria-describedby="status"></svg>
+    <p class="county-note" id="county-note" role="note" hidden>County lines show borders only. <strong>How each county voted isn't available yet:</strong> states are still counting, and county results are published as each state finishes.</p>
+    <div class="legend" id="legend"></div>
+    <p class="map-hint">Tap or click any state to zoom in and see all its results.</p>
+  </figure>
+
+  <span id="after-map" tabindex="-1"></span>
+  <section class="card state-card" id="state-card" hidden aria-live="polite"></section>
+
+  <section class="summary" aria-label="Where things stand">
+    <p class="status"><span id="status"></span> <button type="button" class="q" data-term="majority" aria-label="What is a majority?">?</button></p>
+    <p class="status" id="held-note" hidden></p>
+    <p class="status changes"><span id="changes"></span> <button type="button" class="q" data-term="gain" aria-label="What counts as changing party?">?</button>
+      <button type="button" class="linkish" id="show-flips" aria-pressed="false">Show them on the map</button></p>
+    <p class="status asof">Results as of <span data-updated>…</span>, from Wikipedia's results pages (sources below).</p>
+  </section>
+
+  <section class="panels" aria-label="The count">
+    <article class="card" id="pending-card">
+      <h2>Still being counted</h2>
+      <div id="pending-body"></div>
+    </article>
+    <article class="card" id="history-card" hidden>
+      <h2>How the count moved</h2>
+      <div id="history-body"></div>
+    </article>
+  </section>
+
+  <section class="background" aria-labelledby="bg-title">
+    <h2 class="section-title" id="bg-title">Background</h2>
+    <div class="panels">
+      <article class="card quiet" id="lean-card">
+        <h3>Won against the lean</h3>
+        <p class="hint">“Lean” is how a place usually votes compared with the whole country (the Cook PVI). R+5 means about 5 points more Republican than average.</p>
+        <div id="lean-body"></div>
+      </article>
+      <article class="card quiet" id="turnout-card" hidden>
+        <h3>Turnout <span class="scope">all offices</span> <button type="button" class="q" data-term="turnout" aria-label="What does turnout mean here?">?</button></h3>
+        <div id="turnout-body"></div>
+      </article>
+    </div>
+  </section>
+
+  <details>
+    <summary id="list-title">All races</summary>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Race</th><th>Result</th><th>Winner</th><th>Party gain</th></tr></thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+  </details>
+
+  <footer>
+    <details class="notes">
+      <summary>Sources and notes</summary>
+      <div class="notes-body">
+    <p>Race calls and winners come from Wikipedia's
+      <a href="https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections" target="_blank" rel="noopener">House</a>,
+      <a href="https://en.wikipedia.org/wiki/2026_United_States_Senate_elections" target="_blank" rel="noopener">Senate</a> and
+      <a href="https://en.wikipedia.org/wiki/2026_United_States_gubernatorial_elections" target="_blank" rel="noopener">governor</a>
+      results pages (CC BY-SA 4.0), which follow AP calls and can trail them by a few hours. Shading is by winner only; these tables do not include vote shares.</p>
+    <p>House hexagons are generated per state from each state's seat count and rough location, so a district's position inside its state is approximate. "Party gain" follows Wikipedia, and includes seats that changed hands because district lines were redrawn.</p>
+    <p>Turnout: <a href="https://election.lab.ufl.edu/voter-turnout/" target="_blank" rel="noopener">UF Election Lab</a> (Michael McDonald), ballots counted as a share of the voting-eligible population. 2026 figures are early estimates until states certify; 2022 figures are final.</p>
+    <p>State and county boundaries: US Census Bureau, via <a href="https://github.com/topojson/us-atlas" target="_blank" rel="noopener">us-atlas</a>. Population: 2020 Census state totals, spread across counties using each county's share in earlier Census estimates. County-level vote counts are not shown because they aren't available yet. County lines date from 2017: Connecticut shows its former 8 counties (replaced by 9 planning regions in 2022), and Alaska's Valdez-Cordova area appears as one before its 2019 split.</p>
+      </div>
+    </details>
+  </footer>
+</main>
+
+<div id="tip" role="status" hidden></div>
+<script src="app.js"></script>
+<!--INLINE_JS-->

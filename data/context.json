@@ -1,0 +1,50 @@
+{
+ "_about": "Facts the map needs that are not individual 2026 races. Sources: the Wikipedia Senate page's seat table and the gubernatorial page's infobox, read 2026-11-04.",
+ "house": {
+  "seats": 435,
+  "majority": 218
+ },
+ "senate": {
+  "seats": 100,
+  "majority": 51,
+  "not_up": {
+   "D": 32,
+   "I": 2,
+   "R": 31
+  },
+  "note": "The 2 independents not up in 2026 caucus with Democrats."
+ },
+ "governors": {
+  "seats": 50,
+  "majority": 26,
+  "not_up": {
+   "DE": "D",
+   "KY": "D",
+   "NJ": "D",
+   "NC": "D",
+   "VA": "D",
+   "WA": "D",
+   "IN": "R",
+   "LA": "R",
+   "MS": "R",
+   "MO": "R",
+   "MT": "R",
+   "ND": "R",
+   "UT": "R",
+   "WV": "R"
+  }
+ },
+ "runoffs": {
+  "_about": "Dates of runoff elections, by state and office (H/S/G). Only from the state's official election site. A race with status 'runoff' and no entry here shows 'Headed to a runoff' without a date.",
+  "LA-H": {
+   "date": "2026-12-12",
+   "source": "https://www.sos.la.gov/elections-voting/election-dates",
+   "note": "Louisiana Secretary of State: 'December 12, 2026 - Open U.S. Representative General' (Act 7 of 2026). Read 2026-11-05."
+  }
+ },
+ "updates": {
+  "_about": "When the scheduled updates stop. After race_calls_end (Pacific time) the page shows a 'final snapshot' banner. If updates are restarted, move these dates too.",
+  "race_calls_end": "2026-11-20",
+  "turnout_final": "2026-12-15"
+ }
+}

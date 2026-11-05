@@ -1,0 +1,362 @@
+/* Layout concept: a single newsroom column. Tally board on top, the
+   cartogram as the hero, legend and race list beneath. Party colours are
+   semantic (they mean D / R), so the only free accent is the ink itself. */
+:root {
+  --paper: #f3f4f7;        /* cool grey-blue paper */
+  --panel: #ffffff;
+  --ink: #161a22;
+  --ink-2: #545b69;        /* secondary text */
+  --rule: #d4d8e0;
+  --dem: #2c5cb0;
+  --rep: #c03a36;
+  --pending: #c4c9d3;      /* race not yet called */
+  --norace: #e6e8ee;       /* no race this year */
+  --halo: #ffffff;         /* flip ring + label knock-out */
+  --state-line: #161a22;   /* state borders on the hexmap */
+  --focus: #e0a100;
+  --dem-2: #8aa7da;        /* delegation: mostly D */
+  --rep-2: #df9692;        /* delegation: mostly R */
+  --mixed: #a68cb3;        /* delegation: about even */
+  --dem-3: #c9d6ee;        /* county margin: D by under 5 */
+  --rep-3: #f1cbc8;        /* county margin: R by under 5 */
+  --pending-dot: #7d8494;  /* uncalled race in the dot view (darker than "no race") */
+
+  --display: "Avenir Next Condensed", "Bahnschrift SemiCondensed", "Roboto Condensed", "Arial Narrow", sans-serif-condensed, system-ui, sans-serif; /* device fonts only: no third-party font requests */
+  --body: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #11141a; --panel: #1a1e26; --ink: #e9ecf2; --ink-2: #9aa3b2;
+    --rule: #2e3440; --dem: #5b8be0; --rep: #e46b65; --pending: #4a515e;
+    --norace: #20252e; --halo: #11141a; color-scheme: dark; --state-line: #e9ecf2;
+    --dem-2: #5370a6; --rep-2: #a65650; --mixed: #9983ae; --pending-dot: #8a92a2; --dem-3: #33415c; --rep-3: #5a3734;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #11141a; --panel: #1a1e26; --ink: #e9ecf2; --ink-2: #9aa3b2;
+  --rule: #2e3440; --dem: #5b8be0; --rep: #e46b65; --pending: #4a515e;
+  --norace: #20252e; --halo: #11141a; color-scheme: dark; --state-line: #e9ecf2;
+  --dem-2: #5370a6; --rep-2: #a65650; --mixed: #9983ae; --pending-dot: #8a92a2; --dem-3: #33415c; --rep-3: #5a3734;
+}
+
+body {
+  margin: 0; /* no browser default margin, so the 16px side gutter is exact */
+  background: var(--paper);
+  color: var(--ink);
+  font: 15px/1.5 var(--body);
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 20px 40px;
+}
+.wrap { max-width: 1040px; margin: 0 auto; display: grid; gap: 22px; }
+
+/* ---------- masthead ---------- */
+.eyebrow {
+  font: 600 13px/1 var(--display); letter-spacing: .12em; text-transform: uppercase;
+  color: var(--ink-2); margin: 0 0 6px;
+}
+h1 {
+  font: 700 clamp(34px, 6vw, 56px)/0.98 var(--display); letter-spacing: -.01em;
+  margin: 0; text-wrap: balance;
+}
+.lede { margin: 10px 0 0; max-width: 62ch; color: var(--ink-2); }
+
+/* ---------- controls ---------- */
+.controls { display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; justify-content: space-between; }
+.tabs { display: inline-flex; border: 1px solid var(--rule); border-radius: 999px; padding: 3px; background: var(--panel); }
+.tabs button {
+  font: 600 16px/1 var(--display); letter-spacing: .04em; text-transform: uppercase;
+  border: 0; background: transparent; color: var(--ink-2); padding: 9px 16px; border-radius: 999px; cursor: pointer;
+}
+.tabs button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+.toggle { display: inline-flex; align-items: center; gap: 8px; color: var(--ink-2); cursor: pointer; user-select: none; }
+.toggle input { width: 18px; height: 18px; accent-color: var(--ink); }
+button:focus-visible, .toggle input:focus-visible, summary:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+
+/* ---------- tally board ---------- */
+.tally { display: grid; gap: 10px; }
+.tally-row { display: flex; justify-content: space-between; align-items: end; gap: 12px; }
+.side { display: grid; gap: 2px; }
+.side.right { text-align: right; justify-items: end; }
+.side .num { font: 700 clamp(40px, 7vw, 60px)/.9 var(--display); font-variant-numeric: tabular-nums; }
+.side .who { font: 600 14px/1.2 var(--display); text-transform: uppercase; letter-spacing: .08em; }
+.side .sub { font-size: 12.5px; color: var(--ink-2); }
+.dem { color: var(--dem); } .rep { color: var(--rep); }
+.mid { text-align: center; color: var(--ink-2); font-size: 13px; }
+.mid strong { display: block; font: 700 26px/1 var(--display); color: var(--ink); font-variant-numeric: tabular-nums; }
+.bar { position: relative; display: flex; height: 18px; border-radius: 3px; overflow: hidden; background: var(--pending); }
+.bar span { display: block; height: 100%; transition: width .4s ease; }
+.bar .d { background: var(--dem); } .bar .u { background: var(--pending); } .bar .r { background: var(--rep); }
+.bar .hold { opacity: .55; }
+.tick { position: relative; height: 22px; }
+.tick::before { content: ""; position: absolute; left: var(--at); top: -26px; height: 30px; border-left: 2px dashed var(--ink); }
+.tick span { position: absolute; left: var(--at); transform: translateX(-50%); font-size: 12px; color: var(--ink-2); white-space: nowrap; }
+.status { font-size: 13.5px; color: var(--ink-2); margin: 0; }
+
+/* ---------- map ---------- */
+figure { margin: 0; background: var(--panel); border: 1px solid var(--rule); border-radius: 10px; padding: 12px; }
+#map { display: block; width: 100%; height: auto; touch-action: manipulation; }
+.seat { cursor: pointer; transition: opacity .2s; }
+.seat .hex { stroke: var(--panel); stroke-width: .1; }
+.seat .ring { fill: none; stroke: var(--halo); stroke-width: .13; }
+.seat.dim { opacity: .18; }
+.seat:hover .hex, .seat.active .hex { stroke: var(--ink); stroke-width: .14; }
+.border { stroke: var(--state-line); stroke-width: .2; fill: none; stroke-linecap: round; pointer-events: none; }
+.label { font: 600 .62px var(--display); text-anchor: middle; dominant-baseline: central; fill: var(--ink); pointer-events: none; letter-spacing: .02em; }
+.label.on-color { fill: #fff; }
+.label.house { font-size: 1.05px; fill: var(--ink); paint-order: stroke; stroke: var(--panel); stroke-width: .28px; }
+.inset-note { font: .7px var(--body); fill: var(--ink-2); }
+
+/* geographic styles (975 x 610 Albers USA units) */
+.state .shape { stroke: var(--panel); stroke-width: .8; stroke-linejoin: round; }
+.state .shape.outline { stroke: var(--rule); stroke-width: .7; }
+.state:hover .shape, .state.active .shape { stroke: var(--ink); stroke-width: 1.6; }
+.state .hatch { pointer-events: none; }
+.hatch-line { fill: var(--halo); opacity: .55; }
+.label.geo { font-size: 13px; fill: var(--ink); paint-order: stroke; stroke: var(--panel); stroke-width: 2.5px; stroke-opacity: .7; }
+.dots path.dim { opacity: .15; }
+.legend .stripes { background-image: repeating-linear-gradient(45deg, transparent 0 2px, var(--halo) 2px 4px) !important; outline: 1px solid var(--rule); }
+.legend-note { flex-basis: 100%; margin: 2px 0 0; font-size: 12.5px; }
+
+.legend { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 10px; font-size: 13px; color: var(--ink-2); }
+.legend i { display: inline-block; width: 13px; height: 13px; border-radius: 2px; vertical-align: -2px; margin-right: 6px; }
+.legend .ring { box-shadow: inset 0 0 0 3px var(--halo); outline: 1px solid var(--rule); }
+
+/* ---------- tooltip ---------- */
+#tip {
+  position: fixed; z-index: 20; max-width: min(300px, calc(100vw - 32px)); pointer-events: none;
+  background: var(--panel); color: var(--ink); border: 1px solid var(--rule); border-radius: 8px;
+  padding: 10px 12px; box-shadow: 0 6px 24px rgb(0 0 0 / .18); font-size: 13.5px;
+}
+#tip h3 { font: 700 18px/1.1 var(--display); margin: 0 0 4px; }
+#tip .call { font-weight: 600; }
+#tip .meta { color: var(--ink-2); font-size: 12.5px; margin-top: 4px; }
+#tip ul { margin: 6px 0 0; padding-left: 16px; color: var(--ink-2); font-size: 12.5px; }
+.chip { display: inline-block; font: 600 11px/1 var(--display); letter-spacing: .08em; text-transform: uppercase; padding: 3px 6px; border-radius: 3px; margin-left: 6px; vertical-align: 2px; }
+.chip.flip { background: var(--ink); color: var(--paper); }
+.chip.wait { background: var(--pending); color: var(--ink); }
+
+/* ---------- race list ---------- */
+details { background: var(--panel); border: 1px solid var(--rule); border-radius: 10px; }
+summary { cursor: pointer; padding: 12px 14px; font: 600 16px var(--display); letter-spacing: .04em; text-transform: uppercase; }
+.table-wrap { overflow-x: auto; padding: 0 14px 14px; }
+table { border-collapse: collapse; width: 100%; font-size: 13.5px; font-variant-numeric: tabular-nums; }
+th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--rule); white-space: nowrap; }
+th { font: 600 12px var(--display); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-2); }
+td.party { font-weight: 600; }
+
+footer { font-size: 12.5px; color: var(--ink-2); display: grid; gap: 6px; max-width: 75ch; }
+footer p { margin: 0; }
+footer a { color: inherit; }
+
+@media (prefers-reduced-motion: reduce) { .bar span, .seat { transition: none; } }
+
+/* ---------- context panels ---------- */
+.panels { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 16px; align-items: start; }
+.card { background: var(--panel); border: 1px solid var(--rule); border-radius: 10px; padding: 14px 16px; min-width: 0; }
+.card h2 { font: 700 20px/1.1 var(--display); letter-spacing: .02em; text-transform: uppercase; margin: 0 0 6px; }
+.card .hint { margin: 0 0 8px; font-size: 12.5px; color: var(--ink-2); }
+.card .lead { margin: 0 0 8px; font-size: 14px; }
+.rows { list-style: none; margin: 0; padding: 0; }
+.rows li { display: flex; align-items: center; gap: 8px; padding: 7px 0; border-top: 1px solid var(--rule); font-size: 13.5px; }
+.rows .what { flex: 1; min-width: 0; }
+.rows .who { font-weight: 600; text-align: right; }
+.rows .lean { font: 600 13px var(--mono); font-variant-numeric: tabular-nums; color: var(--ink-2); min-width: 44px; text-align: right; }
+.pill { font: 600 11px/1 var(--display); letter-spacing: .06em; text-transform: uppercase; padding: 4px 7px; border-radius: 999px; white-space: nowrap; border: 1px solid currentColor; }
+.pill.d { color: var(--dem); } .pill.r { color: var(--rep); } .pill.n { color: var(--ink-2); }
+/* Turnout: neutral bars (turnout isn't partisan), a tick for 2022. */
+.tbar { position: relative; flex: 0 0 34%; height: 10px; border-radius: 2px; background: var(--rule); }
+.tbar .now { position: absolute; inset: 0 auto 0 0; border-radius: 2px; background: var(--ink-2); opacity: .55; }
+.tbar .then { position: absolute; top: -3px; bottom: -3px; width: 2px; margin-left: -1px; background: var(--ink); }
+.rows .delta { min-width: 40px; }
+.more summary { padding: 8px 0 2px; font: 600 13px var(--body); text-transform: none; letter-spacing: 0; color: var(--ink-2); cursor: pointer; }
+.more[open] summary { margin-bottom: 4px; }
+
+/* ---------- explainers, changes line, search, state card, history ---------- */
+.q {
+  width: 20px; height: 20px; padding: 0; border-radius: 50%; border: 1px solid var(--rule);
+  background: var(--panel); color: var(--ink-2); font: 600 12px/18px var(--body); cursor: pointer; vertical-align: 1px;
+}
+.q:hover { color: var(--ink); border-color: var(--ink-2); }
+.linkish { border: 0; background: none; padding: 0; color: var(--ink); font: inherit; text-decoration: underline; text-underline-offset: 2px; cursor: pointer; }
+.changes { display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: center; }
+#tip .term { max-width: 260px; font-size: 13px; line-height: 1.45; }
+
+.finder { display: grid; gap: 4px; flex: 1 1 220px; max-width: 340px; }
+.finder input {
+  width: 100%; font: 15px var(--body); color: var(--ink); background: var(--panel);
+  border: 1px solid var(--rule); border-radius: 999px; padding: 9px 14px;
+}
+.finder input:focus-visible { outline: 3px solid var(--focus); outline-offset: 1px; }
+.find-msg { margin: 0; font-size: 13px; color: var(--ink-2); min-height: 0; }
+.find-msg:empty { display: none; }
+
+.state-card .state-head { display: flex; justify-content: space-between; align-items: center; }
+.state-card .close { border: 0; background: none; color: var(--ink-2); font-size: 24px; line-height: 1; cursor: pointer; padding: 2px 6px; }
+.state-card .rows li { justify-content: space-between; flex-wrap: wrap; }
+.state-card .what { flex: 0 0 auto; min-width: 9em; color: var(--ink-2); }
+.muted { color: var(--ink-2); }
+
+.spark { width: 100%; height: auto; display: block; }
+.spark .ln { fill: none; stroke-width: 2.5; stroke-linejoin: round; }
+.spark .dem-ln { stroke: var(--dem); } .spark .rep-ln { stroke: var(--rep); }
+.spark .maj { stroke: var(--ink-2); stroke-dasharray: 4 4; stroke-width: 1; }
+.spark .axis { font: 11px var(--body); fill: var(--ink-2); }
+.spark .end { font: 600 12px var(--body); }
+.spark .end.dem { fill: var(--dem); } .spark .end.rep { fill: var(--rep); }
+
+/* ---------- zoom ---------- */
+figure { position: relative; }
+.zoom-out {
+  position: absolute; top: 10px; left: 10px; z-index: 2;
+  font: 600 13px var(--body); color: var(--ink); background: var(--panel);
+  border: 1px solid var(--rule); border-radius: 999px; padding: 7px 12px; cursor: pointer;
+  box-shadow: 0 2px 8px rgb(0 0 0 / .12);
+}
+.zoom-out:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+.seat.unfocused { opacity: .35; }
+.seat.unfocused.dim { opacity: .12; }
+/* Lines keep the same on-screen width at any zoom. */
+.seat .hex, .border, .state .shape, .counties { vector-effect: non-scaling-stroke; }
+.seat .hex { stroke-width: .6px; stroke-opacity: .75; } /* softer gaps between hexagons */
+.seat:hover .hex, .seat.active .hex { stroke-width: 2px; }
+.border { stroke-width: 1.3px; } /* state borders: thin, so they outline without dominating */
+.state .shape { stroke-width: 1px; }
+.state .shape.outline { stroke-width: 1px; }
+.state:hover .shape, .state.active .shape { stroke-width: 2px; }
+.counties { fill: none; stroke: var(--ink-2); stroke-width: .7px; opacity: .55; pointer-events: none; }
+/* State labels on the map keep their size as you zoom in. */
+.label.geo { font-size: calc(13px / var(--z, 1)); stroke-width: calc(2.5px / var(--z, 1)); }
+@media (prefers-reduced-motion: reduce) { .seat { transition: none; } }
+/* Keyboard focus on a seat: outline the shape itself (an outline on an SVG
+   group is drawn around its whole bounding box, which looks like a stray box). */
+.seat:focus { outline: none; }
+.seat:focus-visible .hex, .seat:focus-visible .shape { stroke: var(--focus); stroke-width: 3px; }
+/* House cartogram state labels also keep their size when zoomed. */
+.label.house { font-size: calc(1.05px / var(--z, 1)); stroke-width: calc(.28px / var(--z, 1)); }
+
+/* Disclaimer under the map while county lines are shown */
+.county-note {
+  margin: 8px 0 0; padding: 8px 10px; font-size: 13px; color: var(--ink-2);
+  background: var(--paper); border-left: 3px solid var(--pending); border-radius: 4px;
+}
+.county-note strong { color: var(--ink); font-weight: 600; }
+
+/* ---------- districts (House view, zoomed into a state) ---------- */
+.seat.district .shape { stroke: var(--panel); stroke-width: 1.2px; vector-effect: non-scaling-stroke; stroke-linejoin: round; }
+.seat.district:hover .shape, .seat.district.active .shape { stroke: var(--ink); stroke-width: 2.2px; }
+.seat.district:focus-visible .shape { stroke: var(--focus); stroke-width: 3px; }
+.district-lines { fill: none; stroke: var(--ink); stroke-width: 1.3px; opacity: .7; vector-effect: non-scaling-stroke; pointer-events: none; }
+
+/* ---------- counties (Senate / governor, zoomed in, when county results exist) ---------- */
+.seat.county .shape { stroke: var(--panel); stroke-width: .8px; vector-effect: non-scaling-stroke; stroke-linejoin: round; }
+.seat.county:hover .shape, .seat.county.active .shape { stroke: var(--ink); stroke-width: 2px; }
+.seat.county:focus-visible .shape { stroke: var(--focus); stroke-width: 3px; }
+
+/* ---------- cleaner layout (Nov 4) ---------- */
+/* Text for screen readers only (e.g. the search box's label; the placeholder shows it visually). */
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.wrap { gap: 18px; grid-template-columns: minmax(0, 1fr); } /* one column that never grows past the screen */
+.tally { gap: 8px; }
+.side .sub:empty { display: none; }
+
+/* Map hint: shown until a state is zoomed into. */
+.map-hint { margin: 8px 0 0; font-size: 12.5px; color: var(--ink-2); }
+figure:has(.zoom-out:not([hidden])) .map-hint { display: none; }
+
+/* The short summary right under the map. */
+.summary { display: grid; gap: 6px; }
+.summary .status { font-size: 14px; }
+.summary .asof { font-size: 12.5px; }
+
+/* Background: lean and turnout, quieter than the count panels. */
+.background { display: grid; gap: 10px; }
+.section-title { font: 600 14px/1 var(--display); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-2); margin: 6px 0 0; }
+.card h3 { font: 700 18px/1.1 var(--display); letter-spacing: .02em; text-transform: uppercase; margin: 0 0 6px; }
+.card.quiet { background: transparent; }
+.scope { font: 600 11px/1 var(--display); letter-spacing: .08em; color: var(--ink-2); border: 1px solid var(--rule); border-radius: 999px; padding: 3px 7px; vertical-align: 3px; margin-left: 4px; }
+
+/* Sources and notes: one line, opens on tap. */
+details.notes { background: none; border: 0; border-top: 1px solid var(--rule); border-radius: 0; }
+details.notes summary { padding: 12px 0 8px; font: 600 13px var(--body); letter-spacing: 0; text-transform: none; color: var(--ink-2); }
+.notes-body { display: grid; gap: 6px; padding-bottom: 8px; }
+
+/* Phones: smaller masthead, and the map runs edge to edge so the hexagons are as big as possible. */
+@media (max-width: 600px) {
+  h1 { font-size: 34px; }
+  .lede { font-size: 14px; }
+  .controls { gap: 10px; }
+  .tabs button { padding: 9px 12px; font-size: 15px; }
+  .finder { flex-basis: 100%; max-width: none; }
+  figure { margin-inline: -16px; width: calc(100% + 32px); min-width: 0; box-sizing: border-box; border-radius: 0; border-inline: 0; padding: 8px 4px; }
+  figure .legend, figure .map-hint, figure .county-note { margin-inline: 12px; }
+}
+
+/* ---------- map lines that must show over any fill (Nov 4 fix) ----------
+   Cartographic "casing": each line is drawn twice, wide and dark underneath,
+   thin and white on top. White-with-a-dark-edge stays visible on blue, red,
+   grey and the plain background, in light and dark mode. */
+:root { --line-top: #ffffff; --line-casing: #000000; }
+.counties-casing, .counties, .district-casing, .district-lines {
+  fill: none; pointer-events: none; vector-effect: non-scaling-stroke; stroke-linejoin: round;
+}
+.counties-casing { stroke: var(--line-casing); stroke-width: 2.2px; opacity: .35; }
+.counties { stroke: var(--line-top); stroke-width: .8px; opacity: .85; }
+/* House, Population style: counties step back so the district borders lead. */
+.counties.under-districts { opacity: .45; }
+.district-casing { stroke: var(--line-casing); stroke-width: 4.5px; opacity: .55; }
+.district-lines { stroke: var(--line-top); stroke-width: 2.2px; opacity: 1; }
+/* Population style: plain background, so plain lines. Districts are a solid ink line
+   with a thin halo in the page color, so they stay on top of dots and county lines. */
+.counties.plain { stroke: var(--ink-2); stroke-width: .8px; opacity: .6; }
+.counties.plain.under-districts { opacity: .4; }
+.district-casing { stroke: var(--panel); stroke-width: 5px; opacity: .9; }
+.district-lines { stroke: var(--ink); stroke-width: 2.2px; }
+
+/* Trust notes in the masthead */
+.unofficial { margin: 8px 0 0; font-size: 12.5px; color: var(--ink-2); }
+.final-banner {
+  margin: 12px 0 0; padding: 10px 12px; font-size: 14px; color: var(--ink);
+  background: var(--panel); border: 1px solid var(--rule); border-left: 4px solid var(--focus); border-radius: 6px;
+}
+
+/* Keyboard: a "skip past the map" link that appears only when focused. */
+.skip { position: absolute; left: 12px; top: 52px; z-index: 5; background: var(--panel); color: var(--ink);
+  border: 1px solid var(--rule); border-radius: 999px; padding: 7px 12px; font: 600 13px var(--body); }
+.skip:not(:focus) { width: 1px; height: 1px; padding: 0; border: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.skip:focus { outline: 3px solid var(--focus); outline-offset: 2px; }
+.tabs button:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+/* Taps on a population dot go to the state under it (empty space zooms out). */
+.dots { pointer-events: none; }
+/* A state's whole inside counts as the state, even where it is drawn as an outline only
+   (Population style), so only real empty space or ocean zooms back out. */
+.seat .shape { pointer-events: all; }
+
+/* ---------- state names on the Map and Population styles ---------- */
+/* Country view: small states and the Population style have no room for names. */
+#map:not(.zoomed) .label.geo.small, #map:not(.zoomed) .state-labels.zoom-only { display: none; }
+/* Zoomed in: a fixed, readable size on any screen (--upx = map units per screen pixel),
+   with a halo in the page color so names read over districts, counties and dots. */
+#map.zoomed .label.geo {
+  font-size: calc(12px * var(--upx, 1)); stroke-width: calc(3px * var(--upx, 1));
+  stroke: var(--panel); stroke-opacity: .85; paint-order: stroke; letter-spacing: .04em;
+}
+
+/* ---------- pan and zoom by hand ---------- */
+#map { touch-action: pan-x pan-y; }          /* one finger scrolls the page; pinches come to the map */
+#map.pannable { touch-action: none; cursor: grab; } /* zoomed in: one finger or the mouse moves the map */
+#map.dragging { cursor: grabbing; }
+#map.dragging .seat { cursor: grabbing; }
+.zoom-ctrls { position: absolute; top: 10px; right: 10px; z-index: 2; display: grid; gap: 4px; }
+.zoom-ctrls button {
+  width: 34px; height: 34px; border-radius: 8px; border: 1px solid var(--rule); background: var(--panel);
+  color: var(--ink); font: 600 20px/1 var(--body); cursor: pointer; box-shadow: 0 2px 8px rgb(0 0 0 / .12);
+}
+.zoom-ctrls button:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+.wheel-hint {
+  position: absolute; left: 50%; top: 45%; transform: translate(-50%, -50%); z-index: 3; margin: 0;
+  background: rgb(0 0 0 / .72); color: #fff; font-size: 14px; padding: 8px 12px; border-radius: 8px;
+  pointer-events: none; white-space: nowrap;
+}
+@media (hover: none) { .wheel-hint { display: none; } } /* phones and tablets pinch instead */

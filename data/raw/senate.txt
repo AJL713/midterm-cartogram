@@ -1,0 +1,39 @@
+# Source: https://en.wikipedia.org/wiki/2026_United_States_Senate_elections
+# Snapshot read 2026-11-04 ~16:25 UTC
+# Format: key|winner party (- = not called)|flip (1 = party gain)|winner name|status|other candidates (name/party;...)|lean (Cook PVI)|held by before (D/R/I, N = new seat, V = vacant)
+# S-FL and S-OH are special elections for Class 3 seats.
+S-FL|R|0|Ashley Moody|called|Angie Nixon/D;Neil Gillespie/I|R+5|R
+S-OH|D|1|Sherrod Brown|called|Jon Husted/R;Greg Levy/I;William Redpath/L|R+5|R
+S-AL|R|0|Barry Moore|called|Everett Wess/D|R+15|R
+S-AK|-|0||uncalled|Gerald Heikes/R;Mary Peltola/D;Dan J. Sullivan/R;Dan S. Sullivan/R|R+6|R
+S-AR|R|0|Tom Cotton|called|Hallie Shoffner/D;Jeff Wadlin/L|R+15|R
+S-CO|D|0|John Hickenlooper|called|Mark Baisley/R;Bob Chew/O;Blake Huber/L;Adam Withrow/O|D+6|D
+S-DE|D|0|Chris Coons|called|Michael Katz/R|D+8|D
+S-GA|D|0|Jon Ossoff|called|Mike Collins/R|R+1|D
+S-ID|R|0|Jim Risch|called|Todd Achilles/I;Natalie Fleming/I;Matt Loesby/L|R+18|R
+S-IL|D|0|Juliana Stratton|called|Don Tracy/R;Whitfield Harrington Jr./I|D+6|D
+S-IA|D|1|Josh Turek|called|Ashley Hinson/R;Thomas Laehn/L|R+6|R
+S-KS|D|1|Adam Hamilton|called|Roger Marshall/R;David Graham/L|R+8|R
+S-KY|R|0|Andy Barr|called|Charles Booker/D;Christopher Campbell/I|R+15|R
+S-LA|R|0|Julia Letlow|called|Jamie Davis/D|R+11|R
+S-ME|D|1|Troy Jackson|called|Susan Collins/R|D+4|R
+S-MA|D|0|Ed Markey|called|John Deaton/R;Shiva Ayyadurai/I;Joe Tache/O|D+14|D
+S-MI|D|0|Abdul El-Sayed|called|Mike Rogers/R;Lydia Christensen/L;Walter P. Kristy/O;Tim Long/O;Douglas P. Marsh/O|EVEN|D
+S-MN|D|0|Peggy Flanagan|called|Michele Tafoya/R;Marisa Simonetti/I;Rebecca Whiting/L|D+3|D
+S-MS|-|0||uncalled|Scott Colom/D;Cindy Hyde-Smith/R;Ty Pinkins/I|R+11|R
+S-MT|R|0|Kurt Alme|called|Seth Bodnar/I;Alani Bankhead/D;Kyle Austin/L|R+10|R
+S-NE|R|0|Pete Ricketts|called|Dan Osborn/I;Chuck Conboy/O;Mike Marvin/O;Robin Richards/O|R+10|R
+S-NH|D|0|Chris Pappas|called|John E. Sununu/R;Edmond LaPlante/O|D+2|D
+S-NJ|D|0|Cory Booker|called|Justin Murphy/R;Veronica Fernandez/I;Joanne Kuniansky/O|D+4|D
+S-NM|D|0|Ben Ray Luján|called|Larry Marker/R|D+4|D
+S-NC|D|1|Roy Cooper|called|Michael Whatley/R;Shannon Bray/L;Michael Dublin/O|R+1|R
+S-OK|R|0|Kevin Hern|called|N'Kiyla Jasmine Thomas/D;Ron Meinhardt/I;Curtis Stinnett/I;Sevier White/L|R+17|R
+S-OR|D|0|Jeff Merkley|called|David Brock Smith/R;Gary Lyndon Dye/L;Chris Henry/O|D+8|D
+S-RI|D|0|Jack Reed|called|Raymond McKay/R;Michael Bahry/I|D+8|D
+S-SC|D|1|Annie Andrews|called|Darline Graham/R;Mark Hackett/O;Kasie Whitener/L|R+8|R
+S-SD|R|0|Mike Rounds|called|Brian Bengs/I|R+15|R
+S-TN|R|0|Bill Hagerty|called|Marquita Bradshaw/D;Tharon Chandler/I;Andrew Gerena/I;Jeremy Hearn/I;Robert Jones/I;James Macon III/I;Yoshi Matthews/I;David Sutman Jr./I;Catherine Whitson/I|R+14|R
+S-TX|D|1|James Talarico|called|Ted Brown/L;Ken Paxton/R|R+6|R
+S-VA|D|0|Mark Warner|called|Bert Mizusawa/R|D+3|D
+S-WV|R|0|Shelley Moore Capito|called|Rachel Fetty Anderson/D;S. Marshall Wilson/O|R+21|R
+S-WY|R|0|Harriet Hageman|called|James W. Byrd/D|R+23|R

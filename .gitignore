@@ -1,0 +1,9 @@
+# Build output for the claude.ai version (docs/ is the public site and IS committed)
+dist/
+# Python and Node leftovers
+__pycache__/
+*.pyc
+.pytest_cache/
+node_modules/
+# Private planning notes (kept in the claude.ai Project, not public)
+PLAN-public-launch.md
