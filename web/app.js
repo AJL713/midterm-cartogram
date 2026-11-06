@@ -673,7 +673,9 @@ function showTip(target, x, y) {
     if (!d) return;
     html = describe(d).html;
   } else if (target.classList.contains("county")) {
-    html = describeCounty(target.dataset.id, countyRace()).html;
+    const c = describeCounty(target.dataset.id, target.dataset.key);
+    if (!c) return;
+    html = c.html;
   } else if (target.classList.contains("district")) {
     const id = target.dataset.id;
     html = describe({ id, state: id.slice(0, 2), race: { key: `H-${id}`, ...DATA.results.races[`H-${id}`] } }).html;
@@ -909,9 +911,11 @@ function animateTo(target, done) {
 /** Zoom into one state: frame it and fade everything else. */
 function zoomTo(st, done) {
   clearTimeout(settleTimer);
+  const from = zoomState;
   zoomState = st;
   hideTip();
   applyFocus();
+  if (from && from !== st) drawDistricts(); // drop the old state's counties and districts now
   document.getElementById("zoom-out").hidden = false;
   animateTo(frameFor(st), () => { finishZoom(); done?.(); });
 }
@@ -1037,17 +1041,20 @@ function drawCounties(layer) {
   for (const [fips, v] of Object.entries(votes)) {
     const shape = DATA.county_shapes && DATA.county_shapes[fips];
     if (!shape) continue;
-    const g = el("g", { class: "seat county", tabindex: "0", role: "button", "aria-label": describeCounty(fips, key).plain }, layer);
+    const g = el("g", { class: "seat county", tabindex: "0", role: "button", "aria-label": describeCounty(fips, key)?.plain || fips }, layer);
     g.dataset.id = fips;
     g.dataset.state = zoomState;
+    g.dataset.key = key; // the race these results belong to (the zoom may move on before the map redraws)
     el("path", { class: "shape", d: shape[1], fill: marginFill(v) }, g);
   }
 }
 
 /** Tooltip for one county: shares, margin and total votes. */
 function describeCounty(fips, key) {
-  const [d, r, t] = DATA.results.counties[key][fips];
-  const name = DATA.county_shapes[fips][0];
+  const row = DATA.results.counties?.[key]?.[fips], shape = DATA.county_shapes?.[fips];
+  if (!row || !shape) return null; // no results for this county: show nothing rather than fail
+  const [d, r, t] = row;
+  const name = shape[0];
   const kind = Number(fips.slice(2)) >= 500 ? " (city)" : zoomState === "LA" ? " Parish" : "";
   const title = `${name}${kind}, ${STATE_NAMES[zoomState]}`;
   const pct = (n) => (t ? ((n / t) * 100).toFixed(1) : "0") + "%";
