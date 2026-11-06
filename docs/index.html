@@ -391,7 +391,7 @@ details.notes summary { padding: 12px 0 8px; font: 600 13px var(--body); letter-
 ::view-transition-old(root), ::view-transition-new(root) { animation-duration: .28s; }
 .controls { view-transition-name: controls; }
 .tally { view-transition-name: tally; }
-::view-transition-old(controls), ::view-transition-old(tally) { display: none; }
+::view-transition-old(controls), ::view-transition-old(tally) { animation: none; opacity: 0; }
 ::view-transition-new(controls), ::view-transition-new(tally) { animation: none; }
 /* Small things appear with a short fade instead of popping in. */
 @keyframes fade-in { from { opacity: 0; transform: translateY(3px); } to { opacity: 1; transform: none; } }
@@ -1817,9 +1817,18 @@ function wirePanZoom() {
 // The toggles and the tally are left out of the crossfade: the toggle highlight
 // slides and the numbers count, so they never show a double image.
 
+// Safari's engine (WebKit: Safari, and every browser and app on iPhone and iPad) is left
+// out: switching offices there crashed the page on Nov 6, so it switches instantly instead.
+const UA = navigator.userAgent;
+const WEBKIT = /AppleWebKit/.test(UA) && (!/(Chrome|Chromium|Edg)\//.test(UA) || /CriOS|FxiOS|EdgiOS/.test(UA));
+
 function smoothly(change) {
-  if (reduceMotion() || !document.startViewTransition) { change(); return; }
-  document.startViewTransition(change);
+  if (WEBKIT || reduceMotion() || !document.startViewTransition) { change(); return; }
+  try {
+    document.startViewTransition(change).finished.catch(() => {});
+  } catch {
+    change(); // the transition could not start: just make the change
+  }
 }
 
 /** Count a number from what it shows now to `to` (instant on first draw or with reduced motion). */

@@ -1262,9 +1262,18 @@ function wirePanZoom() {
 // The toggles and the tally are left out of the crossfade: the toggle highlight
 // slides and the numbers count, so they never show a double image.
 
+// Safari's engine (WebKit: Safari, and every browser and app on iPhone and iPad) is left
+// out: switching offices there crashed the page on Nov 6, so it switches instantly instead.
+const UA = navigator.userAgent;
+const WEBKIT = /AppleWebKit/.test(UA) && (!/(Chrome|Chromium|Edg)\//.test(UA) || /CriOS|FxiOS|EdgiOS/.test(UA));
+
 function smoothly(change) {
-  if (reduceMotion() || !document.startViewTransition) { change(); return; }
-  document.startViewTransition(change);
+  if (WEBKIT || reduceMotion() || !document.startViewTransition) { change(); return; }
+  try {
+    document.startViewTransition(change).finished.catch(() => {});
+  } catch {
+    change(); // the transition could not start: just make the change
+  }
 }
 
 /** Count a number from what it shows now to `to` (instant on first draw or with reduced motion). */
