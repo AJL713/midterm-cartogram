@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-07T01:42:00Z",
+ "updated": "2026-11-07T16:42:00Z",
  "source": {
   "house": "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections",
   "senate": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections",
@@ -494,6 +494,24 @@
     251,
     161,
     23
+   ],
+   "S": [
+    20,
+    13,
+    2
+   ],
+   "G": [
+    22,
+    12,
+    2
+   ]
+  },
+  {
+   "t": "2026-11-07T16:42:00Z",
+   "H": [
+    254,
+    162,
+    19
    ],
    "S": [
     20,
@@ -1999,10 +2017,10 @@
    "state": "CA",
    "district": 14,
    "special": false,
-   "called": false,
-   "status": "uncalled",
-   "winner": null,
-   "winner_name": null,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Aisha Wahab",
    "flip": false,
    "margin": null,
    "others": [],
@@ -2914,10 +2932,10 @@
    "state": "FL",
    "district": 9,
    "special": false,
-   "called": false,
-   "status": "uncalled",
-   "winner": null,
-   "winner_name": null,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Darren Soto",
    "flip": false,
    "margin": null,
    "others": [],
@@ -5584,10 +5602,10 @@
    "state": "NY",
    "district": 2,
    "special": false,
-   "called": false,
-   "status": "uncalled",
-   "winner": null,
-   "winner_name": null,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Andrew Garbarino",
    "flip": false,
    "margin": null,
    "others": [],
@@ -6799,11 +6817,11 @@
    "state": "TN",
    "district": 4,
    "special": false,
-   "called": false,
-   "status": "uncalled",
-   "winner": null,
-   "winner_name": null,
-   "flip": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Victoria Broderick",
+   "flip": true,
    "margin": null,
    "others": [],
    "pvi": "R+11",
@@ -10472,8 +10490,8 @@
   },
   "2026": {
    "US": [
-    49.08,
-    123490000,
+    49.1,
+    123540000,
     251588219
    ],
    "AL": [
@@ -10712,8 +10730,8 @@
     6573770
    ],
    "WA": [
-    54.45,
-    3200000,
+    55.3,
+    3250000,
     5876925
    ],
    "WV": [
@@ -10739,7 +10757,7 @@
    ],
    "2026": [
     "Source: https://election.lab.ufl.edu/2026-general-election-turnout/ (UF Election Lab, Michael McDonald)",
-    "Snapshot: early estimate from AP election-night turnout, revised until states certify; page note: ; read 2026-11-06 16:46 UTC"
+    "Snapshot: early estimate from AP election-night turnout, revised until states certify; page note: ; read 2026-11-07 16:46 UTC"
    ]
   }
  }
