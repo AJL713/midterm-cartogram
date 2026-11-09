@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-07T16:42:00Z",
+ "updated": "2026-11-09T16:31:00Z",
  "source": {
   "house": "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections",
   "senate": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections",
@@ -512,6 +512,24 @@
     254,
     162,
     19
+   ],
+   "S": [
+    20,
+    13,
+    2
+   ],
+   "G": [
+    22,
+    12,
+    2
+   ]
+  },
+  {
+   "t": "2026-11-09T16:31:00Z",
+   "H": [
+    255,
+    163,
+    17
    ],
    "S": [
     20,
@@ -4672,11 +4690,11 @@
    "state": "MN",
    "district": 1,
    "special": false,
-   "called": false,
-   "status": "uncalled",
-   "winner": null,
-   "winner_name": null,
-   "flip": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Jake Johnson",
+   "flip": true,
    "margin": null,
    "others": [],
    "pvi": "R+6",
@@ -5092,10 +5110,10 @@
    "state": "NC",
    "district": 7,
    "special": false,
-   "called": false,
-   "status": "uncalled",
-   "winner": null,
-   "winner_name": null,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "David Rouzer",
    "flip": false,
    "margin": null,
    "others": [],
