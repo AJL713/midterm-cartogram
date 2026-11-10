@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09T16:31:00Z",
+ "updated": "2026-11-10T01:33:00Z",
  "source": {
   "house": "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections",
   "senate": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections",
@@ -530,6 +530,24 @@
     255,
     163,
     17
+   ],
+   "S": [
+    20,
+    13,
+    2
+   ],
+   "G": [
+    22,
+    12,
+    2
+   ]
+  },
+  {
+   "t": "2026-11-10T01:33:00Z",
+   "H": [
+    256,
+    165,
+    14
    ],
    "S": [
     20,
@@ -1720,10 +1738,10 @@
    "state": "AZ",
    "district": 2,
    "special": false,
-   "called": false,
-   "status": "uncalled",
-   "winner": null,
-   "winner_name": null,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Eli Crane",
    "flip": false,
    "margin": null,
    "others": [],
@@ -2665,11 +2683,11 @@
    "state": "CO",
    "district": 4,
    "special": false,
-   "called": false,
-   "status": "uncalled",
-   "winner": null,
-   "winner_name": null,
-   "flip": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Eileen Laubacher",
+   "flip": true,
    "margin": null,
    "others": [],
    "pvi": "R+9",
@@ -3205,10 +3223,10 @@
    "state": "FL",
    "district": 26,
    "special": false,
-   "called": false,
-   "status": "uncalled",
-   "winner": null,
-   "winner_name": null,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Mario Díaz-Balart",
    "flip": false,
    "margin": null,
    "others": [],
