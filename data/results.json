@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T01:33:00Z",
+ "updated": "2026-11-10T16:27:00Z",
  "source": {
   "house": "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections",
   "senate": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections",
@@ -548,6 +548,24 @@
     256,
     165,
     14
+   ],
+   "S": [
+    20,
+    13,
+    2
+   ],
+   "G": [
+    22,
+    12,
+    2
+   ]
+  },
+  {
+   "t": "2026-11-10T16:27:00Z",
+   "H": [
+    257,
+    167,
+    11
    ],
    "S": [
     20,
@@ -2443,10 +2461,10 @@
    "state": "CA",
    "district": 40,
    "special": false,
-   "called": false,
-   "status": "uncalled",
-   "winner": null,
-   "winner_name": null,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Ken Calvert",
    "flip": false,
    "margin": null,
    "others": [],
@@ -5098,11 +5116,11 @@
    "state": "NC",
    "district": 5,
    "special": false,
-   "called": false,
-   "status": "uncalled",
-   "winner": null,
-   "winner_name": null,
-   "flip": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Chuck Hubbard",
+   "flip": true,
    "margin": null,
    "others": [],
    "pvi": "R+9",
@@ -7813,10 +7831,10 @@
    "state": "WA",
    "district": 5,
    "special": false,
-   "called": false,
-   "status": "uncalled",
-   "winner": null,
-   "winner_name": null,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Michael Baumgartner",
    "flip": false,
    "margin": null,
    "others": [],
@@ -10257,7 +10275,7 @@
  "county_sources": {
   "S-TX": [
    "Source: https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas",
-   "Snapshot: revision 1384105240, read 2026-11-06 16:46 UTC",
+   "Snapshot: revision 1384866008, read 2026-11-10 17:00 UTC",
    "Check: rows=254 D=5444982 R=4249373 total=9889704"
   ]
  },
