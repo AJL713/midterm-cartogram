@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-11T00:51:00Z",
+ "updated": "2026-11-11T16:34:00Z",
  "source": {
   "house": "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections",
   "senate": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections",
@@ -584,6 +584,24 @@
     255,
     168,
     12
+   ],
+   "S": [
+    20,
+    13,
+    2
+   ],
+   "G": [
+    22,
+    12,
+    2
+   ]
+  },
+  {
+   "t": "2026-11-11T16:34:00Z",
+   "H": [
+    255,
+    169,
+    11
    ],
    "S": [
     20,
@@ -6739,10 +6757,10 @@
    "state": "SC",
    "district": 2,
    "special": false,
-   "called": false,
-   "status": "uncalled",
-   "winner": null,
-   "winner_name": null,
+   "called": true,
+   "status": "called",
+   "winner": "R",
+   "winner_name": "Joe Wilson",
    "flip": false,
    "margin": null,
    "others": [],
@@ -10293,7 +10311,7 @@
  "county_sources": {
   "S-TX": [
    "Source: https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_Texas",
-   "Snapshot: revision 1384896885, read 2026-11-11 01:47 UTC",
+   "Snapshot: revision 1384105240, read 2026-11-06 16:46 UTC",
    "Check: rows=254 D=5444982 R=4249373 total=9889704"
   ]
  },
