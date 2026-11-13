@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T16:02:00Z",
+ "updated": "2026-11-13T01:30:00Z",
  "source": {
   "house": "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections",
   "senate": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections",
@@ -631,6 +631,24 @@
     12,
     2
    ]
+  },
+  {
+   "t": "2026-11-13T01:30:00Z",
+   "H": [
+    256,
+    169,
+    10
+   ],
+   "S": [
+    21,
+    13,
+    1
+   ],
+   "G": [
+    23,
+    12,
+    1
+   ]
   }
  ],
  "races": {
@@ -983,17 +1001,13 @@
    "state": "KS",
    "district": null,
    "special": false,
-   "called": false,
-   "status": "uncalled",
-   "winner": null,
-   "winner_name": null,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Cindy Holscher",
    "flip": false,
    "margin": null,
    "others": [
-    {
-     "n": "Cindy Holscher",
-     "p": "D"
-    },
     {
      "n": "Ty Masterson",
      "p": "R"
@@ -9049,6 +9063,78 @@
   }
  },
  "counties": {
+  "G-VT": {
+   "50001": [
+    9487,
+    10016,
+    19745
+   ],
+   "50003": [
+    7449,
+    8544,
+    16484
+   ],
+   "50005": [
+    5376,
+    8151,
+    13832
+   ],
+   "50007": [
+    44450,
+    38875,
+    84142
+   ],
+   "50009": [
+    665,
+    1807,
+    2580
+   ],
+   "50011": [
+    6574,
+    14275,
+    21315
+   ],
+   "50013": [
+    1495,
+    2720,
+    4278
+   ],
+   "50015": [
+    5433,
+    6871,
+    12506
+   ],
+   "50017": [
+    6342,
+    8259,
+    14896
+   ],
+   "50019": [
+    3700,
+    7578,
+    11605
+   ],
+   "50021": [
+    8960,
+    17305,
+    26824
+   ],
+   "50023": [
+    15501,
+    15149,
+    31092
+   ],
+   "50025": [
+    12661,
+    8363,
+    21420
+   ],
+   "50027": [
+    13538,
+    14135,
+    28336
+   ]
+  },
   "S-SC": {
    "45001": [
     3415,
@@ -10555,6 +10641,11 @@
   }
  },
  "county_sources": {
+  "G-VT": [
+   "Source: https://en.wikipedia.org/wiki/2026_Vermont_gubernatorial_election",
+   "Snapshot: revision 1385364445, read 2026-11-13 01:50 UTC",
+   "Check: rows=14 D=141631 R=162048 total=309055"
+  ],
   "S-SC": [
    "Source: https://en.wikipedia.org/wiki/2026_United_States_Senate_election_in_South_Carolina",
    "Snapshot: revision 1385216294, read 2026-11-12 16:50 UTC",
