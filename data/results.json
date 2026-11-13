@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-13T01:30:00Z",
+ "updated": "2026-11-13T16:17:00Z",
  "source": {
   "house": "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections",
   "senate": "https://en.wikipedia.org/wiki/2026_United_States_Senate_elections",
@@ -649,6 +649,24 @@
     12,
     1
    ]
+  },
+  {
+   "t": "2026-11-13T16:17:00Z",
+   "H": [
+    256,
+    169,
+    10
+   ],
+   "S": [
+    21,
+    13,
+    1
+   ],
+   "G": [
+    24,
+    12,
+    0
+   ]
   }
  ],
  "races": {
@@ -657,17 +675,13 @@
    "state": "AK",
    "district": null,
    "special": false,
-   "called": false,
-   "status": "uncalled",
-   "winner": null,
-   "winner_name": null,
-   "flip": false,
+   "called": true,
+   "status": "called",
+   "winner": "D",
+   "winner_name": "Jonathan Kreiss-Tomkins",
+   "flip": true,
    "margin": null,
    "others": [
-    {
-     "n": "Jonathan Kreiss-Tomkins",
-     "p": "D"
-    },
     {
      "n": "Bernadette Wilson",
      "p": "R"
@@ -9296,6 +9310,11 @@
     60816,
     115893
    ],
+   "45065": [
+    2518,
+    2829,
+    5470
+   ],
    "45067": [
     7085,
     4036,
@@ -9305,11 +9324,6 @@
     4403,
     2713,
     7221
-   ],
-   "45065": [
-    2518,
-    2829,
-    5470
    ],
    "45071": [
     6135,
@@ -10133,6 +10147,21 @@
     1625,
     2123
    ],
+   "48307": [
+    479,
+    2110,
+    2664
+   ],
+   "48309": [
+    37032,
+    44107,
+    83167
+   ],
+   "48311": [
+    47,
+    315,
+    371
+   ],
    "48313": [
     1083,
     3113,
@@ -10162,21 +10191,6 @@
     8631,
     3470,
     12596
-   ],
-   "48307": [
-    479,
-    2110,
-    2664
-   ],
-   "48309": [
-    37032,
-    44107,
-    83167
-   ],
-   "48311": [
-    47,
-    315,
-    371
    ],
    "48325": [
     8073,
